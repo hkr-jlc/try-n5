@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TRY! N5 - 文法から伸ばす日本語</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Overlay -->
+    <div id="drawer-overlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+
+    <!-- Sidebar Drawer -->
+    <aside id="sidebar-drawer" class="sidebar-drawer">
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <div class="drawer-logo">TRY! N5</div>
+                <div class="drawer-subtitle">文法から伸ばす日本語</div>
+            </div>
+            <button class="drawer-close" onclick="closeDrawer()">✕</button>
+        </div>
+        <div class="drawer-content" id="drawer-content"></div>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <button type="button" class="hamburger-btn" onclick="toggleDrawer()">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div class="nav-title" id="current-section-title">TRY! N5</div>
+            <div class="translate-buttons">
+                <button type="button" class="translate-btn" id="translate-en-btn" onclick="toggleEnglish()">
+                    <span class="translate-icon">🇬🇧</span>
+                    <span class="translate-text">EN</span>
+                </button>
+                <button type="button" class="translate-btn" id="translate-id-btn" onclick="toggleIndonesian()">
+                    <span class="translate-icon">🇮🇩</span>
+                    <span class="translate-text">ID</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container" id="main-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

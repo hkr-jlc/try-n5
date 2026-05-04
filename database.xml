@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<buku_try_n5>
+    <metadata>
+        <judul>TRY! N5文法から伸ばす日本語</judul>
+        <subjudul>日本語能力試験対策</subjudul>
+        <edisi>改訂版</edisi>
+    </metadata>
+
+	<!-- Daftar Isi Lengkap TRY! N5 - Pages 11-13 -->
+	<daftar_isi>
+		<pengantar>
+			<item id="hajimeni" halaman="2">
+				<judul_jp>はじめに</judul_jp>
+				<judul_en>Introduction</judul_en>
+				<judul_id>Pendahuluan</judul_id>
+			</item>
+			<item id="to_learners" halaman="3">
+				<judul_jp>この本をお使いになるみなさんへ</judul_jp>
+				<judul_en>To Learners Using this Book</judul_en>
+				<judul_id>Kepada Para Pembelajar yang Menggunakan Buku Ini</judul_id>
+			</item>
+			<item id="to_teachers" halaman="9">
+				<judul_jp>この本をお使いになる先生方へ</judul_jp>
+				<judul_en>To Teachers Using this Book</judul_en>
+				<judul_id>Kepada Para Guru yang Menggunakan Buku Ini</judul_id>
+			</item>
+			<item id="people" halaman="10">
+				<judul_jp>この本に出てくる人</judul_jp>
+				<judul_en>The People in this Book</judul_en>
+				<judul_id>Orang-Orang dalam Buku Ini</judul_id>
+			</item>
+		</pengantar>
+
+		<!-- BAB 1 - Page 14 -->
+		<bab id="1" halaman="14">
+			<kategori>あいさつ</kategori>
+			<kategori_en>Greetings</kategori_en>
+			<kategori_id>Kosakata Sapaan</kategori_id>
+			<nomor>1</nomor>
+			<judul_jp>あいさつ</judul_jp>
+			<judul_en>Greetings</judul_en>
+			<judul_id>Sapaan</judul_id>
+			<grammar_points>
+				<point id="1" halaman="14">PART1</point>
+				<point id="2" halaman="18">PART2</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 2 (1) - Page 20 -->
+		<bab id="2" halaman="20">
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<nomor>2</nomor>
+			<judul_jp>電気屋で（１）</judul_jp>
+			<judul_en>At the electronics store (1)</judul_en>
+			<judul_id>Di Toko Elektronik (1)</judul_id>
+			<grammar_points>
+				<point id="3" halaman="20">あります</point>
+				<point id="4" halaman="21">ありますか</point>
+				<point id="5" halaman="23">どこですか</point>
+				<point id="6" halaman="26">あちらです</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 2 (2) - Page 29 -->
+		<bab id="3" halaman="29">
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<nomor>3</nomor>
+			<judul_jp>電気屋で（２）</judul_jp>
+			<judul_en>At the electronics store (2)</judul_en>
+			<judul_id>Di Toko Elektronik (2)</judul_id>
+			<grammar_points>
+				<point id="7" halaman="29">新しい電子辞書</point>
+				<point id="8" halaman="31">日本のです</point>
+				<point id="9" halaman="32">数 Numbers</point>
+				<point id="10" halaman="33">23,800円です</point>
+			</grammar_points>
+			<matome halaman="36"/>
+		</bab>
+
+		<!-- BAB 3 (1) - Page 37 -->
+		<bab id="4" halaman="37">
+			<kategori>きのうの買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<nomor>4</nomor>
+			<judul_jp>きのうの買い物（１）</judul_jp>
+			<judul_en>Yesterday's shopping (1)</judul_en>
+			<judul_id>Belanja Kemarin (1)</judul_id>
+			<grammar_points>
+				<point id="11" halaman="37">電子辞書ですね</point>
+				<point id="12" halaman="39">きのう買いました</point>
+				<point id="13" halaman="40">ほしいです</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 3 (2) - Page 42 -->
+		<bab id="5" halaman="42">
+			<kategori>きのうの買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<nomor>5</nomor>
+			<judul_jp>きのうの買い物（２）</judul_jp>
+			<judul_en>Yesterday's shopping (2)</judul_en>
+			<judul_id>Belanja Kemarin (2)</judul_id>
+			<grammar_points>
+				<point id="14" halaman="43">動詞のグループ分け Verb groups</point>
+				<point id="15" halaman="44">動詞のて形 てverb form</point>
+				<point id="16" halaman="44">駅まで行って、…</point>
+				<point id="17" halaman="45">バスで行きました</point>
+				<point id="18" halaman="46">どこか行きましたか</point>
+				<point id="19" halaman="48">どこへも行きません</point>
+			</grammar_points>
+			<matome halaman="50"/>
+		</bab>
+
+		<!-- BAB 4 (1) - Page 51 -->
+		<bab id="6" halaman="51">
+			<kategori>上野の町</kategori>
+			<kategori_en>The town of Ueno</kategori_en>
+			<kategori_id>Kota Ueno</kategori_id>
+			<nomor>6</nomor>
+			<judul_jp>上野の町（１）</judul_jp>
+			<judul_en>The town of Ueno (1)</judul_en>
+			<judul_id>Kota Ueno (1)</judul_id>
+			<grammar_points>
+				<point id="20" halaman="51">行きませんか</point>
+				<point id="21" halaman="52">おもしろいところですよ</point>
+				<point id="22" halaman="53">駅の前</point>
+				<point id="23" halaman="56">公園があります</point>
+				<point id="24" halaman="58">行きましょう</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 4 (2) - Page 60 -->
+		<bab id="7" halaman="60">
+			<kategori>上野の町</kategori>
+			<kategori_en>The town of Ueno</kategori_en>
+			<kategori_id>Kota Ueno</kategori_id>
+			<nomor>7</nomor>
+			<judul_jp>上野の町（２）</judul_jp>
+			<judul_en>The town of Ueno (2)</judul_en>
+			<judul_id>Kota Ueno (2)</judul_id>
+			<grammar_points>
+				<point id="25" halaman="60">「アメ横」というところ</point>
+				<point id="26" halaman="61">「アメ横」は安い店が多いです</point>
+				<point id="27" halaman="62">安くておいしいです</point>
+			</grammar_points>
+			<matome halaman="64"/>
+		</bab>
+
+		<!-- BAB 5 (1) - Page 66 -->
+		<bab id="8" halaman="66">
+			<kategori>まんが</kategori>
+			<kategori_en>Manga</kategori_en>
+			<kategori_id>Manga</kategori_id>
+			<nomor>8</nomor>
+			<judul_jp>まんが（１）</judul_jp>
+			<judul_en>Manga (1)</judul_en>
+			<judul_id>Manga (1)</judul_id>
+			<grammar_points>
+				<point id="28" halaman="67">上手になりました + Plus ～く／にします</point>
+				<point id="29" halaman="68">読みたいです</point>
+				<point id="30" halaman="70">読みたいですから、…</point>
+				<point id="31" halaman="70">まんがが好きです</point>
+				<point id="32" halaman="71">見に行きませんか</point>
+				<point id="33" halaman="72">カレンダー Calendar</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 5 (2) - Page 73 -->
+		<bab id="9" halaman="73">
+			<kategori>まんが</kategori>
+			<kategori_en>Manga</kategori_en>
+			<kategori_id>Manga</kategori_id>
+			<nomor>9</nomor>
+			<judul_jp>まんが（２）</judul_jp>
+			<judul_en>Manga (2)</judul_en>
+			<judul_id>Manga (2)</judul_id>
+			<grammar_points>
+				<point id="34" halaman="73">動詞の辞書形 Dictionary form of verbs</point>
+				<point id="35" halaman="74">まんがをかくことです</point>
+				<point id="36" halaman="75">家族のよび方 Family members</point>
+				<point id="37" halaman="76">時間 Time</point>
+			</grammar_points>
+			<matome halaman="77"/>
+		</bab>
+
+		<!-- BAB 6 (1) - Page 78 -->
+		<bab id="10" halaman="78">
+			<kategori>空港で</kategori>
+			<kategori_en>At the airport</kategori_en>
+			<kategori_id>Di Bandara</kategori_id>
+			<nomor>10</nomor>
+			<judul_jp>空港で（１）</judul_jp>
+			<judul_en>At the airport (1)</judul_en>
+			<judul_id>Di Bandara (1)</judul_id>
+			<grammar_points>
+				<point id="38" halaman="78">買い物をしています</point>
+				<point id="39" halaman="80">待ってください</point>
+				<point id="40" halaman="81">チェックインしてから、…</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 6 (2) - Page 82 -->
+		<bab id="11" halaman="82">
+			<kategori>空港で</kategori>
+			<kategori_en>At the airport</kategori_en>
+			<kategori_id>Di Bandara</kategori_id>
+			<nomor>11</nomor>
+			<judul_jp>空港で（２）</judul_jp>
+			<judul_en>At the airport (2)</judul_en>
+			<judul_id>Di Bandara (2)</judul_id>
+			<grammar_points>
+				<point id="41" halaman="83">動詞のない形 ないverb form</point>
+				<point id="42" halaman="84">入れないでください</point>
+				<point id="43" halaman="85">早く行きましょう</point>
+				<point id="44" halaman="86">時間の長さ Length of time</point>
+			</grammar_points>
+			<matome halaman="87"/>
+		</bab>
+
+		<!-- BAB 7 (1) - Page 88 -->
+		<bab id="12" halaman="88">
+			<kategori>スキーとおんせん</kategori>
+			<kategori_en>Skiing and a hot spring</kategori_en>
+			<kategori_id>Ski dan Pemandian Air Panas</kategori_id>
+			<nomor>12</nomor>
+			<judul_jp>スキーとおんせん（１）</judul_jp>
+			<judul_en>Skiing and a hot spring (1)</judul_en>
+			<judul_id>Ski dan Pemandian Air Panas (1)</judul_id>
+			<grammar_points>
+				<point id="45" halaman="88">動詞のた形 たverb form</point>
+				<point id="46" halaman="89">スキーをしたり、おんせんに入ったりしました</point>
+				<point id="47" halaman="91">楽しかったですが、…</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAB 7 (2) - Page 92 -->
+		<bab id="13" halaman="92">
+			<kategori>スキーとおんせん</kategori>
+			<kategori_en>Skiing and a hot spring</kategori_en>
+			<kategori_id>Ski dan Pemandian Air Panas</kategori_id>
+			<nomor>13</nomor>
+			<judul_jp>スキーとおんせん（２）</judul_jp>
+			<judul_en>Skiing and a hot spring (2)</judul_en>
+			<judul_id>Ski dan Pemandian Air Panas (2)</judul_id>
+			<grammar_points>
+				<point id="48" halaman="92">スキーをしたあとで、…</point>
+				<point id="49" halaman="93">朝ご飯を食べるまえに、…</point>
+				<point id="50" halaman="94">雪を見ながら、…</point>
+				<point id="51" halaman="96">楽しい旅行でした</point>
+			</grammar_points>
+			<matome halaman="98"/>
+		</bab>
+
+		<!-- BAB 8 - Page 99 -->
+		<bab id="14" halaman="99">
+			<kategori>昼ご飯</kategori>
+			<kategori_en>Lunch</kategori_en>
+			<kategori_id>Makan Siang</kategori_id>
+			<nomor>14</nomor>
+			<judul_jp>昼ご飯</judul_jp>
+			<judul_en>Lunch</judul_en>
+			<judul_id>Makan Siang</judul_id>
+			<grammar_points>
+				<point id="52" halaman="99">午後、いそがしい？</point>
+				<point id="53" halaman="104">鈴木くん、午後、いそがしい？</point>
+				<point id="54" halaman="105">授業はないけど、…</point>
+				<point id="55" halaman="106">もう食べた</point>
+				<point id="56" halaman="106">まだ食べていない</point>
+				<point id="57" halaman="108">木がたくさんある公園</point>
+			</grammar_points>
+			<matome halaman="110"/>
+		</bab>
+
+		<!-- BAB 9 - Page 111 -->
+		<bab id="15" halaman="111">
+			<kategori>便利なことば</kategori>
+			<kategori_en>Useful vocabulary</kategori_en>
+			<kategori_id>Kosakata Berguna</kategori_id>
+			<nomor>15</nomor>
+			<judul_jp>便利なことば</judul_jp>
+			<judul_en>Useful vocabulary</judul_en>
+			<judul_id>Kosakata Berguna</judul_id>
+			<grammar_points>
+				<point id="58" halaman="111">1 助詞 Particles</point>
+				<point id="59" halaman="114">2 副詞 Adverbs</point>
+				<point id="60" halaman="117">3 接続詞 Conjunctions</point>
+				<point id="61" halaman="118">4 接尾語 Suffixes</point>
+			</grammar_points>
+			<matome halaman=""/>
+		</bab>
+
+		<!-- BAGIAN AKHIR -->
+		<bagian_akhir>
+			<item id="practice_test" halaman="121">
+				<judul_jp>もぎ試験（1回分）</judul_jp>
+				<judul_en>Practice Test</judul_en>
+				<judul_id>Tes Simulasi (1 Kali)</judul_id>
+			</item>
+			<item id="pattern_index" halaman="148">
+				<judul_jp>文型さくいん</judul_jp>
+				<judul_en>Sentence Pattern Index</judul_en>
+				<judul_id>Indeks Pola Kalimat</judul_id>
+			</item>
+			<item id="can_do_list" halaman="150">
+				<judul_jp>N5「できること」リスト</judul_jp>
+				<judul_en>N5 Can Do List</judul_en>
+				<judul_id>Daftar Kemampuan N5</judul_id>
+			</item>
+		</bagian_akhir>
+
+		<supplement>
+			<judul_jp>別冊</judul_jp>
+			<judul_en>Supplement</judul_en>
+			<judul_id>Lampiran</judul_id>
+
+			<item>
+				<judul_jp>答え・スクリプト</judul_jp>
+				<judul_en>Answers & Scripts</judul_en>
+				<judul_id>Jawaban & Skrip</judul_id>
+			</item>
+			<item>
+				<judul_jp>かいとうようし（マークシート）</judul_jp>
+				<judul_en>Answer Sheets</judul_en>
+				<judul_id>Lembar Jawaban (Mark Sheet)</judul_id>
+			</item>
+		</supplement>
+	</daftar_isi>
+	
+
+<!-- N5「できること」リスト - Pages 150-151 -->
+	<can_do_list halaman="150-151" level="N5">
+		<judul_jp>N5「できること」リスト</judul_jp>
+		<judul_en>N5 Can Do List</judul_en>
+		<judul_id>Daftar Kemampuan N5</judul_id>
+		<bab_group id="1">
+			<nomor>1</nomor>
+			<kategori>あいさつ</kategori>
+			<kategori_en>Greetings</kategori_en>
+			<kategori_id>Sapaan</kategori_id>
+			<judul>あいさつ</judul>
+			<judul_en>Greetings</judul_en>
+			<judul_id>Sapaan</judul_id>
+			<dekiru>
+				<item>
+					<jp>きほんてきな あいさつが できる。</jp>
+					<en>Make basic greetings.</en>
+					<id>Dapat melakukan sapaan dasar.</id>
+				</item>
+				<item>
+					<jp>あいさつに 答えることが できる。</jp>
+					<en>Respond to greetings.</en>
+					<id>Dapat menanggapi sapaan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="2">
+			<nomor>2</nomor>
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<judul>電気屋で</judul>
+			<judul_en>At the electronics store</judul_en>
+			<judul_id>Di Toko Elektronik</judul_id>
+			<dekiru>
+				<item>
+					<jp>店の 人に 商品の 場所や ねだんを 聞いて、答えを 理解する ことが できる。</jp>
+					<en>Ask a store clerk where a product is and its price, and understand the answer.</en>
+					<id>Dapat menanyakan kepada petugas toko tentang lokasi dan harga barang, serta memahami jawabannya.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="3">
+			<nomor>3</nomor>
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<judul>電気屋で</judul>
+			<judul_en>At the electronics store</judul_en>
+			<judul_id>Di Toko Elektronik</judul_id>
+			<dekiru>
+				<item>
+					<jp>店の 人に 商品について 質問したり、ほかの 商品を さがして もらったり する ことが できる。</jp>
+					<en>Ask a store clerk about a product and get a clerk to find a different item for you.</en>
+					<id>Dapat menanyakan kepada petugas toko tentang suatu barang dan meminta petugas mencari barang lain.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="4">
+			<nomor>4</nomor>
+			<kategori>きのうの 買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<judul>きのうの 買い物</judul>
+			<judul_en>Yesterday's shopping</judul_en>
+			<judul_id>Belanja Kemarin</judul_id>
+			<dekiru>
+				<item>
+					<jp>いつ・どこで・何を したか、過去の 行動について 話す ことが できる。</jp>
+					<en>Talk about what happened in the past as well as when and where.</en>
+					<id>Dapat bercerita tentang peristiwa masa lalu, kapan dan di mana terjadi.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="5">
+			<nomor>5</nomor>
+			<kategori>きのうの 買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<judul>きのうの 買い物</judul>
+			<judul_en>Yesterday's shopping</judul_en>
+			<judul_id>Belanja Kemarin</judul_id>
+			<dekiru>
+				<item>
+					<jp>交通手段などに ついて、じゅんばんに 話す ことが できる。</jp>
+					<en>Talk about means of transportation and the like in the correct order.</en>
+					<id>Dapat bercerita tentang sarana transportasi dan sejenisnya secara berurutan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="6">
+			<nomor>6</nomor>
+			<kategori>上野の 町</kategori>
+			<kategori_en>The town of Ueno</kategori_en>
+			<kategori_id>Kota Ueno</kategori_id>
+			<judul>上野の 町</judul>
+			<judul_en>The town of Ueno</judul_en>
+			<judul_id>Kota Ueno</judul_id>
+			<dekiru>
+				<item>
+					<jp>人を さそったり、人や 物の そんざいを 説明したり する ことが できる。</jp>
+					<en>Invite people and explain the existence of people and things.</en>
+					<id>Dapat mengajak orang dan menjelaskan keberadaan orang atau benda.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="7">
+			<nomor>7</nomor>
+			<kategori>上野の 町</kategori>
+			<kategori_en>The town of Ueno</kategori_en>
+			<kategori_id>Kota Ueno</kategori_id>
+			<judul>上野の 町</judul>
+			<judul_en>The town of Ueno</judul_en>
+			<judul_id>Kota Ueno</judul_id>
+			<dekiru>
+				<item>
+					<jp>場所の ようすや とくちょうを 説明する ことが できる。</jp>
+					<en>Explain what a place is like and its characteristics.</en>
+					<id>Dapat menjelaskan suasana dan karakteristik suatu tempat.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="8">
+			<nomor>8</nomor>
+			<kategori>まんが</kategori>
+			<kategori_en>Manga</kategori_en>
+			<kategori_id>Komik/Manga</kategori_id>
+			<judul>まんが</judul>
+			<judul_en>Manga</judul_en>
+			<judul_id>Komik/Manga</judul_id>
+			<dekiru>
+				<item>
+					<jp>好きな ものや しゅみについて 話す ことが できる。</jp>
+					<en>Talk about hobbies and things you like.</en>
+					<id>Dapat bercerita tentang hobi dan hal-hal yang disukai.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="9">
+			<nomor>9</nomor>
+			<kategori>まんが</kategori>
+			<kategori_en>Manga</kategori_en>
+			<kategori_id>Komik/Manga</kategori_id>
+			<judul>まんが</judul>
+			<judul_en>Manga</judul_en>
+			<judul_id>Komik/Manga</judul_id>
+			<dekiru>
+				<item>
+					<jp>家族や しゅみについて 話す ことが できる。</jp>
+					<en>Talk about your family and hobbies.</en>
+					<id>Dapat bercerita tentang keluarga dan hobi.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="10">
+			<nomor>10</nomor>
+			<kategori>空港で</kategori>
+			<kategori_en>At the airport</kategori_en>
+			<kategori_id>Di Bandara</kategori_id>
+			<judul>空港で</judul>
+			<judul_en>At the airport</judul_en>
+			<judul_id>Di Bandara</judul_id>
+			<dekiru>
+				<item>
+					<jp>人や 自分が 今 している ことを 説明する ことが できる。</jp>
+					<en>Explain what you and other people are doing now.</en>
+					<id>Dapat menjelaskan apa yang sedang dilakukan oleh diri sendiri dan orang lain saat ini.</id>
+				</item>
+				<item>
+					<jp>して ほしい ことを 伝える ことが できる。</jp>
+					<en>Convey what you want a person to do.</en>
+					<id>Dapat menyampaikan apa yang ingin diminta kepada seseorang untuk dilakukan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="11">
+			<nomor>11</nomor>
+			<kategori>空港で</kategori>
+			<kategori_en>At the airport</kategori_en>
+			<kategori_id>Di Bandara</kategori_id>
+			<judul>空港で</judul>
+			<judul_en>At the airport</judul_en>
+			<judul_id>Di Bandara</judul_id>
+			<dekiru>
+				<item>
+					<jp>して ほしくない ことを 伝える ことが できる。</jp>
+					<en>Convey what you do not want a person to do.</en>
+					<id>Dapat menyampaikan apa yang tidak ingin diminta kepada seseorang untuk dilakukan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="12">
+			<nomor>12</nomor>
+			<kategori>スキーと おんせん</kategori>
+			<kategori_en>Skiing and a hot spring</kategori_en>
+			<kategori_id>Ski dan Pemandian Air Panas</kategori_id>
+			<judul>スキーと おんせん</judul>
+			<judul_en>Skiing and a hot spring</judul_en>
+			<judul_id>Ski dan Pemandian Air Panas</judul_id>
+			<dekiru>
+				<item>
+					<jp>過去の 経験について 説明したり、かんそうを 言ったり する ことが できる。</jp>
+					<en>Explain a past experience and give your impressions.</en>
+					<id>Dapat menjelaskan pengalaman masa lalu dan menyampaikan kesan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="13">
+			<nomor>13</nomor>
+			<kategori>スキーと おんせん</kategori>
+			<kategori_en>Skiing and a hot spring</kategori_en>
+			<kategori_id>Ski dan Pemandian Air Panas</kategori_id>
+			<judul>スキーと おんせん</judul>
+			<judul_en>Skiing and a hot spring</judul_en>
+			<judul_id>Ski dan Pemandian Air Panas</judul_id>
+			<dekiru>
+				<item>
+					<jp>自分の 行動について、じゅんばんに 説明する ことが できる。</jp>
+					<en>Explain your actions in chronological order.</en>
+					<id>Dapat menjelaskan tindakan diri sendiri secara berurutan kronologis.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+		<bab_group id="14">
+			<nomor>14</nomor>
+			<kategori>昼ご飯</kategori>
+			<kategori_en>Lunch</kategori_en>
+			<kategori_id>Makan Siang</kategori_id>
+			<judul>昼ご飯</judul>
+			<judul_en>Lunch</judul_en>
+			<judul_id>Makan Siang</judul_id>
+			<dekiru>
+				<item>
+					<jp>友だちと、カジュアルに 話す ことが できる。</jp>
+					<en>Talk casually with friends.</en>
+					<id>Dapat bercakap-cakap santai dengan teman.</id>
+				</item>
+				<item>
+					<jp>どんな 人か、どんな ものか、などを 説明する ことが できる。</jp>
+					<en>Provide explanations such as what sort of person or thing you are talking about.</en>
+					<id>Dapat memberikan penjelasan seperti orang atau benda seperti apa yang sedang dibicarakan.</id>
+				</item>
+			</dekiru>
+		</bab_group>
+	</can_do_list>	
+	
+</buku_try_n5>
