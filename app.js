@@ -293,7 +293,7 @@ function renderDrawer(currentSection = 'contents') {
         `;
     });
     
-    html += '</div></div><div class="drawer-section"><div class="drawer-section-title">Daftar Isi (Bab 1-20)</div><div class="drawer-list">';
+    html += '</div></div><div class="drawer-section"><div class="drawer-section-title">Daftar Isi (Bab 1-15)</div><div class="drawer-list">';
     
     let currentCategory = '';
     data.bab.forEach((bab) => {
@@ -1274,7 +1274,7 @@ function renderCanDoList() {
                     <span class="bab-header-en">What You Can Do with N5 Grammar</span>
                     <span class="translation-id">Apa yang Dapat Anda Lakukan dengan Tata Bahasa N5</span>
                 </div>
-                <p class="page-number" style="text-align: center; color: #6b7280; margin-top: 0.5rem;">p.205-207</p>
+                <p class="page-number" style="text-align: center; color: #6b7280; margin-top: 0.5rem;">p.150-151</p>
             </div>
 
             <div class="can-do-intro">
