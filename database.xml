@@ -339,7 +339,2323 @@
 			</item>
 		</supplement>
 	</daftar_isi>
-	
+
+	<!-- KONTEN BAB 1 - Pages 14-19 -->
+	<bab1_content>
+		<header halaman="14-19">
+			<kategori>あいさつ</kategori>
+			<kategori_en>Greetings</kategori_en>
+			<kategori_id>Sapaan</kategori_id>
+			<nomor>1</nomor>
+			<judul>あいさつ</judul>
+			<judul_en>Greetings</judul_en>
+			<judul_id>Sapaan</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>きほんてきな あいさつが できる。</jp>
+					<en>Make basic greetings.</en>
+					<id>Dapat melakukan sapaan dasar.</id>
+				</item>
+				<item>
+					<jp>あいさつに 答えることが できる。</jp>
+					<en>Respond to greetings.</en>
+					<id>Dapat menjawab sapaan.</id>
+				</item>
+			</dekiru_koto>
+
+			<!-- PART 1 -->
+			<content type="speech">
+				<bagian cd="02">
+					<judul>はじめて会ったとき</judul>
+					<judul_en>When you meet someone for the first time</judul_en>
+					<judul_id>Ketika Pertama Kali Bertemu</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>はじめまして。田中です。どうぞよろしくおねがいします。</jp>
+							<en>Nice to meet you. I'm Tanaka. Please be kind to me.</en>
+							<id>Perkenalkan, saya Tanaka. Tolong berkenan baik dengan saya.</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>こちらこそ、どうぞよろしくおねがいします。</jp>
+							<en>Nice to meet you too. Please be kind to me too.</en>
+							<id>Saya pula, tolong berkenan baik dengan saya.</id>
+						</karakter>
+					</dialog>
+					<catatan>※「こちらこそ」だけでも使う。</catatan>
+					<catatan_en>You can also simply say "kochira koso".</catatan_en>
+					<catatan_id>※ Bisa juga menggunakan "kochira koso" saja.</catatan_id>
+				</bagian>
+
+				<bagian cd="03">
+					<judul>おれいを言うとき</judul>
+					<judul_en>When you express thanks</judul_en>
+					<judul_id>Ketika Mengucapkan Terima Kasih</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>どうぞ。</jp>
+							<en>Here you are.</en>
+							<id>Silakan (terima).</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>ありがとうございます。</jp>
+							<en>Thank you very much.</en>
+							<id>Terima kasih banyak.</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>どうぞ。</jp>
+							<en>Here you are.</en>
+							<id>Silakan (terima).</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>ありがとうございます。いただきます。</jp>
+							<en>Thank you very much. I humbly receive.</en>
+							<id>Terima kasih banyak. Saya terima (dengan hormat).</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>いいえ、どういたしまして。</jp>
+							<en>No, you're welcome.</en>
+							<id>Tidak, sama-sama.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="04">
+					<judul>毎日のあいさつ</judul>
+					<judul_en>Everyday greetings</judul_en>
+					<judul_id>Sapaan Sehari-hari</judul_id>
+					<sub_judul>会う Meeting</sub_judul>
+					<sub_judul_en>Meeting</sub_judul_en>
+					<dialog>
+						<karakter nama="A">
+							<jp>おはようございます。</jp>
+							<en>Good morning.</en>
+							<id>Selamat pagi.</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>こんにちは。</jp>
+							<en>Hello / Good afternoon.</en>
+							<id>Selamat siang.</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>こんばんは。</jp>
+							<en>Good evening.</en>
+							<id>Selamat malam.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="05">
+					<judul>わかれる Saying goodbye</judul>
+					<judul_en>Saying goodbye</judul_en>
+					<judul_id>Berpisah</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>さようなら。</jp>
+							<en>Goodbye.</en>
+							<id>Selamat tinggal.</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>おやすみなさい。</jp>
+							<en>Good night.</en>
+							<id>Selamat tidur.</id>
+						</karakter>
+					</dialog>
+					<catatan>※友だちには「さよなら」「じゃ、また」も使う。</catatan>
+					<catatan_en>You can also say "sayonara" or "jaa, mata" to friends.</catatan_en>
+					<catatan_id>※ Kepada teman bisa juga menggunakan "sayonara" atau "jaa, mata".</catatan_id>
+				</bagian>
+
+				<bagian cd="06">
+					<judul>ねる Going to bed</judul>
+					<judul_en>Going to bed</judul_en>
+					<judul_id>Pergi Tidur</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>おやすみなさい。</jp>
+							<en>Good night.</en>
+							<id>Selamat tidur.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="07">
+					<judul>食事 Eating</judul>
+					<judul_en>Eating</judul_en>
+					<judul_id>Makan</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>いただきます。</jp>
+							<en>I humbly receive. (said before eating)</en>
+							<id>Saya makan (dengan hormat, sebelum makan).</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>ごちそうさまでした。</jp>
+							<en>Thank you for the meal. (said after eating)</en>
+							<id>Terima kasih atas hidangannya (sesudah makan).</id>
+						</karakter>
+					</dialog>
+					<dialog>
+						<karakter nama="A">
+							<jp>どうぞ。</jp>
+							<en>Please. / Here you are.</en>
+							<id>Silakan.</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>ありがとうございます。いただきます。</jp>
+							<en>Thank you very much. I humbly receive.</en>
+							<id>Terima kasih banyak. Saya terima (dengan hormat).</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="08">
+					<judul>長いわかれのとき</judul>
+					<judul_en>When you say goodbye for a long time</judul_en>
+					<judul_id>Ketika Berpisah Lama</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>お元気で。</jp>
+							<en>Take care. / Stay well.</en>
+							<id>Jaga diri baik-baik.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="09">
+					<judul>家をたずねるとき</judul>
+					<judul_en>When you visit a home</judul_en>
+					<judul_id>Ketika Mengunjungi Rumah</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>おじゃまします。</jp>
+							<en>Excuse me for disturbing. (entering someone's home)</en>
+							<id>Maaf mengganggu (masuk ke rumah orang).</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>いらっしゃい。</jp>
+							<en>Welcome. (casual)</en>
+							<id>Silakan masuk. (santai)</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="10">
+					<judul>たのむとき</judul>
+					<judul_en>When you make a request</judul_en>
+					<judul_id>Ketika Meminta</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>おねがいします。</jp>
+							<en>Please. / I request.</en>
+							<id>Tolong. / Saya mohon.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+
+				<bagian cd="11">
+					<judul>問題がないと言うとき</judul>
+					<judul_en>When you want to say there is no problem</judul_en>
+					<judul_id>Ketika Mengatakan Tidak Ada Masalah</judul_id>
+					<dialog>
+						<karakter nama="A">
+							<jp>だいじょうぶですか。</jp>
+							<en>Are you alright? / Is it okay?</en>
+							<id>Apakah Anda baik-baik saja?</id>
+						</karakter>
+						<karakter nama="B">
+							<jp>だいじょうぶです。</jp>
+							<en>I'm alright. / It's okay.</en>
+							<id>Saya baik-baik saja.</id>
+						</karakter>
+					</dialog>
+				</bagian>
+			</content>
+
+			<!-- PART 2 -->
+			<content type="speech" part="2">
+				<bagian cd="12">
+					<judul>「すみません」</judul>
+					<judul_en>"Sumimasen"</judul_en>
+					<judul_id>"Sumimasen"</judul_id>
+					<sub_bagian>
+						<judul>あやまるとき</judul>
+						<judul_en>When you apologize</judul_en>
+						<judul_id>Ketika Meminta Maaf</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>すみません。</jp>
+								<en>I'm sorry.</en>
+								<id>Maaf.</id>
+							</karakter>
+						</dialog>
+						<catatan>※友だちや家族にあやまるときには、「ごめんなさい」も使う。</catatan>
+						<catatan_en>You can also use "gomen nasai" when you apologize to a friend or family member.</catatan_en>
+						<catatan_id>※ Ketika meminta maaf kepada teman atau keluarga, bisa juga menggunakan "gomen nasai".</catatan_id>
+					</sub_bagian>
+					<sub_bagian>
+						<judul>おれいを言うとき</judul>
+						<judul_en>When you express thanks</judul_en>
+						<judul_id>Ketika Mengucapkan Terima Kasih</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>すみません。</jp>
+								<en>Thank you. (lit. excuse me)</en>
+								<id>Terima kasih (ucapan ringan).</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+					<sub_bagian>
+						<judul>よびかけるとき</judul>
+						<judul_en>When you call out to someone</judul_en>
+						<judul_id>Ketika Memanggil Seseorang</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>すみません。</jp>
+								<en>Excuse me. (to get attention)</en>
+								<id>Permisi. (untuk menarik perhatian)</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+				</bagian>
+
+				<bagian cd="13">
+					<judul>「しつれいします」</judul>
+					<judul_en>"Shitsurei shimasu"</judul_en>
+					<judul_id>"Shitsurei shimasu"</judul_id>
+					<sub_bagian>
+						<judul>先に帰るとき</judul>
+						<judul_en>When you leave earlier than other people</judul_en>
+						<judul_id>Ketika Pulang Lebih Dulu</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>お先にしつれいします。</jp>
+								<en>Excuse me for leaving first.</en>
+								<id>Permisi, saya pulang duluan.</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+					<sub_bagian>
+						<judul>部屋に入るとき</judul>
+						<judul_en>When you enter a room</judul_en>
+						<judul_id>Ketika Memasuki Ruangan</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>しつれいします。</jp>
+								<en>Excuse me. (entering a room)</en>
+								<id>Permisi (masuk ruangan).</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+				</bagian>
+
+				<bagian cd="14">
+					<judul>「どうぞ」</judul>
+					<judul_en>"Douzo"</judul_en>
+					<judul_id>"Douzo"</judul_id>
+					<sub_bagian>
+						<judul>何かをすすめるとき</judul>
+						<judul_en>When you offer something</judul_en>
+						<judul_id>Ketika Menawarkan Sesuatu</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>どうぞ。</jp>
+								<en>Please. / Here you are.</en>
+								<id>Silakan.</id>
+							</karakter>
+							<karakter nama="B">
+								<jp>どうも。</jp>
+								<en>Thanks.</en>
+								<id>Terima kasih.</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+					<sub_bagian>
+						<judul>何かをあげるとき</judul>
+						<judul_en>When you give something</judul_en>
+						<judul_id>Ketika Memberikan Sesuatu</judul_id>
+						<dialog>
+							<karakter nama="A">
+								<jp>どうぞ。</jp>
+								<en>Here you are.</en>
+								<id>Silakan (terima).</id>
+							</karakter>
+						</dialog>
+					</sub_bagian>
+				</bagian>
+			</content>
+		</header>
+
+		<!-- YATTE MIYOU - Page 19 -->
+		<yatte_miyou halaman="19">
+			<judul>やってみよう！</judul>
+			<judul_id>Ayo Coba!</judul_id>
+			<jawaban_ref>別冊P. 1</jawaban_ref>
+
+			<mondai1 type="えをみながら">
+				<judul>もんだい1</judul>
+				<judul_id>Soal 1</judul_id>
+				<instruksi>このもんだいではえをみながらしつもんをきいてください。やじるし（→）のひとはなんといいますか。1から3のなかから、いちばんいいものを1つえらんでください。</instruksi>
+				<instruksi_id>Dalam soal ini, lihat gambar sambil mendengarkan pertanyaan. Apa yang dikatakan orang dengan panah (→)? Pilih yang paling tepat dari 1 sampai 3.</instruksi_id>
+
+				<soal id="1" cd="15">
+					<gambar>orang perempuan menerima bunga dari laki-laki</gambar>
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="2" cd="16">
+					<gambar>orang perempuan mengantar teman di bandara</gambar>
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="3" cd="17">
+					<gambar>tiga orang makan bersama di meja</gambar>
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="4" cd="18">
+					<gambar>laki-laki datang ke rumah, perempuan membuka pintu</gambar>
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="5" cd="19">
+					<gambar>laki-laki menyerahkan dokumen ke perempuan</gambar>
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+			</mondai1>
+
+			<mondai2 type="えなし">
+				<judul>もんだい2</judul>
+				<judul_id>Soal 2</judul_id>
+				<instruksi>このもんだいは、えなどがありません。ぶんをきいて、1から3のなかから、いちばんいいものを1つえらんでください。</instruksi>
+				<instruksi_id>Dalam soal ini, tidak ada gambar. Dengarkan kalimat dan pilih yang paling tepat dari 1 sampai 3.</instruksi_id>
+
+				<soal id="6" cd="20">
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="7" cd="21">
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="8" cd="22">
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="9" cd="23">
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+				<soal id="10" cd="24">
+					<pilihan>1</pilihan>
+					<pilihan>2</pilihan>
+					<pilihan>3</pilihan>
+				</soal>
+			</mondai2>
+		</yatte_miyou>
+	</bab1_content>
+
+	<!-- KONTEN BAB 2 - Pages 20-28 -->
+	<bab2_content>
+		<header halaman="20-28">
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<nomor>2</nomor>
+			<judul>電気屋で（１）</judul>
+			<judul_en>At the electronics store (1)</judul_en>
+			<judul_id>Di Toko Elektronik (1)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>店の人に商品の場所や値段を聞いて、答えを理解することができる。</jp>
+					<en>Ask a store clerk where a product is and its price, and understand the answer.</en>
+					<id>Bertanya kepada pegawai toko tentang lokasi barang dan harganya, dan memahami jawabannya.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="25">
+				<karakter nama="店員">
+					<jp>いらっしゃいませ。</jp>
+					<id>Selamat datang.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>すみません。電子辞書、ありますか。</jp>
+					<id>Permisi. Apakah ada kamus elektronik?</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>はい、ございます。</jp>
+					<id>Ya, ada.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>どこですか。</jp>
+					<id>Di mana?</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>あちらです。どうぞ。</jp>
+					<id>Di sana. Silakan.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 1: あります - Pages 20-21 -->
+		<sub_bab id="1" halaman="20-21">
+			<nomor>1</nomor>
+			<judul>あります</judul>
+			<judul_id>Ada (Arimasu)</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「〜です」「〜ます」は、現在や未来のことなどを言うときに使う。</jp>
+					<en>Use "~desu" and "~masu" when you are talking about the present or future.</en>
+					<id>Gunakan "~desu" dan "~masu" ketika berbicara tentang sekarang atau masa depan.</id>
+				</penjelasan>
+				<pola>PI（現在肯定形／現在否定形）</pola>
+				<pola_id>Predikat (bentuk positif/negatif kini)</pola_id>
+
+				<tabel_conjugasi>
+					<group name="動詞">
+						<item affirmative="いきます" negative="いきません" />
+					</group>
+					<group name="い形容詞">
+						<item affirmative="おおきいです" negative="おおきくありません／おおきくないです" />
+					</group>
+					<group name="な形容詞">
+						<item affirmative="きれいです" negative="きれいではありません／きれいじゃありません／きれいじゃないです" />
+					</group>
+					<group name="名詞">
+						<item affirmative="あめです" negative="あめではありません／あめじゃありません／あめじゃないです" />
+					</group>
+				</tabel_conjugasi>
+
+				<contoh>
+					<item no="1">
+						<jp>毎朝、コーヒーを飲みます。</jp>
+						<id>Setiap pagi, saya minum kopi.</id>
+					</item>
+					<item no="2">
+						<jp>今日は暑いです。</jp>
+						<id>Hari ini panas.</id>
+					</item>
+					<item no="3">
+						<jp>鈴木さんは親切です。</jp>
+						<id>Suzuki-san ramah.</id>
+					</item>
+					<item no="4">
+						<jp>今日、銀行は休みじゃありません。</jp>
+						<id>Hari ini, bank tidak libur.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 1</jawaban_ref>
+
+				<soal id="1">
+					<teks>さん／リン／です／は／中国人</teks>
+					<jawaban>リンさんは中国人です</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>は／じゃありません／これ／ノート</teks>
+					<jawaban>これはノートじゃありません</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>です／今日／は／いそがしい</teks>
+					<jawaban>今日はいそがしいです</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>毎晩／聞きます／音楽／を</teks>
+					<jawaban>毎晩音楽を聞きます</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.20-21</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 2: ありますか - Pages 21-22 -->
+		<sub_bab id="2" halaman="21-22">
+			<nomor>2</nomor>
+			<judul>ありますか</judul>
+			<judul_id>Ada? (Arimasu ka)</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>質問するときは、文の最後に「か」をつける。</jp>
+					<en>Add "ka" to the end of a sentence when you ask a question.</en>
+					<id>Tambahkan "ka" di akhir kalimat ketika bertanya.</id>
+				</penjelasan>
+				<pola>〜ですか／〜ますか</pola>
+				<pola_id>~desu ka / ~masu ka</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：鈴木さんですか。B：はい、鈴木です。</jp>
+						<id>A: Apakah Anda Suzuki-san? B: Ya, saya Suzuki.</id>
+					</item>
+					<item no="2">
+						<jp>A：この本、おもしろいですか。B：はい、とてもおもしろいです。</jp>
+						<id>A: Apakah buku ini menarik? B: Ya, sangat menarik.</id>
+					</item>
+					<item no="3">
+						<jp>A：明日、学校へ行きますか。B：いいえ、行きません。</jp>
+						<id>A: Apakah besok Anda pergi ke sekolah? B: Tidak, tidak pergi.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<soal id="1">
+					<teks>Q：毎日、新聞を読みますか。</teks>
+					<jawaban>はい、読みます。／いいえ、読みません。</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>Q：日本のカメラは高いですか。</teks>
+					<jawaban>はい、高いです。／いいえ、高くないです。</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>Q：明日、ひまですか。</teks>
+					<jawaban>はい、ひまです。／いいえ、ひまじゃありません。</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>Q：土曜日、会社は休みですか。</teks>
+					<jawaban>はい、休みです。／いいえ、休みじゃありません。</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<u>
+				<penjelasan>
+					<jp>「そうです」「ちがいます」は、名詞の質問文に答えるときだけ使う。形容詞や動詞の質問文の答えには使わない。</jp>
+					<en>Only use "sou desu" and "chigaimasu" to respond to a question that pertains directly to a noun. Do not use to respond to a question that pertains directly to an adjective or verb.</en>
+					<id>Gunakan "sou desu" dan "chigaimasu" hanya untuk menjawab pertanyaan yang berhubungan langsung dengan kata benda. Jangan gunakan untuk menjawab pertanyaan yang berhubungan langsung dengan kata sifat atau kata kerja.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item no="1">
+						<jp>A：田中さんですか。B：はい、そうです。／いいえ、ちがいます。</jp>
+						<id>A: Apakah Anda Tanaka-san? B: Ya, benar. / Tidak, bukan.</id>
+					</item>
+					<item no="2">
+						<jp>A：日本語はむずかしいですか。B：はい、むずかしいです。（×はい、そうです）</jp>
+						<id>A: Apakah bahasa Jepang sulit? B: Ya, sulit. (Tidak boleh: Ya, benar)</id>
+					</item>
+					<item no="3">
+						<jp>A：朝、パンを食べますか。B：はい、食べます。（×はい、そうです）</jp>
+						<id>A: Apakah Anda makan roti di pagi hari? B: Ya, makan. (Tidak boleh: Ya, benar)</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<u>
+				<penjelasan>
+					<jp>「はい」「いいえ」は、「AかBか」という質問の答えには使わない。</jp>
+					<en>Do not use "hai" or "iie" when you respond to an "A ka B ka" type of question.</en>
+					<id>Jangan gunakan "hai" atau "iie" ketika menjawab pertanyaan bertipe "A atau B".</id>
+				</penjelasan>
+				<contoh_plus>
+					<item no="1">
+						<jp>A：山本さんは先生ですか、学生ですか。B：学生です。（×はい、学生です）</jp>
+						<id>A: Apakah Yamamoto-san guru atau murid? B: Murid. (Salah: Ya, murid)</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<halaman_ref>p.21-22</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 3: どこですか - Pages 23-24 -->
+		<sub_bab id="3" halaman="23-24">
+			<nomor>3</nomor>
+			<judul>どこですか</judul>
+			<judul_id>Di Mana? (Doko desu ka)</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>名前・場所・理由などがわからないときは、疑問詞を使う。</jp>
+					<en>Use a question word when you do not know a name, place, reason or the like.</en>
+					<id>Gunakan kata tanya ketika tidak mengetahui nama, tempat, alasan, atau sejenisnya.</id>
+				</penjelasan>
+				<pola>疑問詞 + 〜ですか／〜ますか</pola>
+				<pola_id>Kata tanya + ~desu ka / ~masu ka</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：それは何のざっしですか。B：車のざっしです。</jp>
+						<id>A: Majalah apa itu? B: Majalah mobil.</id>
+					</item>
+					<item no="2">
+						<jp>A：テストはいつですか。B：来週の木曜日です。</jp>
+						<id>A: Kapan tesnya? B: Kamis minggu depan.</id>
+					</item>
+					<item no="3">
+						<jp>A：あの方はどなたですか。B：西川さんです。</jp>
+						<id>A: Siapakah orang itu? B: Nishikawa-san.</id>
+					</item>
+					<item no="4">
+						<jp>A：日本のおかしはどうですか。B：おいしいです。</jp>
+						<id>A: Bagaimana makanan ringan Jepang? B: Enak.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<soal id="1">
+					<teks>A：日本語のCDは（　　）ですか。B：これです。</teks>
+					<jawaban>どれ</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：大阪は（　　）町ですか。B：にぎやかな町です。</teks>
+					<jawaban>どんな</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：学校は（　　）ですか。B：楽しいです。</teks>
+					<jawaban>どう</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：（　　）と昼ご飯を食べますか。B：佐藤さんと食べます。</teks>
+					<jawaban>だれ</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>A：日曜日、（　　）へ行きますか。B：公園へ行きます。</teks>
+					<jawaban>どこ</jawaban>
+				</soal>
+				<soal id="6">
+					<teks>A：これは（　　）ですか。B：350円です。</teks>
+					<jawaban>いくら</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<u id="1">
+				<penjelasan>
+					<jp>「何」には、「なに」「なん」2つの読み方がある。「何人」「何時」など、物の数をかぞえることがあとにくるときは、「なん」と読む。「何」のあとに「n／t／d」で始まることがばがくるときも、「なん」と読む。</jp>
+					<en>"Nani" has two readings: "nani" and "nan". When the following character turns the word into one asking about how many of something there are, such as "nan'nin" and "nan'ji", this character is read as "nan". "Nani" is also read as "nan" when the following character begins with the sounds "n/t/d".</en>
+					<id>"Nani" memiliki dua cara baca: "nani" dan "nan". Ketika karakter berikutnya mengubah kata menjadi pertanyaan tentang jumlah, seperti "nan'nin" dan "nan'ji", karakter ini dibaca "nan". "Nani" juga dibaca "nan" ketika karakter berikutnya dimulai dengan bunyi "n/t/d".</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>何の、何と、何で、何だ</item>
+				</contoh_plus>
+			</u>
+
+			<u id="2">
+				<penjelasan>
+					<jp>疑問詞の位置によって、「は」と「が」のどちらを使うか決まる。疑問詞の文と答えの文は、同じ助詞を使う。</jp>
+					<en>Whether you use "wa" or "ga" depends on the position of the question word. Use the same particles for both the question and the answer.</en>
+					<id>Apakah menggunakan "wa" atau "ga" tergantung pada posisi kata tanya. Gunakan partikel yang sama untuk kalimat tanya dan jawaban.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item no="1">
+						<jp>A：あの人はだれですか。B：あの人は高橋さんです。</jp>
+						<id>A: Siapakah orang itu? B: Orang itu Takahashi-san.</id>
+					</item>
+					<item no="2">
+						<jp>A：どの人が田中さんですか。B：あの人が田中さんです。</jp>
+						<id>A: Orang mana yang Tanaka-san? B: Orang itu adalah Tanaka-san.</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<soal id="1">
+					<teks>このかさ（は・が）だれのですか。</teks>
+					<jawaban>は</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>どれ（は・が）伊藤さんの車ですか。</teks>
+					<jawaban>が</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>だれ（は・が）パーティーに行きますか。</teks>
+					<jawaban>が</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>日本語の勉強（は・が）どうですか。</teks>
+					<jawaban>は</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.23-24</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 4: あちらです - Pages 25-28 -->
+		<sub_bab id="4" halaman="25-28">
+			<nomor>4</nomor>
+			<judul>あちらです</judul>
+			<judul_id>Di Sana (Achira desu)</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>物や場所、方向などをさすときは、「これ」「それ」「あれ」を使う。</jp>
+					<en>Use "kore", "sore" and "are" to indicate a thing's location or a direction.</en>
+					<id>Gunakan "kore", "sore", dan "are" untuk menunjukkan lokasi benda atau arah.</id>
+				</penjelasan>
+				<pola>これ／それ／あれ／どれ、ここ／そこ／あそこ／どこ、こちら／そちら／あちら／どちら</pola>
+				<pola_id>Kata penunjuk ko-so-a-do</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：これはだれのかばんですか。B：それは田中さんのかばんです。</jp>
+						<id>A: Tas ini milik siapa? B: Tas itu milik Tanaka-san.</id>
+					</item>
+					<item no="2">
+						<jp>A：あれは日本の車ですか。B：はい。あれは日本の車です。</jp>
+						<id>A: Apakah mobil itu mobil Jepang? B: Ya. Mobil itu adalah mobil Jepang.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<soal id="1">
+					<teks>A：（　　）はだれのかさですか。B：（　　）は私のかさです。</teks>
+					<jawaban>それ／これ</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：（　　）は何ですか。B：（　　）は電話の会社です。</teks>
+					<jawaban>あれ／あれ</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：（　　）かばんはいくらですか。B：48,000円です。</teks>
+					<jawaban>その</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：ゆうびんきょくはどこですか。B：（　　）です。</teks>
+					<jawaban>あそこ</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>A：Bさんのかばんはどれですか。B：（　　）です。あの白いかばんです。</teks>
+					<jawaban>あれ</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<u id="1">
+				<penjelasan>
+					<jp>「どうですか」をていねいに言うときは、「いかがですか」を使う。</jp>
+					<en>When you want to say "dou desu ka" politely, use "ikaga desu ka".</en>
+					<id>Ketika ingin mengatakan "dou desu ka" dengan sopan, gunakan "ikaga desu ka".</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>
+						<jp>A：日本のせいかつはいかがですか。B：とても楽しいです。</jp>
+						<id>A: Bagaimana kehidupan di Jepang? B: Sangat menyenangkan.</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<u id="2">
+				<penjelasan>
+					<jp>「どうですか」は、相手に何かをすすめるときにも使う。</jp>
+					<en>You can also use "dou desu ka" when you offer something to a person.</en>
+					<id>Anda juga bisa menggunakan "dou desu ka" ketika menawarkan sesuatu kepada seseorang.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>
+						<jp>A：お茶、どうですか／いかがですか。B：ありがとうございます。いただきます。</jp>
+						<id>A: Bagaimana dengan teh? B: Terima kasih. Saya akan menerimanya.</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<u id="3">
+				<penjelasan>
+					<jp>「こちら」は家族じゃない人をしょうかいするときにも使う。</jp>
+					<en>"Kochira" is also used when you introduce a person who is not a family member.</en>
+					<id>"Kochira" juga digunakan ketika memperkenalkan orang yang bukan anggota keluarga.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>
+						<jp>こちらは鈴木さんです。</jp>
+						<id>Ini adalah Suzuki-san.</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<halaman_ref>p.25-28</halaman_ref>
+		</sub_bab>
+	</bab2_content>
+
+	<!-- KONTEN BAB 3 - Pages 29-36 -->
+	<bab3_content>
+		<header halaman="29-30">
+			<kategori>電気屋で</kategori>
+			<kategori_en>At the electronics store</kategori_en>
+			<kategori_id>Di Toko Elektronik</kategori_id>
+			<nomor>3</nomor>
+			<judul>電気屋で（２）</judul>
+			<judul_en>At the electronics store (2)</judul_en>
+			<judul_id>Di Toko Elektronik (2)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>店の人に商品について質問したり、ほかの商品をさがしてもらったりすることができる。</jp>
+					<en>Ask a store clerk about a product and get a clerk to find a different item for you.</en>
+					<id>Dapat bertanya kepada pegawai toko tentang barang dan meminta pegawai mencarikan barang lain.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="26">
+				<karakter nama="店員">
+					<jp>こちらはいかがですか。新しい電子辞書です。</jp>
+					<id>Bagaimana dengan ini? Ini kamus elektronik baru.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>日本のですか。</jp>
+					<id>Apakah ini yang dari Jepang?</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>はい、カシオのです。23,800円です。</jp>
+					<id>Ya, ini merek Casio. Harganya 23.800 yen.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>もっと安いの、ありませんか。</jp>
+					<id>Apakah ada yang lebih murah?</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>はい。こちらは18,500円です。</jp>
+					<id>Ya. Ini harganya 18.500 yen.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>ケースはいくらですか。</jp>
+					<id>Berapa harga casenya?</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>1,500円です。</jp>
+					<id>1.500 yen.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>じゃあ、この電子辞書とケースをください。</jp>
+					<id>Kalau begitu, saya beli kamus elektronik dan casenya.</id>
+				</karakter>
+				<karakter nama="店員">
+					<jp>ありがとうございます。</jp>
+					<id>Terima kasih.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 5: 新しい電子辞書 - Pages 29-30 -->
+		<sub_bab id="5" halaman="29-30">
+			<nomor>5</nomor>
+			<judul>新しい電子辞書</judul>
+			<judul_id>Kamus Elektronik Baru</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>どんな人か、どんなものかなどをくわしく説明するときは、名詞の前に説明のことばを言う。</jp>
+					<en>When you describe a noun in detail, such as what sort of person or thing it is, use explanatory words before the noun.</en>
+					<id>Ketika menjelaskan kata benda secara detail, seperti orang atau barang seperti apa, gunakan kata penjelas sebelum kata benda.</id>
+				</penjelasan>
+				<pola>いA / なAな / Nの + 名詞</pola>
+				<pola_id>Kata Sifat i / Kata Sifat na / Kata Benda no + Kata Benda</pola_id>
+
+				<catatan>い形容詞には「の」がつかない。</catatan>
+				<catatan_id>Jangan tambahkan "no" di akhir kata sifat i.</catatan_id>
+				<contoh_salah>
+					<item>
+						<jp>大きいのかばんを買います。</jp>
+						<id>❌ Saya membeli tas yang besar.</id>
+					</item>
+				</contoh_salah>
+				<contoh>
+					<item no="1">
+						<jp>大きいかばんを買います。</jp>
+						<id>✅ Saya membeli tas besar.</id>
+					</item>
+					<item no="2">
+						<jp>A：これはだれのかさですか。B：あ、すみません。私のかさです。</jp>
+						<id>A: Payung ini milik siapa? B: Ah, maaf. Ini payung saya.</id>
+					</item>
+					<item no="3">
+						<jp>A：毎日、インターネットでおもしろいゲームをします。B：そうですか。</jp>
+						<id>A: Setiap hari, saya bermain game yang menarik di internet. B: Begitu ya.</id>
+					</item>
+					<item no="4">
+						<jp>A：きれいなくつですね。B：ありがとうございます。</jp>
+						<id>A: Sepatu Anda bagus ya. B: Terima kasih.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<contoh>
+					<teks>は／写真／古い／です</teks>
+					<jawaban>これは古い写真です</jawaban>
+				</contoh>
+
+				<soal id="1">
+					<teks>料理／な／を／かんたん／作ります</teks>
+					<jawaban>いつもかんたんな料理を作ります</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>いくら／テレビ／か／は／です／の</teks>
+					<jawaban>SONYのテレビはいくらですか</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>きれい／です／は／な／花</teks>
+					<jawaban>さくらはきれいな花です</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>は／の／カレンダー／来年／です</teks>
+					<jawaban>これは来年のカレンダーです</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>ジュース／か／つめたい／飲みます／を</teks>
+					<jawaban>鈴木さん、つめたいジュースを飲みますか</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.29 いA/なA/N + 名詞</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 6: 日本のです - Pages 31-32 -->
+		<sub_bab id="6" halaman="31-32">
+			<nomor>6</nomor>
+			<judul>日本のです</judul>
+			<judul_id>Dari Jepang</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「〜の」は名詞をしゅうしょくする文で、名詞の代わりに使う。</jp>
+					<en>"~no" can be used as a noun in a sentence that modifies the relevant noun.</en>
+					<id>"~no" dapat digunakan sebagai kata benda dalam kalimat yang memodifikasi kata benda terkait.</id>
+				</penjelasan>
+				<pola>N / いA / なAな + の</pola>
+				<pola_id>Kata Benda / Kata Sifat i / Kata Sifat na + no</pola_id>
+
+				<catatan>「N＋の＋N」のときは、「N＋の」になる。</catatan>
+				<catatan_id>Ketika ada "kata benda + no + kata benda", dapat disederhanakan menjadi "kata benda + no".</catatan_id>
+				<contoh>
+					<item no="1">
+						<jp>これは日本のです。</jp>
+						<id>Ini yang dari Jepang.</id>
+					</item>
+					<item no="2">
+						<jp>A：これはどこの車ですか。B：イタリアのです。</jp>
+						<id>A: Mobil ini dari mana? B: Dari Italia.</id>
+					</item>
+					<item no="3">
+						<jp>A：この黒いのはだれのかさですか。B：鈴木さんのです。</jp>
+						<id>A: Yang hitam ini payung siapa? B: Punya Suzuki-san.</id>
+					</item>
+					<item no="4">
+						<jp>A：どんなくつがいいですか。B：じょうぶなのをください。</jp>
+						<id>A: Sepatu seperti apa yang bagus? B: Tolong berikan yang kuat.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<contoh>
+					<teks>A：これはだれのペンですか。B：先生のです。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：それはどこのシャツですか。B：＿＿＿＿です。</teks>
+					<gambar>Made in JAPAN</gambar>
+					<jawaban>日本の</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：Bさんのかさはどれですか。B：＿＿＿＿です。</teks>
+					<gambar>payung hitam</gambar>
+					<jawaban>黒いの</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：あれはだれの自転車ですか。B：＿＿＿＿です。</teks>
+					<gambar>リン naik sepeda</gambar>
+					<jawaban>リンの</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：このぼうしはBさんのですか。B：はい、＿＿＿＿です。</teks>
+					<gambar>topi</gambar>
+					<jawaban>私の</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.31 N/いA/なA + の</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 7: 23,800円です - Pages 33-35 -->
+		<sub_bab id="7" halaman="33-35">
+			<nomor>7</nomor>
+			<judul>23,800円です</judul>
+			<judul_id>23.800 Yen</judul_id>
+			<bintang>★</bintang>
+
+			<u>
+				<judul>数 Numbers</judul>
+				<judul_id>Angka</judul_id>
+				<tabel_conjugasi type="基本の数">
+					<group name="0〜10">
+						<item base="0" reading="れい／ゼロ"/>
+						<item base="1" reading="いち"/>
+						<item base="2" reading="に"/>
+						<item base="3" reading="さん"/>
+						<item base="4" reading="よん／し"/>
+						<item base="5" reading="ご"/>
+						<item base="6" reading="ろく"/>
+						<item base="7" reading="なな／しち"/>
+						<item base="8" reading="はち"/>
+						<item base="9" reading="きゅう／く"/>
+						<item base="10" reading="じゅう"/>
+					</group>
+					<group name="11〜20">
+						<item base="11" reading="じゅういち"/>
+						<item base="12" reading="じゅうに"/>
+						<item base="13" reading="じゅうさん"/>
+						<item base="14" reading="じゅうよん／じゅうし"/>
+						<item base="15" reading="じゅうご"/>
+						<item base="16" reading="じゅうろく"/>
+						<item base="17" reading="じゅうなな／じゅうしち"/>
+						<item base="18" reading="じゅうはち"/>
+						<item base="19" reading="じゅうきゅう／じゅうく"/>
+						<item base="20" reading="にじゅう"/>
+					</group>
+				</tabel_conjugasi>
+				<tabel_conjugasi type="位">
+					<group name="十〜万">
+						<item base="10" reading="じゅう"/>
+						<item base="100" reading="ひゃく"/>
+						<item base="1,000" reading="せん"/>
+						<item base="10,000" reading="いちまん"/>
+					</group>
+				</tabel_conjugasi>
+
+				<yatte_miyou_plus>
+					<judul>やってみよう！</judul>
+					<jawaban_ref>別冊P. 2</jawaban_ref>
+					<soal id="1">
+						<teks>284</teks>
+						<jawaban>にひゃくはちじゅうよん</jawaban>
+					</soal>
+					<soal id="2">
+						<teks>369</teks>
+						<jawaban>さんびゃくろくじゅうきゅう</jawaban>
+					</soal>
+					<soal id="3">
+						<teks>612</teks>
+						<jawaban>ろっぴゃくじゅうに</jawaban>
+					</soal>
+					<soal id="4">
+						<teks>1,450</teks>
+						<jawaban>せんよんひゃくごじゅう</jawaban>
+					</soal>
+					<soal id="5">
+						<teks>8,764</teks>
+						<jawaban>はっせんななひゃくろくじゅうよん</jawaban>
+					</soal>
+				</yatte_miyou_plus>
+			</u>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>物の数をかぞえるときは、数字のあとに助数詞をつける。どんなものをかぞえるかで使う助数詞が決まる。</jp>
+					<en>When you count things, you add a counter suffix after the number. The type of thing you are counting determines what counter suffix you will use.</en>
+					<id>Ketika menghitung benda, tambahkan penghitung setelah angka. Jenis benda yang dihitung menentukan penghitung apa yang digunakan.</id>
+				</penjelasan>
+				<pola>数字 + 助数詞</pola>
+				<pola_id>Angka + Penghitung</pola_id>
+
+				<catatan>あとにつく助数詞で、数字の読み方が変わることがある。</catatan>
+				<catatan_id>Penghitung yang diletakkan setelah angka dapat mengubah cara membaca angka.</catatan_id>
+				<contoh_plus>
+					<item no="1">
+						<jp>4円（よえん）</jp>
+						<id>4 yen (yoen)</id>
+					</item>
+					<item no="2">
+						<jp>1さい（いっさい）</jp>
+						<id>1 tahun (issai)</id>
+					</item>
+				</contoh_plus>
+
+				<tabel_conjugasi type="助数詞">
+					<group name="〜まい">
+						<item no="1">いちまい</item>
+						<item no="2">にまい</item>
+						<item no="3">さんまい</item>
+						<item no="4">よんまい</item>
+						<item no="5">ごまい</item>
+						<item no="6">ろくまい</item>
+						<item no="7">ななまい</item>
+						<item no="8">はちまい</item>
+						<item no="9">きゅうまい</item>
+						<item no="10">じゅうまい</item>
+						<item no="?">なんまい</item>
+					</group>
+					<group name="〜だい">
+						<item no="1">いちだい</item>
+						<item no="2">にだい</item>
+						<item no="3">さんだい</item>
+						<item no="4">よんだい</item>
+						<item no="5">ごだい</item>
+						<item no="6">ろくだい</item>
+						<item no="7">ななだい</item>
+						<item no="8">はちだい</item>
+						<item no="9">きゅうだい</item>
+						<item no="10">じゅうだい</item>
+						<item no="?">なんだい</item>
+					</group>
+					<group name="〜ばん">
+						<item no="1">いちばん</item>
+						<item no="2">にばん</item>
+						<item no="3">さんばん</item>
+						<item no="4">よんばん</item>
+						<item no="5">ごばん</item>
+						<item no="6">ろくばん</item>
+						<item no="7">ななばん</item>
+						<item no="8">はちばん</item>
+						<item no="9">きゅうばん</item>
+						<item no="10">じゅうばん</item>
+						<item no="?">なんばん</item>
+					</group>
+					<group name="〜えん">
+						<item no="1">いちえん</item>
+						<item no="2">にえん</item>
+						<item no="3">さんえん</item>
+						<item no="4">よえん</item>
+						<item no="5">ごえん</item>
+						<item no="6">ろくえん</item>
+						<item no="7">ななえん</item>
+						<item no="8">はちえん</item>
+						<item no="9">きゅうえん</item>
+						<item no="10">じゅうえん</item>
+						<item no="?">なんえん</item>
+					</group>
+					<group name="〜さい">
+						<item no="1">いっさい</item>
+						<item no="2">にさい</item>
+						<item no="3">さんさい</item>
+						<item no="4">よんさい</item>
+						<item no="5">ごさい</item>
+						<item no="6">ろくさい</item>
+						<item no="7">ななさい</item>
+						<item no="8">はっさい</item>
+						<item no="9">きゅうさい</item>
+						<item no="10">じゅっさい</item>
+						<item no="?">なんさい</item>
+					</group>
+					<group name="〜さつ">
+						<item no="1">いっさつ</item>
+						<item no="2">にさつ</item>
+						<item no="3">さんさつ</item>
+						<item no="4">よんさつ</item>
+						<item no="5">ごさつ</item>
+						<item no="6">ろくさつ</item>
+						<item no="7">ななさつ</item>
+						<item no="8">はっさつ</item>
+						<item no="9">きゅうさつ</item>
+						<item no="10">じゅっさつ</item>
+						<item no="?">なんさつ</item>
+					</group>
+					<group name="〜こ">
+						<item no="1">いっこ</item>
+						<item no="2">にこ</item>
+						<item no="3">さんこ</item>
+						<item no="4">よんこ</item>
+						<item no="5">ごこ</item>
+						<item no="6">ろっこ</item>
+						<item no="7">ななこ</item>
+						<item no="8">はっこ</item>
+						<item no="9">きゅうこ</item>
+						<item no="10">じゅっこ</item>
+						<item no="?">なんこ</item>
+					</group>
+					<group name="〜かい">
+						<item no="1">いっかい</item>
+						<item no="2">にかい</item>
+						<item no="3">さんかい</item>
+						<item no="4">よんかい</item>
+						<item no="5">ごかい</item>
+						<item no="6">ろっかい</item>
+						<item no="7">ななかい</item>
+						<item no="8">はっかい</item>
+						<item no="9">きゅうかい</item>
+						<item no="10">じゅっかい</item>
+						<item no="?">なんかい</item>
+					</group>
+					<group name="〜ほん">
+						<item no="1">いっぽん</item>
+						<item no="2">にほん</item>
+						<item no="3">さんぼん</item>
+						<item no="4">よんほん</item>
+						<item no="5">ごほん</item>
+						<item no="6">ろっぽん</item>
+						<item no="7">ななほん</item>
+						<item no="8">はっぽん</item>
+						<item no="9">きゅうほん</item>
+						<item no="10">じゅっぽん</item>
+						<item no="?">なんぼん</item>
+					</group>
+					<group name="〜はい">
+						<item no="1">いっぱい</item>
+						<item no="2">にはい</item>
+						<item no="3">さんばい</item>
+						<item no="4">よんはい</item>
+						<item no="5">ごはい</item>
+						<item no="6">ろっぱい</item>
+						<item no="7">ななはい</item>
+						<item no="8">はっぱい</item>
+						<item no="9">きゅうはい</item>
+						<item no="10">じゅっぱい</item>
+						<item no="?">なんばい</item>
+					</group>
+					<group name="〜にん">
+						<item no="1">ひとり</item>
+						<item no="2">ふたり</item>
+						<item no="3">さんにん</item>
+						<item no="4">よにん</item>
+						<item no="5">ごにん</item>
+						<item no="6">ろくにん</item>
+						<item no="7">しちにん／ななにん</item>
+						<item no="8">はちにん</item>
+						<item no="9">きゅうにん</item>
+						<item no="10">じゅうにん</item>
+						<item no="?">なんにん</item>
+					</group>
+					<group name="〜つ">
+						<item no="1">ひとつ</item>
+						<item no="2">ふたつ</item>
+						<item no="3">みっつ</item>
+						<item no="4">よっつ</item>
+						<item no="5">いつつ</item>
+						<item no="6">むっつ</item>
+						<item no="7">ななつ</item>
+						<item no="8">やっつ</item>
+						<item no="9">ここのつ</item>
+						<item no="10">とお</item>
+						<item no="?">いくつ</item>
+					</group>
+				</tabel_conjugasi>
+
+				<contoh>
+					<item no="1">
+						<jp>私は毎朝、パンを2まい食べます。</jp>
+						<id>Saya makan 2 lembar roti setiap pagi.</id>
+					</item>
+					<item no="2">
+						<jp>つくえの上に本が3さつあります。</jp>
+						<id>Ada 3 buku di atas meja.</id>
+					</item>
+					<item no="3">
+						<jp>A：すみません。このりんご、3つください。B：はい、ありがとうございます。</jp>
+						<id>A: Maaf, apel ini, tolong 3 buah. B: Baik, terima kasih.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 2</jawaban_ref>
+
+				<contoh>
+					<teks>2本 → にほん</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>3 cangkir kopi</teks>
+					<gambar>3 cangkir</gambar>
+					<jawaban>さんはい</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>4 jeruk</teks>
+					<gambar>4 jeruk</gambar>
+					<jawaban>よんこ</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>2 anak</teks>
+					<gambar>2 anak</gambar>
+					<jawaban>ふたり</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>1 CD</teks>
+					<gambar>1 CD</gambar>
+					<jawaban>いちまい</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>520 yen</teks>
+					<gambar>500+10+10 yen</gambar>
+					<jawaban>ごひゃくにじゅうえん</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.33 助数詞</halaman_ref>
+		</sub_bab>
+
+		<!-- REVIEW QUESTIONS - Pages 36-37 -->
+		<matome halaman="36-37">
+			<judul>まとめの問題</judul>
+			<judul_id>Soal-soal Ringkasan</judul_id>
+			<jawaban_ref>別冊P. 9</jawaban_ref>
+
+			<mondai1 type="文章の文法">
+				<judul>問題1 〈文章の文法〉</judul>
+				<judul_id>Soal 1: Tata Bahasa Teks</judul_id>
+				<instruksi>1〜4に何を入れますか。1・2・3・4からいちばんいいものを一つえらんでください。</instruksi>
+				<instruksi_id>Pilih yang paling tepat untuk mengisi 1 sampai 4 dari pilihan 1・2・3・4.</instruksi_id>
+
+				<bacaan>
+					<teks>私は[1]新宿へ行きます。新宿の店は大きいです。いろいろなものがあります。店の人は[2]親切です。明日も私は友だちと新宿へ行きます。[3]、日本の電子辞書を買います。日本[4]はちょっと高いですが、とてもいいです。</teks>
+					<id>Saya [1] pergi ke Shinjuku. Toko di Shinjuku besar. Ada berbagai macam barang. Pegawai toko [2] ramah. Besok saya juga pergi ke Shinjuku dengan teman. [3], saya membeli kamus elektronik Jepang. Yang [4] Jepang sedikit mahal, tetapi sangat bagus.</id>
+				</bacaan>
+
+				<soal id="1">
+					<pilihan id="1">あまり</pilihan>
+					<pilihan id="2">たいへん</pilihan>
+					<pilihan id="3">たくさん</pilihan>
+					<pilihan id="4">よく</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="2">
+					<pilihan id="1">とても</pilihan>
+					<pilihan id="2">まっすぐ</pilihan>
+					<pilihan id="3">はじめて</pilihan>
+					<pilihan id="4">まだ</pilihan>
+					<jawaban>1</jawaban>
+				</soal>
+				<soal id="3">
+					<pilihan id="1">それでは</pilihan>
+					<pilihan id="2">しかし</pilihan>
+					<pilihan id="3">でも</pilihan>
+					<pilihan id="4">そして</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="4">
+					<pilihan id="1">に</pilihan>
+					<pilihan id="2">の</pilihan>
+					<pilihan id="3">へ</pilihan>
+					<pilihan id="4">から</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+			</mondai1>
+
+			<mondai2 type="聴解">
+				<judul>問題2 〈聴解〉</judul>
+				<judul_id>Soal 2: Mendengarkan</judul_id>
+
+				<bagian1>
+					<instruksi>はじめにしつもんをきいてください。それからはなしをきいて、1から4のなかから、ただしいこたえを1つえらんでください。</instruksi>
+					<instruksi_id>Pertama dengarkan pertanyaan. Kemudian dengarkan pembicaraan, dan pilih yang paling tepat dari 1 sampai 4.</instruksi_id>
+
+					<soal id="1" cd="27">
+						<pilihan id="1">300円</pilihan>
+						<pilihan id="2">400円</pilihan>
+						<pilihan id="3">600円</pilihan>
+						<pilihan id="4">700円</pilihan>
+					</soal>
+				</bagian1>
+
+				<bagian2>
+					<instruksi>このもんだいではえなどがありません。まず、ぶんをきいてください。それから、そのへんじをきいて、1から3のなかから、いちばんいいものを一つえらんでください。</instruksi>
+					<instruksi_id>Dalam soal ini, tidak ada gambar. Pertama dengarkan kalimat. Kemudian dengarkan jawabannya, dan pilih yang paling tepat dari 1 sampai 3.</instruksi_id>
+
+					<soal id="1" cd="28">
+						<pilihan>1</pilihan>
+						<pilihan>2</pilihan>
+						<pilihan>3</pilihan>
+					</soal>
+					<soal id="2" cd="29">
+						<pilihan>1</pilihan>
+						<pilihan>2</pilihan>
+						<pilihan>3</pilihan>
+					</soal>
+				</bagian2>
+			</mondai2>
+		</matome>
+	</bab3_content>
+
+	<!-- KONTEN BAB 4 - Pages 37-41 -->
+	<bab4_content>
+		<!-- PAGE 37 - Header & Dekiru Koto -->
+		<header halaman="37">
+			<kategori>きのうの買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<nomor>4</nomor>
+			<judul>きのうの買い物（１）</judul>
+			<judul_en>Yesterday's shopping (1)</judul_en>
+			<judul_id>Belanja Kemarin (1)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>いつ・どこで・何をしたか、過去の行動について話すことができる。</jp>
+					<en>Talk about what happened in the past as well as when and where.</en>
+					<id>Dapat berbicara tentang tindakan di masa lalu, kapan, di mana, dan apa yang dilakukan.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="30">
+				<karakter nama="スミス">
+					<jp>おはようございます。</jp>
+					<id>Selamat pagi.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>おはようございます。</jp>
+					<id>Selamat pagi.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>あ、新しい電子辞書ですね。</jp>
+					<id>Ah, kamus elektronik baru ya.</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>はい、きのう買いました。</jp>
+					<id>Iya, kemarin saya membelinya.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>高かったですか。</jp>
+					<id>Apakah mahal?</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>いいえ、あまり高くなかったです。20,000円でした。</jp>
+					<id>Tidak, tidak terlalu mahal. Harganya 20.000 yen.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>へえ。じゃあ、私もほしいです。</jp>
+					<id>Hah. Kalau begitu, saya juga ingin.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 8: 電子辞書ですね - Page 37-38 -->
+		<sub_bab id="8" halaman="37-38">
+			<nomor>8</nomor>
+			<judul>電子辞書ですね</judul>
+			<judul_id>Kamus Elektronik Ya</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「ね」は、自分がそうだと思うことを相手にたしかめたいときに、文の最後につける。</jp>
+					<en>When you want to check something you think is true with another person, add "ne" to the end of the sentence.</en>
+					<id>Gunakan "ne" di akhir kalimat ketika ingin memastikan sesuatu yang Anda pikir benar kepada orang lain.</id>
+				</penjelasan>
+
+				<contoh>
+					<item no="1">
+						<jp>A：明日のパーティーは6時からです。 B：はい、6時ですね。</jp>
+						<id>A: Pesta besok mulai jam 6. B: Iya, jam 6 ya.</id>
+					</item>
+					<item no="2">
+						<jp>A：今日は、1,000円のTシャツが20% offです。 B：じゃ、800円ですね。</jp>
+						<id>A: Hari ini, kaos 1.000 yen diskon 20%. B: Kalau begitu, 800 yen ya.</id>
+					</item>
+					<item no="3">
+						<jp>A：佐藤さんの住所はわかりますね。 B：はい、わかります。</jp>
+						<id>A: Anda tahu alamat Sato-san, kan? B: Iya, saya tahu.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<soal id="1">
+					<teks>A：このシャツは1,500円です。 B：1,500円です（ね・×）。じゃ、これをください。</teks>
+					<jawaban>ね</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：これは高橋さんのです（ね・×）。 B：はい、私のです。</teks>
+					<jawaban>ね</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：私は来週国へ帰ります（ね・×）。 B：そうですか。お元気で。</teks>
+					<jawaban>×</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：いらっしゃいませ。プレゼントですか。 B：いいえ、自分のです（ね・×）。</teks>
+					<jawaban>×</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>A：コーヒーとケーキ、おねがいします。 B：コーヒーとケーキです（ね・×）。</teks>
+					<jawaban>ね</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<u>
+				<penjelasan>
+					<jp>「ね」は、自分がそうだと思うことについて、相手も同じ意見かどうか聞くときにも使う。</jp>
+					<en>You can also use "ne" to ask a person whether he or she has the same opinion as you.</en>
+					<id>Anda juga bisa menggunakan "ne" untuk menanyakan apakah orang lain memiliki pendapat yang sama dengan Anda.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item no="1">
+						<jp>A：おはようございます。今日はいい天気ですね。 B：本当にいい天気ですね。</jp>
+						<id>A: Selamat pagi. Hari ini cuacanya bagus ya. B: Benar-benar cuaca yang bagus ya.</id>
+					</item>
+					<item no="2">
+						<jp>A：毎日宿題がたくさんありますね。 B：そうですね。</jp>
+						<id>A: Setiap hari PR-nya banyak ya. B: Benar ya.</id>
+					</item>
+					<item no="3">
+						<jp>A：今日はいそがしいですね。 B：本当に、今日はお客さんが多いですね。</jp>
+						<id>A: Hari ini sibuk ya. B: Benar, hari ini banyak pelanggan ya.</id>
+					</item>
+				</contoh_plus>
+			</u>
+
+			<halaman_ref>p.37 ～ね</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 9: きのう買いました - Page 39 -->
+		<sub_bab id="9" halaman="39">
+			<nomor>9</nomor>
+			<judul>きのう買いました</judul>
+			<judul_id>Kemarin Membeli</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「～でした」「～ました」は、過去のことを言うときに使う。</jp>
+					<en>Use "~deshita" and "~mashita" when you talk about something in the past.</en>
+					<id>Gunakan "~deshita" dan "~mashita" ketika berbicara tentang sesuatu di masa lalu.</id>
+				</penjelasan>
+
+				<tabel_conjugasi>
+					<group name="動詞">
+						<item affirmative="いきました" negative="いきませんでした" />
+					</group>
+					<group name="い形容詞">
+						<item affirmative="おおきかったです" negative="おおきくありませんでした／おおきくなかったです" />
+					</group>
+					<group name="な形容詞">
+						<item affirmative="しずかでした" negative="しずかではありませんでした／しずかじゃありませんでした／しずかじゃなかったです" />
+					</group>
+					<group name="名詞">
+						<item affirmative="あめでした" negative="あめではありませんでした／あめじゃありませんでした／あめじゃなかったです" />
+					</group>
+				</tabel_conjugasi>
+
+				<contoh>
+					<item no="1">
+						<jp>A：きのう、テレビを見ましたか。 B：いいえ、見ませんでした。</jp>
+						<id>A: Kemarin, apakah Anda menonton TV? B: Tidak, saya tidak menonton.</id>
+					</item>
+					<item no="2">
+						<jp>おとといは暑くなかったです。</jp>
+						<id>Kemarin lusa tidak panas.</id>
+					</item>
+					<item no="3">
+						<jp>きのう、銀行は休みでした。</jp>
+						<id>Kemarin, bank libur.</id>
+					</item>
+					<item no="4">
+						<jp>A：きのうは、いそがしかったですか。 B：いいえ、ひまでした。</jp>
+						<id>A: Kemarin, apakah sibuk? B: Tidak, saya luang.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<soal id="1">
+					<teks>Q：きのうは雨でしたか。</teks>
+					<jawaban>はい、雨でした／いいえ、雨ではありませんでした</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>Q：きのうはいそがしかったですか。</teks>
+					<jawaban>はい、いそがしかったです／いいえ、いそがしくありませんでした</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>Q：晩ご飯は何を食べましたか。</teks>
+					<jawaban>カレーを食べました／ラーメンを食べました</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>Q：晩ご飯はおいしかったですか。</teks>
+					<jawaban>はい、おいしかったです／いいえ、おいしくありませんでした</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>Q：いつ洗たくをしましたか。</teks>
+					<jawaban>きのうしました／おとといしました</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.39 ～ました／～でした</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 10: ほしいです - Pages 40-41 -->
+		<sub_bab id="10" halaman="40-41">
+			<nomor>10</nomor>
+			<judul>ほしいです</judul>
+			<judul_id>Ingin/Mau</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「～がほしいです」は、自分が物（名詞）をもとめるときに使う。ほかの人のきぼうには使わない。</jp>
+					<en>Use "~ga hoshii desu" when you want something (a noun). Do not use it for another person's desire.</en>
+					<id>Gunakan "~ga hoshii desu" ketika Anda menginginkan sesuatu (kata benda). Jangan gunakan untuk keinginan orang lain.</id>
+				</penjelasan>
+				<pola>N + が + ほしいです</pola>
+				<pola_id>Kata Benda + ga + hoshii desu</pola_id>
+
+				<catatan>「～がほしいです」は、動作（動詞）には使わない。</catatan>
+				<catatan_id>Jangan gunakan "~ga hoshii desu" dengan tindakan (kata kerja).</catatan_id>
+				<contoh_salah>
+					<item>
+						<jp>ねますがほしいです。 ⇒ ○ ねたいです。</jp>
+						<id>❌ Saya ingin tidur (salah). ⇒ ○ Saya ingin tidur (ne-tai).</id>
+					</item>
+				</contoh_salah>
+
+				<contoh>
+					<item no="1">
+						<jp>私は新しいパソコンがほしいです。</jp>
+						<id>Saya ingin komputer baru.</id>
+					</item>
+					<item no="2">
+						<jp>A：今、何がいちばんほしいですか。 B：車がいちばんほしいです。</jp>
+						<id>A: Sekarang, apa yang paling Anda inginkan? B: Saya paling ingin mobil.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<soal id="1">
+					<teks>Q：犬がほしいですか。</teks>
+					<jawaban>はい、ほしいです／いいえ、ほしくないです</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>Q：今、何がいちばんほしいですか。</teks>
+					<jawaban>パソコンがいちばんほしいです／車がいちばんほしいです</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<u>
+				<bagian id="1">
+					<penjelasan>
+						<jp>「～がほしいです」は、い形容詞と同じように形が変わる。</jp>
+						<en>"~ga hoshii desu" changes form the same way an i adjective does.</en>
+						<id>"~ga hoshii desu" berubah bentuk sama seperti kata sifat i.</id>
+					</penjelasan>
+					<contoh_plus>
+						<item>「ほしいです」「ほしくないです／ほしくありません」「ほしかったです」「ほしくなかったです／ほしくありませんでした」</item>
+					</contoh_plus>
+				</bagian>
+				<bagian id="2">
+					<penjelasan>
+						<jp>「ほしかったです」は、ほしいものが手に入らなくてざんねんだという気持ちで使うことが多い。</jp>
+						<en>"Hoshikatta desu" is often used to express regret over not being able to get something you wanted.</en>
+						<id>"Hoshikatta desu" sering digunakan untuk mengungkapkan penyesalan karena tidak bisa mendapatkan sesuatu yang diinginkan.</id>
+					</penjelasan>
+					<contoh_plus>
+						<item no="1">
+							<jp>私は子どものとき自転車がほしかったです。</jp>
+							<id>Saat kecil, saya ingin sepeda.</id>
+						</item>
+						<item no="2">
+							<jp>私はカメラがほしかったです。でも、あの店のカメラは高かったですから、買いませんでした。</jp>
+							<id>Saya ingin kamera. Tetapi, karena kamera di toko itu mahal, saya tidak membelinya.</id>
+						</item>
+					</contoh_plus>
+				</bagian>
+				<bagian id="3">
+					<penjelasan>
+						<jp>「ほしくないです」は強い否定で、しつれいになることがあるから、使うとき注意する。</jp>
+						<en>Be careful about using "hoshikunai desu" because it is a strong refusal that may be taken as rude.</en>
+						<id>Hati-hati menggunakan "hoshikunai desu" karena merupakan penolakan yang kuat dan bisa dianggap kasar.</id>
+					</penjelasan>
+					<contoh_plus>
+						<item>
+							<jp>A：コーヒー、飲みますか。 B：いいえ、ほしくないです。 ⇒ ○ いいえ、けっこうです。</jp>
+							<id>A: Mau kopi? B: Tidak, saya tidak ingin. ⇒ ○ Tidak, terima kasih.</id>
+						</item>
+					</contoh_plus>
+				</bagian>
+				<bagian id="4">
+					<penjelasan>
+						<jp>「～がほしいですか」と聞くとしつれいになることがあるから、使うとき注意する。</jp>
+						<en>Be careful about asking a question by using "~ga hoshii desu ka" because it may be taken as rude.</en>
+						<id>Hati-hati menanyakan pertanyaan dengan "~ga hoshii desu ka" karena bisa dianggap kasar.</id>
+					</penjelasan>
+					<contoh_plus>
+						<item>
+							<jp>先生、お茶ほしいですか。 ⇒ ○ 先生、お茶いかがですか。</jp>
+							<id>❌ Guru, apakah Anda ingin teh? ⇒ ○ Guru, bagaimana dengan teh?</id>
+						</item>
+					</contoh_plus>
+				</bagian>
+			</u>
+
+			<halaman_ref>p.40 ～がほしいです</halaman_ref>
+		</sub_bab>
+	</bab4_content>
+
+	<!-- KONTEN BAB 5 - Pages 42-50 -->
+	<bab5_content>
+		<!-- PAGE 42 - Header & Dekiru Koto & Speech -->
+		<header halaman="42">
+			<kategori>きのうの買い物</kategori>
+			<kategori_en>Yesterday's shopping</kategori_en>
+			<kategori_id>Belanja Kemarin</kategori_id>
+			<nomor>5</nomor>
+			<judul>きのうの買い物（２）</judul>
+			<judul_en>Yesterday's shopping (2)</judul_en>
+			<judul_id>Belanja Kemarin (2)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>交通手段などについて、じゅんばんに話すことができる。</jp>
+					<en>Talk about means of transportation and the like in the correct order.</en>
+					<id>Dapat membicarakan sarana transportasi dan sejenisnya secara berurutan.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="31">
+				<karakter nama="スミス">
+					<jp>その辞書、どこで買いましたか。</jp>
+					<en>Where did you buy that dictionary?</en>
+					<id>Kamus itu, di mana Anda membelinya?</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>新宿で買いました。</jp>
+					<en>I bought it in Shinjuku.</en>
+					<id>Saya membelinya di Shinjuku.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>新宿までどうやって行きましたか。</jp>
+					<en>How did you go to Shinjuku?</en>
+					<id>Bagaimana cara Anda pergi ke Shinjuku?</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>森下駅まで行って、地下鉄に乗りました。</jp>
+					<en>I went to Morishita Station and took the subway.</en>
+					<id>Saya pergi ke Stasiun Morishita, lalu naik kereta bawah tanah.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>森下駅までバスで行きましたか。</jp>
+					<en>Did you go to Morishita Station by bus?</en>
+					<id>Apakah Anda pergi ke Stasiun Morishita dengan bus?</id>
+				</karakter>
+				<karakter nama="リン">
+					<jp>いいえ、自転車で行きました。</jp>
+					<en>No, I went by bicycle.</en>
+					<id>Tidak, saya pergi dengan sepeda.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>スミスさんはきのうどこか行きましたか。</jp>
+					<en>Smith, did you go somewhere yesterday?</en>
+					<id>Smith-san, apakah Anda pergi ke suatu tempat kemarin?</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>いいえ。私はどこへも行きませんでした。</jp>
+					<en>No. I didn't go anywhere.</en>
+					<id>Tidak. Saya tidak pergi ke mana pun.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 11: 駅まで行って、… - Pages 44-45 -->
+		<sub_bab id="11" halaman="44-45">
+			<nomor>11</nomor>
+			<judul>駅まで行って、…</judul>
+			<judul_id>Pergi ke Stasiun, dan…</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>いくつかの動作をつづけて言うときは、動詞のて形を使う。物事のじゅんばんを言うときにも使う。</jp>
+					<en>Use the te verb form when you refer to a number of actions consecutively. You can also use it to say things in a chronological order.</en>
+					<id>Gunakan bentuk te kata kerja ketika menyebutkan beberapa tindakan secara berurutan. Juga digunakan untuk menyatakan urutan kejadian.</id>
+				</penjelasan>
+				<pola>V-て、…</pola>
+				<pola_id>Kata Kerja bentuk te + ...</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>毎朝6時に起きて、顔を洗って、新聞を読みます。</jp>
+						<en>Every morning I wake up at 6, wash my face, and read the newspaper.</en>
+						<id>Setiap pagi saya bangun jam 6, mencuci muka, dan membaca koran.</id>
+					</item>
+					<item no="2">
+						<jp>学校は9時に始まって、3時に終わります。</jp>
+						<en>School begins at 9 and ends at 3.</en>
+						<id>Sekolah dimulai jam 9 dan selesai jam 3.</id>
+					</item>
+					<item no="3">
+						<jp>今朝、5時に起きて、さんぽしました。</jp>
+						<en>This morning I woke up at 5 and went for a walk.</en>
+						<id>Pagi ini saya bangun jam 5 dan pergi berjalan-jalan.</id>
+					</item>
+					<item no="4">
+						<jp>テストは1時に始まって、3時に終わりました。</jp>
+						<en>The test began at 1 and ended at 3.</en>
+						<id>Ujian dimulai jam 1 dan selesai jam 3.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<contoh>
+					<teks>きっぷを買って、中へ入りました。</teks>
+					<id>Saya membeli tiket, lalu masuk ke dalam.</id>
+				</contoh>
+
+				<soal id="1">
+					<teks>東京で新幹線に＿＿＿、大阪で降ります。</teks>
+					<jawaban>乗って</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>渡辺さんはめがねを＿＿＿、ぼうしをかぶりました。</teks>
+					<jawaban>かけて</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>山田さんは昼＿＿＿、夜学校へ行きます。</teks>
+					<jawaban>働いて</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>新宿で友だちと食事を＿＿＿、買い物をしました。</teks>
+					<jawaban>して</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>図書館へ＿＿＿、本を借りました。</teks>
+					<jawaban>行って</jawaban>
+				</soal>
+
+				<pilihan_jawaban>
+					<item>働きます</item>
+					<item>買います</item>
+					<item>行きます</item>
+					<item>します</item>
+					<item>かけます</item>
+					<item>乗ります</item>
+				</pilihan_jawaban>
+			</yatte_miyou>
+
+			<halaman_ref>p.44 ～て</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 12: バスで行きました - Pages 45-46 -->
+		<sub_bab id="12" halaman="45-46">
+			<nomor>12</nomor>
+			<judul>バスで行きました</judul>
+			<judul_id>Pergi dengan Bus</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「～で」は、交通手段や道具など、何を使うか説明するときに使う。</jp>
+					<en>Use "～de" to explain what you use: means of transportation, tools, etc.</en>
+					<id>Gunakan "~de" untuk menjelaskan apa yang Anda gunakan: sarana transportasi, alat, dll.</id>
+				</penjelasan>
+				<pola>N + で</pola>
+				<pola_id>Kata Benda + de</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>私はふねで沖縄へ行きました。</jp>
+						<en>I went to Okinawa by ship.</en>
+						<id>Saya pergi ke Okinawa dengan kapal.</id>
+					</item>
+					<item no="2">
+						<jp>日本語で手紙を書きました。</jp>
+						<en>I wrote a letter in Japanese.</en>
+						<id>Saya menulis surat dalam bahasa Jepang.</id>
+					</item>
+					<item no="3">
+						<jp>わからないことばを辞書でしらべました。</jp>
+						<en>I looked up words I didn't understand in the dictionary.</en>
+						<id>Saya mencari kata-kata yang tidak saya mengerti di kamus.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<catatan>「歩く」は、「歩いて」になる。</catatan>
+			<catatan_en>"Aruku" becomes "aruite".</catatan_en>
+			<catatan_id>"Aruku" menjadi "aruite".</catatan_id>
+			<contoh_plus>
+				<item no="1">
+					<jp>私は毎日歩いて学校へ行きます。⇒ ○歩いて学校へ行きます。</jp>
+					<en>I walk to school every day. ⇒ Walk to school.</en>
+					<id>Saya berjalan kaki ke sekolah setiap hari. ⇒ Berjalan kaki ke sekolah.</id>
+				</item>
+			</contoh_plus>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<contoh>
+					<teks>へ／で／学校 ⇒ 電車で学校へ行きます。</teks>
+					<id>Ke / dengan / sekolah ⇒ Saya pergi ke sekolah dengan kereta.</id>
+				</contoh>
+
+				<soal id="1">
+					<teks>ホテル／バス／で／まで ⇒ あの＿＿＿行きます。</teks>
+					<jawaban>ホテルまでバスで</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>スプーン／ケーキ／で／は ⇒ この＿＿＿食べます。</teks>
+					<jawaban>ケーキはスプーンで</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>本／新しい／で／を ⇒ インターネット＿＿＿注文しました。</teks>
+					<jawaban>で新しい本を</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.45 ～で</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 13: どこか行きましたか - Pages 46-47 -->
+		<sub_bab id="13" halaman="46-47">
+			<nomor>13</nomor>
+			<judul>どこか行きましたか</judul>
+			<judul_id>Apakah Anda Pergi ke Suatu Tempat?</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>はっきり特定できない人や物・場所などを言いたいとき、疑問詞に「か」をつける。</jp>
+					<en>When you want to talk about an unspecified person, thing, place, etc., add "ka" to a question word.</en>
+					<id>Ketika ingin membicarakan orang, benda, atau tempat yang tidak spesifik, tambahkan "ka" pada kata tanya.</id>
+				</penjelasan>
+				<pola>疑問詞 + か + 助詞</pola>
+				<pola_id>Kata Tanya + ka + Partikel</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：さっきだれか来ましたよ。B：あ、たぶん山田さんでしょう。</jp>
+						<en>A: Someone came just now. B: Ah, it's probably Yamada-san.</en>
+						<id>A: Tadi ada seseorang yang datang. B: Ah, mungkin Yamada-san.</id>
+					</item>
+					<item no="2">
+						<jp>A：鈴木さん、どこかおいしいレストランを知っていますか。B：駅前のイタリア料理のレストランがおいしいですよ。</jp>
+						<en>A: Suzuki-san, do you know any good restaurants? B: The Italian restaurant in front of the station is good.</en>
+						<id>A: Suzuki-san, apakah Anda tahu restoran enak di suatu tempat? B: Restoran Italia di depan stasiun enak lho.</id>
+					</item>
+					<item no="3">
+						<jp>A：京都で何か買いましたか。B：はい、きれいな紙を買いました。</jp>
+						<en>A: Did you buy anything in Kyoto? B: Yes, I bought some beautiful paper.</en>
+						<id>A: Apakah Anda membeli sesuatu di Kyoto? B: Iya, saya membeli kertas yang indah.</id>
+					</item>
+					<item no="4">
+						<jp>A：大阪でだれかに会いますか。B：ええ、友だちに会います。</jp>
+						<en>A: Are you going to meet someone in Osaka? B: Yes, I'm going to meet a friend.</en>
+						<id>A: Apakah Anda akan bertemu seseorang di Osaka? B: Iya, saya akan bertemu teman.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<u>
+				<penjelasan>
+					<jp>1. 助詞「が」「を」「へ」はしょうりゃくできる。</jp>
+					<en>1. You can omit the particles "ga", "o" and "e".</en>
+					<id>1. Anda dapat menghilangkan partikel "ga", "o", dan "e".</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>だれか（が）、なにか（を）、どこか（へ）</item>
+				</contoh_plus>
+				<penjelasan>
+					<jp>2. そのほかの助詞はしょうりゃくできない。</jp>
+					<en>2. You can not omit other particles.</en>
+					<id>2. Anda tidak dapat menghilangkan partikel lainnya.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>だれかに、だれかと</item>
+				</contoh_plus>
+			</u>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<contoh>
+					<teks>A：教室に（だれか）いますか。B：はい、佐藤さんがいます。</teks>
+					<id>A: Apakah ada seseorang di kelas? B: Iya, Sato-san ada.</id>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：朝（　　　　）食べましたか。B：はい、パンを食べました。</teks>
+					<jawaban>なにか</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：きのう（　　　　）行きましたか。B：はい、図書館へ行きました。</teks>
+					<jawaban>どこか</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：今日（　　　　）来ますか。B：はい、田中さんが来ます。</teks>
+					<jawaban>だれか</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：明日京都へ行きます。B：そうですか。1人で行きますか。（　　　　）いっしょに行きますか。A：友だちと行きます。</teks>
+					<jawaban>だれか</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.46 ～か</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 14: どこへも行きません - Pages 48-49 -->
+		<sub_bab id="14" halaman="48-49">
+			<nomor>14</nomor>
+			<judul>どこへも行きません</judul>
+			<judul_id>Tidak Pergi ke Mana Pun</judul_id>
+			<bintang>★★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「疑問詞＋も＋～ない」は、それが「ぜんぜん～ない」ということを強調するときに使う。</jp>
+					<en>Use "question word + mo + ~nai" when you want to emphasize that an action was not / is not / will not be done at all.</en>
+					<id>Gunakan "kata tanya + mo + ~nai" ketika ingin menekankan bahwa suatu tindakan sama sekali tidak dilakukan.</id>
+				</penjelasan>
+				<pola>疑問詞 + (助詞) + も + ～ない</pola>
+				<pola_id>Kata Tanya + (Partikel) + mo + ~nai</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：私は朝パンを食べました。佐藤さんは？ B：私は何も食べませんでした。</jp>
+						<en>A: I ate bread in the morning. How about Sato-san? B: I didn't eat anything.</en>
+						<id>A: Saya makan roti pagi ini. Bagaimana dengan Sato-san? B: Saya tidak makan apa pun.</id>
+					</item>
+					<item no="2">
+						<jp>A：明日どこか行きますか。 B：いいえ、どこも行きません。</jp>
+						<en>A: Are you going somewhere tomorrow? B: No, I'm not going anywhere.</en>
+						<id>A: Apakah Anda pergi ke suatu tempat besok? B: Tidak, saya tidak pergi ke mana pun.</id>
+					</item>
+					<item no="3">
+						<jp>きのう、だれにも会いませんでした。</jp>
+						<en>I didn't meet anyone yesterday.</en>
+						<id>Kemarin, saya tidak bertemu siapa pun.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<u>
+				<penjelasan>
+					<jp>1. 助詞「が」「を」はしょうりゃくする。</jp>
+					<en>1. You can omit the particles "ga" and "o".</en>
+					<id>1. Anda dapat menghilangkan partikel "ga" dan "o".</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>だれがも ⇒ だれも　なにをも ⇒ なにも</item>
+				</contoh_plus>
+				<penjelasan>
+					<jp>2. 助詞「へ」はしょうりゃくしてもしなくてもいい。</jp>
+					<en>2. Omitting the particles "e" is optional.</en>
+					<id>2. Menghilangkan partikel "e" bersifat opsional.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>どこ（へ）も</item>
+				</contoh_plus>
+				<penjelasan>
+					<jp>3. そのほかの助詞はしょうりゃくできない。</jp>
+					<en>3. You can not omit other particles.</en>
+					<id>3. Anda tidak dapat menghilangkan partikel lainnya.</id>
+				</penjelasan>
+				<contoh_plus>
+					<item>だれとも、だれにも</item>
+				</contoh_plus>
+			</u>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 3</jawaban_ref>
+
+				<contoh>
+					<teks>A：明日、だれか来ますか。B：いいえ、（だれも）来ませんよ。</teks>
+					<id>A: Besok, apakah ada seseorang yang datang? B: Tidak, tidak ada yang datang.</id>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：朝、何か飲みましたか。B：いいえ、（　　　　）飲みませんでした。</teks>
+					<jawaban>なにも</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：デパートで何か買いましたか。B：いいえ、（　　　　）買いませんでした。</teks>
+					<jawaban>なにも</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：日曜日、どこか行きますか。B：いいえ、（　　　　）行きません。</teks>
+					<jawaban>どこへも／どこも</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：朝、だれかと話しますか。B：いいえ、（　　　　）話しません。</teks>
+					<jawaban>だれとも</jawaban>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.48 ～も～ない</halaman_ref>
+		</sub_bab>
+
+		<!-- REVIEW QUESTIONS - Page 50 -->
+		<matome halaman="50">
+			<judul>まとめの問題</judul>
+			<judul_id>Soal-soal Ringkasan</judul_id>
+			<jawaban_ref>別冊P. 9</jawaban_ref>
+
+			<mondai1 type="文章の文法">
+				<judul>問題1 〈文章の文法〉</judul>
+				<judul_id>Soal 1: Tata Bahasa Teks</judul_id>
+				<instruksi>1～5に何を入れますか。1・2・3・4からいちばんいいものを一つえらんでください。</instruksi>
+				<instruksi_id>Pilih yang paling tepat untuk mengisi 1 sampai 5 dari pilihan 1・2・3・4.</instruksi_id>
+
+				<bacaan>
+					<teks>きのう、友だち［1］新宿へ行きました。うちからバスで駅［2］行って、地下鉄に乗りました。新宿［3］電子辞書とケースを買いました。辞書はあまり［4］です。全部で20,000円でした。それから、友だちと映画を［5］、食事をしました。とても楽しかったです。</teks>
+					<id>Kemarin, saya pergi ke Shinjuku [1] teman. Dari rumah naik bus [2] stasiun, lalu naik kereta bawah tanah. [3] Shinjuku saya membeli kamus elektronik dan case. Kamusnya tidak terlalu [4]. Totalnya 20.000 yen. Setelah itu, saya [5] film bersama teman, lalu makan. Sangat menyenangkan.</id>
+				</bacaan>
+
+				<soal id="1">
+					<pilihan id="1">に</pilihan>
+					<pilihan id="2">が</pilihan>
+					<pilihan id="3">と</pilihan>
+					<pilihan id="4">は</pilihan>
+					<jawaban>3</jawaban>
+				</soal>
+				<soal id="2">
+					<pilihan id="1">から</pilihan>
+					<pilihan id="2">まで</pilihan>
+					<pilihan id="3">で</pilihan>
+					<pilihan id="4">を</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+				<soal id="3">
+					<pilihan id="1">で</pilihan>
+					<pilihan id="2">は</pilihan>
+					<pilihan id="3">へ</pilihan>
+					<pilihan id="4">に</pilihan>
+					<jawaban>1</jawaban>
+				</soal>
+				<soal id="4">
+					<pilihan id="1">高い</pilihan>
+					<pilihan id="2">高くない</pilihan>
+					<pilihan id="3">高かった</pilihan>
+					<pilihan id="4">高くなかった</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+				<soal id="5">
+					<pilihan id="1">見る</pilihan>
+					<pilihan id="2">見た</pilihan>
+					<pilihan id="3">見ない</pilihan>
+					<pilihan id="4">見て</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+			</mondai1>
+
+			<mondai2 type="聴解">
+				<judul>問題2 〈聴解〉</judul>
+				<judul_id>Soal 2: Mendengarkan</judul_id>
+				<instruksi>はじめにしつもんをきいてください。それからはなしをきいて、1から4のなかから、ただしいこたえを1つえらんでください。</instruksi>
+				<instruksi_id>Pertama, dengarkan pertanyaan. Kemudian dengarkan pembicaraan, dan pilih jawaban yang benar dari 1 sampai 4.</instruksi_id>
+
+				<soal id="1" cd="32">
+					<pilihan id="1">バス</pilihan>
+					<pilihan id="2">車</pilihan>
+					<pilihan id="3">タクシー</pilihan>
+					<pilihan id="4">歩いて</pilihan>
+				</soal>
+				<soal id="2" cd="33">
+					<pilihan id="1">男の人がボールペンを買います。</pilihan>
+					<pilihan id="2">女の人がボールペンを買います。</pilihan>
+					<pilihan id="3">男の人がスーパーを買います。</pilihan>
+					<pilihan id="4">女の人がスーパーを買います。</pilihan>
+				</soal>
+			</mondai2>
+		</matome>
+	</bab5_content>
+
+
+
+	<!-- KONTEN BAB 6 - Pages 51-59 -->	
 
 <!-- N5「できること」リスト - Pages 150-151 -->
 	<can_do_list halaman="150-151" level="N5">
