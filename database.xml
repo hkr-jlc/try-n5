@@ -2653,11 +2653,963 @@
 		</matome>
 	</bab5_content>
 
+	<!-- KONTEN BAB 6 - Pages 51-59 -->
+	<bab6_content>
+		<!-- PAGE 51 - Header & Dekiru Koto -->
+		<header halaman="51">
+			<kategori>人をさそったり、人や物のそんざいを説明したり</kategori>
+			<kategori_en>Invite people and explain the existence of people and things</kategori_en>
+			<kategori_id>Mengajak orang dan menjelaskan keberadaan orang serta benda</kategori_id>
+			<nomor>6</nomor>
+			<judul>上野の町（１）</judul>
+			<judul_en>The town of Ueno (1)</judul_en>
+			<judul_id>Kota Ueno (1)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>人をさそったり、人や物のそんざいを説明したりすることができる。</jp>
+					<en>Invite people and explain the existence of people and things.</en>
+					<id>Dapat mengajak orang dan menjelaskan keberadaan orang serta benda.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="34">
+				<karakter nama="山田">
+					<jp>スミスさん、今度の日曜日、上野へ行きませんか。</jp>
+					<id>Smith-san, minggu ini hari Minggu, maukah ke Ueno?</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>上野はどんなところですか。</jp>
+					<id>Ueno itu tempat seperti apa?</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>おもしろいところですよ。</jp>
+					<id>Tempat yang menarik.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>へえ。何がありますか。</jp>
+					<id>Oh. Ada apa?</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>駅の前に大きい公園があります。公園の中にびじゅつ館や動物園などがありますよ。</jp>
+					<id>Di depan stasiun ada taman besar. Di dalam taman ada museum seni, kebun binatang, dan lain-lain.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>そうですか。</jp>
+					<id>Begitu ya.</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>パンダもいますよ。</jp>
+					<id>Panda juga ada lho.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>いいですね。</jp>
+					<id>Bagus ya.</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>じゃあ、今度の日曜日に行きましょう。</jp>
+					<id>Kalau begitu, mari pergi hari Minggu ini.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 15: 行きませんか - Pages 51-52 -->
+		<sub_bab id="15" halaman="51-52">
+			<nomor>15</nomor>
+			<judul>行きませんか</judul>
+			<judul_id>Maukah Pergi?</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「〜ませんか」は、人をさそうときに使う。</jp>
+					<en>Use "~masen ka" when you invite a person.</en>
+					<id>Gunakan "~masen ka" ketika mengajak seseorang.</id>
+				</penjelasan>
+				<pola>V-ます + ませんか</pola>
+				<pola_id>Kata Kerja bentuk masu + masen ka</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：今から映画を見ませんか。B：ええ、いいですね。</jp>
+						<id>A: Dari sekarang maukah menonton film? B: Iya, bagus ya.</id>
+					</item>
+					<item no="2">
+						<jp>A：土曜日、テニスをしませんか。B：すみません。土曜日はちょっと……。</jp>
+						<id>A: Hari Sabtu, maukah bermain tenis? B: Maaf. Hari Sabtu agak...</id>
+					</item>
+					<item no="3">
+						<jp>A：このケーキ、おいしいですよ。いっしょに食べませんか。B：ありがとうございます。いただきます。</jp>
+						<id>A: Kue ini enak lho. Maukah makan bersama? B: Terima kasih. Saya akan makan.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>A：いい天気ですね。外で昼ご飯を食べませんか。B：ええ、いいですね。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：あのきっさ店でコーヒーを＿＿＿＿＿＿。B：いいですね。</teks>
+					<jawaban>飲みませんか</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：つかれましたね。少し＿＿＿＿＿＿。B：そうですね。</teks>
+					<jawaban>休みませんか</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：今日は暑いですね。いっしょにプールへ＿＿＿＿＿＿。B：ええ、いいですね。</teks>
+					<jawaban>行きませんか</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>A：私たちは公園でサッカーをします。Bさんもいっしょに＿＿＿＿＿＿。B：サッカーはちょっと……。</teks>
+					<jawaban>しませんか</jawaban>
+				</soal>
+
+				<pilihan_jawaban>
+					<item>します</item>
+					<item>休みます</item>
+					<item>行きます</item>
+					<item>飲みます</item>
+					<item>食べます</item>
+				</pilihan_jawaban>
+			</yatte_miyou>
+		</sub_bab>
+
+		<!-- SUB BAB 16: おもしろい ところですよ - Pages 53-54 -->
+		<sub_bab id="16" halaman="53-54">
+			<nomor>16</nomor>
+			<judul>おもしろい ところですよ</judul>
+			<judul_id>Tempat yang Menarik</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「よ」は、自分が知っていることを、知らない相手に伝えるとき、文の最後につける。</jp>
+					<en>Add "yo" to the end of a sentence when you tell a person something you know but he or she does not.</en>
+					<id>Tambahkan "yo" di akhir kalimat ketika memberitahu orang lain sesuatu yang Anda tahu tetapi dia tidak tahu.</id>
+				</penjelasan>
+
+				<contoh>
+					<item no="1">
+						<jp>A：佐藤さんはどんな人ですか。B：明るい人ですよ。</jp>
+						<id>A: Sato-san orang seperti apa? B: Orang yang ceria.</id>
+					</item>
+					<item no="2">
+						<jp>ほら、あそこに鳥がいますよ。</jp>
+						<id>Lihat, di sana ada burung.</id>
+					</item>
+					<item no="3">
+						<jp>あのレストランのカレー、おいしいですよ。今度いっしょに行きませんか。</jp>
+						<id>Kari restoran itu enak lho. Nanti maukah pergi bersama?</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>A：パーティーは6時からですか。B：いいえ、5時からです（よ）。</teks>
+					<jawaban>よ</jawaban>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：いい天気ですから、かさはいりませんね。B：今日は、午後から雨が降ります（ね・よ）。</teks>
+					<jawaban>よ</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：明日はテストですから、えんぴつとけしゴムを持ってきてください。B：えんぴつとけしゴムです（ね・よ）。</teks>
+					<jawaban>ね</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>A：これは何ですか。B：日本のおかしです。おいしいです（ね・よ）。</teks>
+					<gambar>dango/japanese sweets</gambar>
+					<jawaban>よ</jawaban>
+				</soal>
+			</yatte_miyou>
+		</sub_bab>
+
+		<!-- SUB BAB 17: 駅の 前 - Pages 54-55 -->
+		<sub_bab id="17" halaman="54-55">
+			<nomor>17</nomor>
+			<judul>駅の前</judul>
+			<judul_id>Depan Stasiun</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>ある物の場所を説明するときは、基準にする物のあとに場所のことばを言う。</jp>
+					<en>When you explain where a thing is, use a locational word after the object being referenced.</en>
+					<id>Ketika menjelaskan di mana suatu benda, gunakan kata lokasi setelah objek yang dijadikan acuan.</id>
+				</penjelasan>
+				<pola>物 + の + 場所のことば</pola>
+				<pola_id>Benda + no + Kata Lokasi</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>はこの中</jp>
+						<id>Di dalam kotak</id>
+						<gambar>gunting di dalam kotak</gambar>
+					</item>
+					<item no="2">
+						<jp>中のはこ</jp>
+						<id>Kotak yang di dalam</id>
+						<gambar>kotak di dalam laci</gambar>
+					</item>
+					<item no="3">
+						<jp>テーブルの上</jp>
+						<id>Di atas meja</id>
+						<gambar>kucing di atas meja</gambar>
+					</item>
+					<item no="4">
+						<jp>はこの外</jp>
+						<id>Di luar kotak</id>
+						<gambar>kucing di luar kotak</gambar>
+					</item>
+					<item no="5">
+						<jp>前・うしろ</jp>
+						<id>Depan・Belakang</id>
+						<gambar>anak menghadap depan dan belakang</gambar>
+					</item>
+					<item no="6">
+						<jp>車のそば</jp>
+						<id>Di samping mobil</id>
+						<gambar>anak di samping mobil</gambar>
+					</item>
+					<item no="7">
+						<jp>レストランと病院の間</jp>
+						<id>Di antara restoran dan rumah sakit</id>
+						<gambar>restoran dan rumah sakit</gambar>
+					</item>
+					<item no="8">
+						<jp>木の向こう</jp>
+						<id>Di seberang pohon</id>
+						<gambar>anak golf di seberang pohon</gambar>
+					</item>
+					<item no="9">
+						<jp>道の左がわ・道の右がわ</jp>
+						<id>Sisi kiri jalan・Sisi kanan jalan</id>
+						<gambar>anak di persimpangan jalan</gambar>
+					</item>
+					<item no="10">
+						<jp>ゆうびんきょくのとなり</jp>
+						<id>Di sebelah kantor pos</id>
+						<gambar>gedung di sebelah kantor pos</gambar>
+					</item>
+					<item no="11">
+						<jp>ゆうびんきょくの左・ゆうびんきょくの右</jp>
+						<id>Kiri kantor pos・Kanan kantor pos</id>
+						<gambar>arah kiri dan kanan dari kantor pos</gambar>
+					</item>
+					<item no="12">
+						<jp>北・西・東・南</jp>
+						<id>Utara・Barat・Timur・Selatan</id>
+						<gambar>kompas mata angin</gambar>
+					</item>
+					<item no="13">
+						<jp>駅の近く</jp>
+						<id>Dekat stasiun</id>
+						<gambar>stasiun kereta dan gedung di dekatnya</gambar>
+					</item>
+					<item no="14">
+						<jp>このへん・ここ</jp>
+						<id>Sekitar sini・Di sini</id>
+						<gambar>anak di lingkaran yang menunjuk lokasi</gambar>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>かばんはいすの（上）です。</teks>
+					<gambar>tas di atas bangku</gambar>
+				</contoh>
+
+				<soal id="1">
+					<teks>病院はゆうびんきょくの（　　）です。</teks>
+					<gambar>rumah sakit di kiri kantor pos, sekolah di kanan</gambar>
+					<pilihan>1. 右</pilihan>
+					<pilihan>2. 左</pilihan>
+					<pilihan>3. 向こう</pilihan>
+					<pilihan>4. 間</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>ゆうびんきょくは学校と病院の（　　）です。</teks>
+					<gambar>sekolah, kantor pos, rumah sakit berjajar</gambar>
+					<pilihan>1. 間</pilihan>
+					<pilihan>2. 前</pilihan>
+					<pilihan>3. 中</pilihan>
+					<pilihan>4. 左</pilihan>
+					<jawaban>1</jawaban>
+				</soal>
+				<soal id="3">
+					<teks>犬は木の（　　）です。</teks>
+					<gambar>anjing di bawah pohon</gambar>
+					<pilihan>1. 下</pilihan>
+					<pilihan>2. 上</pilihan>
+					<pilihan>3. うしろ</pilihan>
+					<pilihan>4. 間</pilihan>
+					<jawaban>1</jawaban>
+				</soal>
+				<soal id="4">
+					<teks>リンさんはスミスさんの（　　）です。</teks>
+					<gambar>foto grup, Smith di kanan, Lin di kiri Smith</gambar>
+					<pilihan>1. 前</pilihan>
+					<pilihan>2. うしろ</pilihan>
+					<pilihan>3. 下</pilihan>
+					<pilihan>4. 左</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="5">
+					<teks>えんぴつは本の（　　）です。</teks>
+					<gambar>pensil di atas buku</gambar>
+					<pilihan>1. 間</pilihan>
+					<pilihan>2. 中</pilihan>
+					<pilihan>3. 上</pilihan>
+					<pilihan>4. 下</pilihan>
+					<jawaban>3</jawaban>
+				</soal>
+				<soal id="6">
+					<teks>はさみは本の（　　）です。</teks>
+					<gambar>gunting di bawah buku</gambar>
+					<pilihan>1. 間</pilihan>
+					<pilihan>2. 中</pilihan>
+					<pilihan>3. 上</pilihan>
+					<pilihan>4. 下</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="7">
+					<teks>高いビルは駅の（　　）です。</teks>
+					<gambar>gedung tinggi di depan stasiun</gambar>
+					<pilihan>1. 上</pilihan>
+					<pilihan>2. 向こう</pilihan>
+					<pilihan>3. となり</pilihan>
+					<pilihan>4. 前</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="8">
+					<teks>神戸は大阪の（　　）です。</teks>
+					<gambar>peta Jepang, Kobe di barat Osaka</gambar>
+					<pilihan>1. 東</pilihan>
+					<pilihan>2. 西</pilihan>
+					<pilihan>3. 南</pilihan>
+					<pilihan>4. 北</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+			</yatte_miyou>
+		</sub_bab>
+
+		<!-- SUB BAB 18: 公園が あります - Pages 56-57 -->
+		<sub_bab id="18" halaman="56-57">
+			<nomor>18</nomor>
+			<judul>公園があります</judul>
+			<judul_id>Ada Taman</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>人や物がある場所にあるかないか、どこにあるか言うときに使う。</jp>
+					<en>Use these words when you say whether a person or thing exists in a certain place or where it is.</en>
+					<id>Gunakan kata-kata ini ketika mengatakan apakah orang atau benda ada di suatu tempat atau di mana letaknya.</id>
+				</penjelasan>
+				<catatan>人や動物には、「いる」を使う。</catatan>
+				<catatan_en>Use "iru" for people and animals.</catatan_en>
+				<catatan_id>Gunakan "iru" untuk orang dan hewan.</catatan_id>
+
+				<contoh>
+					<item no="1">
+						<jp>A：れいぞうこの中に何がありますか。B：牛乳やたまごなどがあります。</jp>
+						<id>A: Di dalam kulkas ada apa? B: Ada susu, telur, dan lain-lain.</id>
+					</item>
+					<item no="2">
+						<jp>A：はこの中に何かありますか。B：いいえ、何もありません。</jp>
+						<id>A: Di dalam kotak ada sesuatu? B: Tidak, tidak ada apa-apa.</id>
+					</item>
+					<item no="3">
+						<jp>あそこに山田さんがいます。</jp>
+						<id>Di sana ada Yamada-san.</id>
+					</item>
+					<item no="4">
+						<jp>A：この動物園にパンダがいますか。B：いいえ、いません。</jp>
+						<id>A: Di kebun binatang ini ada panda? B: Tidak, tidak ada.</id>
+					</item>
+					<item no="5">
+						<jp>A：カメラはどこにありますか。B：かばんの中にあります。</jp>
+						<id>A: Kamera di mana? B: Ada di dalam tas.</id>
+					</item>
+					<item no="6">
+						<jp>A：かぎはどこですか。B：テレビの上にあります。</jp>
+						<id>A: Kunci di mana? B: Ada di atas televisi.</id>
+					</item>
+					<item no="7">
+						<jp>A：山田さんはどこにいますか。B：あそこにいます。</jp>
+						<id>A: Yamada-san di mana? B: Di sana.</id>
+					</item>
+					<item no="8">
+						<jp>A：ねこはどこですか。B：木の上にいますよ。</jp>
+						<id>A: Kucing di mana? B: Ada di atas pohon.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<bagian1>
+					<contoh>
+						<item no="1">
+							<teks>先生は図書室に（います）。</teks>
+						</item>
+						<item no="2">
+							<teks>自転車のかぎはかばんの中に（あります）。</teks>
+						</item>
+					</contoh>
+
+					<soal id="1">
+						<teks>A：学校のとなりに何が（　　　　）か。B：公園が（　　　　）。</teks>
+						<jawaban>あります／あります</jawaban>
+					</soal>
+					<soal id="2">
+						<teks>A：中村さんはどこですか。B：今、ロビーに（　　　　）。</teks>
+						<jawaban>います</jawaban>
+					</soal>
+					<soal id="3">
+						<teks>A：ねこがいません。B：つくえの下に（　　　　）よ。</teks>
+						<jawaban>います</jawaban>
+					</soal>
+					<soal id="4">
+						<teks>A：こうばんはどこですか。B：駅の前に（　　　　）。</teks>
+						<jawaban>あります</jawaban>
+					</soal>
+					<soal id="5">
+						<teks>A：すみません、えんぴつ……。B：その本の間に（　　　　）よ。</teks>
+						<jawaban>あります</jawaban>
+					</soal>
+				</bagian1>
+
+				<bagian2>
+					<contoh>
+						<teks>コンビニは、駅（の）中（に）ありますよ。</teks>
+					</contoh>
+
+					<soal id="1">
+						<teks>A：にわ（　　）だれかいますか。B：はい、佐藤さん（　　）います。</teks>
+						<jawaban>に／が</jawaban>
+					</soal>
+					<soal id="2">
+						<teks>A：先生（　　）どこ（　　）いますか。B：教室（　　）います。</teks>
+						<jawaban>は／に／に</jawaban>
+					</soal>
+					<soal id="3">
+						<teks>A：そこ（　　）何かありますか。B：いいえ、何（　　）ありません。</teks>
+						<jawaban>に／も</jawaban>
+					</soal>
+					<soal id="4">
+						<teks>A：かさ（　　）どこ（　　）ありますか。B：かばん（　　）中です。</teks>
+						<jawaban>は／に／の</jawaban>
+					</soal>
+				</bagian2>
+			</yatte_miyou>
+		</sub_bab>
+
+		<!-- SUB BAB 19: 行きましょう - Pages 58-59 -->
+		<sub_bab id="19" halaman="58-59">
+			<nomor>19</nomor>
+			<judul>行きましょう</judul>
+			<judul_id>Mari Pergi</judul_id>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「〜ましょう」は、ほかの人にいっしょにするようによびかけるときに使う。</jp>
+					<en>Use "~mashou" when you invite a person to do something together.</en>
+					<id>Gunakan "~mashou" ketika mengajak orang lain untuk melakukan sesuatu bersama-sama.</id>
+				</penjelasan>
+				<pola>V-ます + ましょう</pola>
+				<pola_id>Kata Kerja bentuk masu + mashou</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>9時ですよ。仕事を始めましょう。</jp>
+						<id>Sudah jam 9. Mari mulai bekerja.</id>
+					</item>
+					<item no="2">
+						<jp>A：もう5時ですよ。B：そうですね。じゃ、終わりましょう。</jp>
+						<id>A: Sudah jam 5. B: Benar ya. Kalau begitu, mari selesaikan.</id>
+					</item>
+					<item no="3">
+						<jp>A：晩ご飯、どうしますか。B：あのレストランで食べましょう。</jp>
+						<id>A: Makan malam, bagaimana? B: Mari makan di restoran itu.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<u>
+				<judul>「〜ませんか」と「〜ましょう」</judul>
+				<penjelasan>
+					<jp>相手の気持ちを聞くときは「〜ませんか」を使う。そうすることが決まっているときや、そうするようによびかけるときは「〜ましょう」を使う。</jp>
+					<en>Use "~masen ka" to ask how a person is feeling. Use "~mashou" when a decision has already been made to do something or when you invite a person to do it.</en>
+					<id>Gunakan "~masen ka" untuk menanyakan perasaan orang lain. Gunakan "~mashou" ketika keputusan sudah dibuat untuk melakukan sesuatu atau ketika mengajak orang lain untuk melakukannya.</id>
+				</penjelasan>
+			</u>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>A：つかれましたね。少し休みませんか。B：そうですね。じゃ、ちょっと休みましょう。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>A：土曜日いっしょに映画を見ませんか。B：ええ、いいですね。A：何時にどこで会いますか。B：じゃ、9時に駅で＿＿＿＿＿＿。</teks>
+					<jawaban>会いましょう</jawaban>
+				</soal>
+				<soal id="2">
+					<teks>A：いい天気ですね。外で昼ご飯を＿＿＿＿＿＿。B：ええ、いいですね。じゃ、あそこの公園へ＿＿＿＿＿＿。</teks>
+					<jawaban>食べましょう／行きましょう</jawaban>
+				</soal>
+
+				<pilihan_jawaban>
+					<item>会います</item>
+					<item>行きます</item>
+					<item>休みます</item>
+					<item>見ます</item>
+					<item>食べます</item>
+				</pilihan_jawaban>
+			</yatte_miyou>
+
+			<halaman_ref>p.51 〜ませんか</halaman_ref>
+		</sub_bab>
+	</bab6_content>
+
+	<!-- KONTEN BAB 7 - Pages 60-65 -->
+	<bab7_content>
+		<header halaman="60">
+			<kategori>場所のようすやとくちょうを説明する</kategori>
+			<kategori_en>Explain what a place is like and its characteristics</kategori_en>
+			<kategori_id>Menjelaskan Keadaan dan Karakteristik Tempat</kategori_id>
+			<nomor>7</nomor>
+			<judul>上野の町（２）</judul>
+			<judul_en>The town of Ueno (2)</judul_en>
+			<judul_id>Kota Ueno (2)</judul_id>
+
+			<dekiru_koto>
+				<judul>できること</judul>
+				<judul_id>Yang Bisa Dilakukan</judul_id>
+				<item>
+					<jp>場所のようすやとくちょうを説明することができる。</jp>
+					<en>Explain what a place is like and its characteristics.</en>
+					<id>Dapat menjelaskan keadaan dan karakteristik suatu tempat.</id>
+				</item>
+			</dekiru_koto>
+
+			<content type="speech" cd="35">
+				<karakter nama="スミス">
+					<jp>ここが上野ですね。</jp>
+					<id>Ini Ueno ya.</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>ええ、そうですよ。</jp>
+					<id>Iya, benar.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>あそこに人がたくさんいますね。</jp>
+					<id>Di sana banyak orang ya.</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>あそこは「アメ横」というところです。</jp>
+					<id>Tempat itu adalah yang disebut "Ameyoko".</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>へえ。「アメ横」……？</jp>
+					<id>Hah. "Ameyoko"……?</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>「アメ横」は安い店が多いですよ。</jp>
+					<id>"Ameyoko" itu banyak toko yang murah lho.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>どんな店がありますか。</jp>
+					<id>Ada toko seperti apa?</id>
+				</karakter>
+				<karakter nama="山田">
+					<jp>食べ物や洋服などの店があります。食べ物は安くておいしいですよ。</jp>
+					<id>Ada toko makanan dan pakaian Barat dan sebagainya. Makanannya murah dan enak lho.</id>
+				</karakter>
+				<karakter nama="スミス">
+					<jp>へえ。いいですね。</jp>
+					<id>Hah. Bagus ya.</id>
+				</karakter>
+			</content>
+		</header>
+
+		<!-- SUB BAB 20: 「アメ横」という ところ - Page 60-61 -->
+		<sub_bab id="20" halaman="60-61">
+			<nomor>20</nomor>
+			<judul>「アメ横」という ところ</judul>
+			<judul_id>Tempat yang Disebut "Ameyoko"</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「AというB」は、聞き手がよく知らない人や物、場所の名前を言うときに使う。話し手がよく知らないことにも使う。</jp>
+					<en>Use "A to iu B" when talking about the name of a person, thing or place that the listener is not familiar with. You can also use it for subjects you are not familiar with.</en>
+					<id>Gunakan "A to iu B" ketika membicarakan nama orang, benda, atau tempat yang tidak dikenal pendengar. Juga bisa digunakan untuk topik yang tidak dikenal pembicara.</id>
+				</penjelasan>
+				<pola>AというB</pola>
+				<pola_id>A to iu B</pola_id>
+
+				<catatan>話し手も聞き手もどちらもよく知っていることには使わない。</catatan>
+				<catatan_en>Do not use it for subjects that both you and the listener are familiar with.</catatan_en>
+				<catatan_id>Jangan gunakan untuk topik yang dikenal baik oleh pembicara dan pendengar.</catatan_id>
+
+				<contoh>
+					<item no="1">
+						<jp>「わさび」という食べ物を知っていますか。</jp>
+						<id>Apakah Anda tahu makanan yang disebut "wasabi"?</id>
+					</item>
+					<item no="2">
+						<jp>私は長野の「戸隠」というところで生まれました。</jp>
+						<id>Saya lahir di tempat yang disebut "Togakushi" di Nagano.</id>
+					</item>
+					<item no="3">
+						<jp>「トマト銀行」という銀行はどこにありますか。</jp>
+						<id>Di mana bank yang disebut "Tomato Ginkou"?</id>
+					</item>
+					<item no="4">
+						<jp>「小林さん」という人が来ました。</jp>
+						<id>Orang yang disebut "Kobayashi-san" telah datang.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>私は先週（大山）というところへ行きました。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>私は（　　　）という町で生まれました。</teks>
+				</soal>
+				<soal id="2">
+					<teks>私は（　　　）という学校で勉強しました。</teks>
+				</soal>
+				<soal id="3">
+					<teks>私の国の有名な（　　　）という人を知っていますか。</teks>
+				</soal>
+				<soal id="4">
+					<teks>私の友だちは、今（　　　）という学校で勉強しています。</teks>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.60 ～という</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 21: 「アメ横」は安い店が多いです - Pages 61-62 -->
+		<sub_bab id="21" halaman="61-62">
+			<nomor>21</nomor>
+			<judul>「アメ横」は安い店が多いです</judul>
+			<judul_id>"Ameyoko" Banyak Toko yang Murah</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>「AはBが～」は、「Aという全体の中のBという部分的なとくちょう」を言うときに使う。</jp>
+					<en>Use "A wa B ga ~" when you talk about the characteristics of B, which is part of A.</en>
+					<id>Gunakan "A wa B ga ~" ketika membicarakan karakteristik B yang merupakan bagian dari A.</id>
+				</penjelasan>
+				<pola>AはBが～</pola>
+				<pola_id>A wa B ga ~</pola_id>
+
+				<contoh>
+					<item no="1">
+						<jp>あの人は目が大きいです。</jp>
+						<id>Orang itu matanya besar.</id>
+					</item>
+					<item no="2">
+						<jp>鈴木さんはピアノが上手です。</jp>
+						<id>Suzuki-san pandai piano.</id>
+					</item>
+					<item no="3">
+						<jp>この川は水がきれいですね。</jp>
+						<id>Sungai ini airnya bersih ya.</id>
+					</item>
+					<item no="4">
+						<jp>この本はえが多いです。</jp>
+						<id>Buku ini gambarnya banyak.</id>
+					</item>
+				</contoh>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>私の父は（背）が（高い）です。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>私の母は（　　　）が（　　　）です。</teks>
+				</soal>
+				<soal id="2">
+					<teks>私の学校は（　　　）が（　　　）です。</teks>
+				</soal>
+				<soal id="3">
+					<teks>私の国は（　　　）が（　　　）です。</teks>
+				</soal>
+			</yatte_miyou>
+
+			<halaman_ref>p.61 ～は～が</halaman_ref>
+		</sub_bab>
+
+		<!-- SUB BAB 22: 安くておいしいです - Pages 62-63 -->
+		<sub_bab id="22" halaman="62-63">
+			<nomor>22</nomor>
+			<judul>安くておいしいです</judul>
+			<judul_id>Murah dan Enak</judul_id>
+			<bintang>★</bintang>
+
+			<dou_tsukau>
+				<judul>どう使う？</judul>
+				<judul_id>Bagaimana Menggunakannya?</judul_id>
+				<penjelasan>
+					<jp>形容詞や名詞を2つ以上つづけて言うときは、て形を使う。過去のことを言うときもて形を使う。</jp>
+					<en>Use the te form when you say two or more adjectives or nouns in a row. Also use the te form when you talk about the past.</en>
+					<id>Gunakan bentuk te ketika mengatakan dua atau lebih kata sifat atau kata benda secara berurutan. Juga gunakan bentuk te ketika berbicara tentang masa lalu.</id>
+				</penjelasan>
+				<pola>いA→くて / なA→で / N→で</pola>
+				<pola_id>Kata Sifat i→ku-te / Kata Sifat na→de / Kata Benda→de</pola_id>
+
+				<tabel_conjugasi>
+					<group name="い形容詞">
+						<item polite="おおきいです" te="おおきくて"/>
+						<item polite="*いいです" te="*よくて"/>
+						<item polite="おおきくないです" te="おおきくなくて"/>
+					</group>
+					<group name="な形容詞">
+						<item polite="しずかです" te="しずかで"/>
+						<item polite="しずかじゃありません" te="しずかじゃなくて"/>
+					</group>
+					<group name="名詞">
+						<item polite="あめです" te="あめで"/>
+						<item polite="あめじゃありません" te="あめじゃなくて"/>
+					</group>
+				</tabel_conjugasi>
+
+				<contoh>
+					<item no="1">
+						<jp>山田さんは明るくて親切な人です。</jp>
+						<id>Yamada-san adalah orang yang cerah dan ramah.</id>
+					</item>
+					<item no="2">
+						<jp>A：ここはけしきがきれいでしずかなところですよ。B：そうですか。</jp>
+						<id>A: Tempat ini pemandangannya indah dan tenang lho. B: Oh begitu.</id>
+					</item>
+					<item no="3">
+						<jp>リンさんは大学1年生で、去年日本へ来ました。</jp>
+						<id>Lin-san mahasiswa tahun pertama, dan tahun lalu datang ke Jepang.</id>
+					</item>
+					<item no="4">
+						<jp>きのう、渡辺さんのうちへ行きました。渡辺さんのうちは、広くてきれいでした。</jp>
+						<id>Kemarin, saya pergi ke rumah Watanabe-san. Rumah Watanabe-san luas dan bersih.</id>
+					</item>
+				</contoh>
+
+				<catatan>はんたいの意味の文を1つにするときは、て形は使わない。「いい意味+いい意味」「悪い意味+悪い意味」のときに使う。</catatan>
+				<catatan_en>Do not use the te form when you use two words with opposite meanings. Use it for "good meaning + good meaning" or "bad meaning + bad meaning".</catatan_en>
+				<catatan_id>Jangan gunakan bentuk te ketika menggunakan dua kata dengan makna berlawanan. Gunakan untuk "makna baik + makna baik" atau "makna buruk + makna buruk".</catatan_id>
+
+				<contoh_salah>
+					<item>
+						<jp>鈴木さんのうちは、せまくてきれいです。→ 鈴木さんのうちは、せまいですがきれいです。</jp>
+						<id>❌ Rumah Suzuki-san sempit dan bersih. → Rumah Suzuki-san sempit tetapi bersih.</id>
+					</item>
+				</contoh_salah>
+			</dou_tsukau>
+
+			<yatte_miyou>
+				<judul>やってみよう！</judul>
+				<judul_id>Ayo Coba!</judul_id>
+				<jawaban_ref>別冊P. 4</jawaban_ref>
+
+				<contoh>
+					<teks>この部屋は広くてきれいです。この部屋は広いですが古いです。</teks>
+				</contoh>
+
+				<soal id="1">
+					<teks>ゾウは鼻が　　　　　　耳が大きいです。</teks>
+					<gambar>gajah</gambar>
+				</soal>
+				<soal id="2">
+					<teks>このカメラは　　　　　　軽いです。</teks>
+				</soal>
+				<soal id="3">
+					<teks>パーティーは　　　　　　楽しかったです。</teks>
+				</soal>
+				<soal id="4">
+					<teks>今日は5月　　　　　　、こどもの日です。</teks>
+				</soal>
+				<soal id="5">
+					<teks>あのレストランは　　　　　　、店の人が親切じゃありません。</teks>
+				</soal>
+
+				<pilihan_jawaban>
+					<item>おいしいです</item>
+					<item>広いです</item>
+					<item>小さいです</item>
+					<item>にぎやかです</item>
+					<item>長いです</item>
+					<item>5日です</item>
+				</pilihan_jawaban>
+			</yatte_miyou>
+
+			<halaman_ref>p.62 ～て（形容詞・名詞）</halaman_ref>
+		</sub_bab>
+
+		<!-- REVIEW QUESTIONS - Pages 64-65 -->
+		<matome halaman="64-65">
+			<judul>まとめの問題</judul>
+			<judul_id>Soal-soal Ringkasan</judul_id>
+			<jawaban_ref>別冊P. 10</jawaban_ref>
+
+			<mondai1 type="文章の文法">
+				<judul>問題1 〈文章の文法〉</judul>
+				<judul_id>Soal 1: Tata Bahasa Teks</judul_id>
+				<instruksi>1～4に何を入れますか。1・2・3・4からいちばんいいものを一つえらんでください。</instruksi>
+				<instruksi_id>Pilih yang paling tepat untuk mengisi 1 sampai 4 dari pilihan 1・2・3・4.</instruksi_id>
+
+				<bacaan>
+					<teks>日曜日、山田さんと上野へ行きました。上野はにぎやか［1］おもしろいところでした。駅の前に大きい公園があって、公園の中にびじゅつ館や動物園などがありました。駅の近くに「アメ横」［2］ところがありました。アメ横には人がたくさん［3］。食べ物や洋服などの店がたくさんありました。私はおかしを買いました。［4］おいしいおかしでした。</teks>
+					<id>Hari Minggu, saya pergi ke Ueno bersama Yamada-san. Ueno adalah tempat yang ramai [1] menarik. Di depan stasiun ada taman besar, dan di dalam taman ada museum seni dan kebun binatang. Di dekat stasiun ada tempat yang disebut "Ameyoko". Di Ameyoko banyak orang [3]. Ada banyak toko makanan dan pakaian Barat. Saya membeli kue. [4] kue yang enak.</id>
+				</bacaan>
+
+				<soal id="1">
+					<pilihan id="1">と</pilihan>
+					<pilihan id="2">て</pilihan>
+					<pilihan id="3">が</pilihan>
+					<pilihan id="4">で</pilihan>
+					<jawaban>4</jawaban>
+				</soal>
+				<soal id="2">
+					<pilihan id="1">から</pilihan>
+					<pilihan id="2">ぐらい</pilihan>
+					<pilihan id="3">という</pilihan>
+					<pilihan id="4">や</pilihan>
+					<jawaban>3</jawaban>
+				</soal>
+				<soal id="3">
+					<pilihan id="1">買いました</pilihan>
+					<pilihan id="2">いました</pilihan>
+					<pilihan id="3">ありました</pilihan>
+					<pilihan id="4">会いました</pilihan>
+					<jawaban>2</jawaban>
+				</soal>
+				<soal id="4">
+					<pilihan id="1">安くて</pilihan>
+					<pilihan id="2">安いです</pilihan>
+					<pilihan id="3">安かった</pilihan>
+					<pilihan id="4">安かったです</pilihan>
+					<jawaban>1</jawaban>
+				</soal>
+			</mondai1>
+
+			<mondai2 type="地図">
+				<judul>問題2 〈地図〉</judul>
+				<judul_id>Soal 2: Peta</judul_id>
+				<instruksi>文章を読んで、地図を選んでください。</instruksi>
+				<instruksi_id>Baca teks dan pilih peta yang tepat.</instruksi_id>
+
+				<pilihan_map>
+					<item id="1">Map 1: 上野駅→公園（中にびじゅつ館・動物園）→アメ横（駅の近く）</item>
+					<item id="2">Map 2: 上野駅→公園→びじゅつ館→動物園（アメ横なし）</item>
+					<item id="3">Map 3: 上野駅→公園→びじゅつ館→動物園→アメ横（横配置）</item>
+					<item id="4">Map 4: 上野駅→公園→動物園→びじゅつ館→アメ横（配置違い）</item>
+				</pilihan_map>
+				<jawaban>1</jawaban>
+			</mondai2>
+
+			<mondai3 type="聴解">
+				<judul>問題3 〈聴解〉</judul>
+				<judul_id>Soal 3: Mendengarkan</judul_id>
+
+				<bagian1>
+					<instruksi>はじめにしつもんをきいてください。それからはなしをきいて、1から4のなかから、ただしいこたえを1つえらんでください。</instruksi>
+					<instruksi_id>Pertama dengarkan pertanyaan. Kemudian dengarkan pembicaraan, dan pilih yang paling tepat dari 1 sampai 4.</instruksi_id>
+
+					<soal id="1" cd="36">
+						<gambar>4 bangunan bernomor 1-4</gambar>
+						<pilihan id="1">Bangunan 1</pilihan>
+						<pilihan id="2">Bangunan 2</pilihan>
+						<pilihan id="3">Bangunan 3</pilihan>
+						<pilihan id="4">Bangunan 4</pilihan>
+					</soal>
+					<soal id="2" cd="37">
+						<pilihan id="1">ご両親は北京にいます。</pilihan>
+						<pilihan id="2">みんな北京にいます。</pilihan>
+						<pilihan id="3">ご両親はニューヨークにいます。</pilihan>
+						<pilihan id="4">みんなニューヨークにいます。</pilihan>
+					</soal>
+				</bagian1>
+
+				<bagian2>
+					<instruksi>このもんだいではえなどがありません。まず、ぶんをきいてください。それから、そのへんじをきいて、1から3のなかから、いちばんいいものを一つえらんでください。</instruksi>
+					<instruksi_id>Dalam soal ini, tidak ada gambar. Pertama dengarkan kalimat. Kemudian dengarkan jawabannya, dan pilih yang paling tepat dari 1 sampai 3.</instruksi_id>
+
+					<soal id="1" cd="38">
+						<pilihan>1</pilihan>
+						<pilihan>2</pilihan>
+						<pilihan>3</pilihan>
+					</soal>
+					<soal id="2" cd="39">
+						<pilihan>1</pilihan>
+						<pilihan>2</pilihan>
+						<pilihan>3</pilihan>
+					</soal>
+				</bagian2>
+			</mondai3>
+		</matome>
+	</bab7_content>
 
 
-	<!-- KONTEN BAB 6 - Pages 51-59 -->	
 
-<!-- N5「できること」リスト - Pages 150-151 -->
+	<!-- KONTEN BAB 8 - Pages 66-72 -->	
+
+
+	<!-- N5「できること」リスト - Pages 150-151 -->
 	<can_do_list halaman="150-151" level="N5">
 		<judul_jp>N5「できること」リスト</judul_jp>
 		<judul_en>N5 Can Do List</judul_en>
