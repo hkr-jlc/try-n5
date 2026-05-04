@@ -329,8 +329,8 @@
 
 			<item>
 				<judul_jp>答え・スクリプト</judul_jp>
-				<judul_en>Answers & Scripts</judul_en>
-				<judul_id>Jawaban & Skrip</judul_id>
+				<judul_en>Answers &amp; Scripts</judul_en>
+				<judul_id>Jawaban &amp; Skrip</judul_id>
 			</item>
 			<item>
 				<judul_jp>かいとうようし（マークシート）</judul_jp>
@@ -1832,7 +1832,7 @@
 
 	<!-- KONTEN BAB 4 - Pages 37-41 -->
 	<bab4_content>
-		<!-- PAGE 37 - Header & Dekiru Koto -->
+		<!-- PAGE 37 - Header &amp; Dekiru Koto -->
 		<header halaman="37">
 			<kategori>きのうの買い物</kategori>
 			<kategori_en>Yesterday's shopping</kategori_en>
@@ -2165,7 +2165,7 @@
 
 	<!-- KONTEN BAB 5 - Pages 42-50 -->
 	<bab5_content>
-		<!-- PAGE 42 - Header & Dekiru Koto & Speech -->
+		<!-- PAGE 42 - Header &amp; Dekiru Koto &amp; Speech -->
 		<header halaman="42">
 			<kategori>きのうの買い物</kategori>
 			<kategori_en>Yesterday's shopping</kategori_en>
@@ -2655,7 +2655,7 @@
 
 	<!-- KONTEN BAB 6 - Pages 51-59 -->
 	<bab6_content>
-		<!-- PAGE 51 - Header & Dekiru Koto -->
+		<!-- PAGE 51 - Header &amp; Dekiru Koto -->
 		<header halaman="51">
 			<kategori>人をさそったり、人や物のそんざいを説明したり</kategori>
 			<kategori_en>Invite people and explain the existence of people and things</kategori_en>
@@ -3606,7 +3606,7 @@
 
 	<!-- KONTEN BAB 8 - Pages 66-72 -->
 	<bab8_content>
-		<!-- PAGE 66 - Header & Dekiru Koto -->
+		<!-- PAGE 66 - Header &amp; Dekiru Koto -->
 		<header halaman="66">
 			<kategori>まんが</kategori>
 			<kategori_en>Manga</kategori_en>
@@ -4059,7 +4059,7 @@
 
 	<!-- KONTEN BAB 9 - Pages 73-77 -->
 	<bab9_content>
-		<!-- PAGE 73 - Header & Dekiru Koto -->
+		<!-- PAGE 73 - Header &amp; Dekiru Koto -->
 		<header halaman="73">
 			<kategori>まんが</kategori>
 			<kategori_en>Manga</kategori_en>
@@ -4415,7 +4415,7 @@
 
 	<!-- KONTEN BAB 10 - Pages 78-81 -->
 	<bab10_content>
-		<!-- PAGE 78 - Header & Dekiru Koto -->
+		<!-- PAGE 78 - Header &amp; Dekiru Koto -->
 		<header halaman="78">
 			<kategori>空港で</kategori>
 			<kategori_en>At the airport</kategori_en>
@@ -5532,7 +5532,7 @@
 
 	<!-- KONTEN BAB 13 - Pages 92-98 -->
 	<bab13_content>
-		<!-- PAGE 92 - Header & Speech -->
+		<!-- PAGE 92 - Header &amp; Speech -->
 		<header halaman="92">
 			<kategori>スキーとおんせん（２）</kategori>
 			<kategori_en>Skiing and a hot spring (2)</kategori_en>
@@ -5993,7 +5993,7 @@
 
 	<!-- KONTEN BAB 14 - Pages 99-110 -->
 	<bab14_content>
-		<!-- PAGE 99 - Header & Dekiru Koto -->
+		<!-- PAGE 99 - Header &amp; Dekiru Koto -->
 		<header halaman="99">
 			<kategori>昼ご飯</kategori>
 			<kategori_en>Lunch</kategori_en>
