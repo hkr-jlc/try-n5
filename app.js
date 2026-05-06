@@ -3,26 +3,27 @@ let currentSection = 'contents';
 let showEnglish = false;
 let showIndonesian = false;
 let xmlData = null;
-
-// Urutan semua section untuk navigasi
 let sectionOrder = [];
 
-// Bangun urutan section berdasarkan data XML
+// Build section order from XML
 function buildSectionOrder() {
     sectionOrder = ['contents'];
     const data = parseXMLData();
     data.bab.forEach(bab => {
         sectionOrder.push(`bab-${bab.id}-header`);
         sectionOrder.push(`bab-${bab.id}-grammar`);
+        // Check if matome exists for this bab
+        const babContent = getBabContent(bab.id);
+        if (babContent.matome && babContent.matome.mondais && babContent.matome.mondais.length > 0) {
+            sectionOrder.push(`bab-${bab.id}-matome`);
+        }
     });
-    // Add can-do-list at the end
     sectionOrder.push('can-do-list');
 }
 
-// Generate HTML tombol navigasi
+// Generate nav buttons
 function getNavButtons(currentId) {
     if (sectionOrder.length === 0) buildSectionOrder();
-    
     const idx = sectionOrder.indexOf(currentId);
     if (idx === -1) return '';
     
@@ -31,42 +32,36 @@ function getNavButtons(currentId) {
     
     let html = '<div class="nav-buttons">';
     
-    // Tombol 戻る (Prev)
     if (prevId) {
         let prevLabel = '戻る';
         if (prevId === 'contents') prevLabel = 'もくじへ';
-        if (currentId === 'can-do-list') prevLabel = '戻る';
         html += `<button class="nav-btn prev-btn" onclick="showSection('${prevId}')">← ${prevLabel}</button>`;
     } else {
-        html += '<span></span>'; // placeholder agar layout tetap rapi
+        html += '<span></span>';
     }
     
-    // Tombol 次へ (Next)
     if (nextId) {
         let nextLabel = '次へ';
-        // Dari Header → Grammar
-        if (currentId.includes('-header') && nextId.includes('-grammar')) {
-            nextLabel = '文法を学ぶ';
-        }
-        // Dari Grammar → Header Bab Berikutnya
-        else if (currentId.includes('-grammar') && nextId.includes('-header')) {
-            nextLabel = '次の本文へ';
-        }
-        // Dari Contents → Header Bab 1
-        else if (currentId === 'contents') {
+        if (currentId === 'contents' && nextId.includes('-header')) {
             nextLabel = '本文を読む';
-        }
-        // Dari Bab terakhir Grammar → Can Do List
-        else if (currentId.includes('-grammar') && nextId === 'can-do-list') {
+        } else if (currentId.includes('-header') && nextId.includes('-grammar')) {
+            nextLabel = '文法を学ぶ';
+        } else if (currentId.includes('-grammar') && nextId.includes('-matome')) {
+            nextLabel = 'まとめの問題へ';
+        } else if (currentId.includes('-grammar') && nextId.includes('-header')) {
+            nextLabel = '次の本文へ';
+        } else if (currentId.includes('-matome') && nextId.includes('-header')) {
+            nextLabel = '次の本文へ';
+        } else if (currentId.includes('-matome') && nextId === 'can-do-list') {
             nextLabel = 'できることリストへ';
-        }
-        // Dari Can Do List → Kembali ke Contents
-        else if (currentId === 'can-do-list' && nextId === 'contents') {
+        } else if (currentId === 'can-do-list' && nextId === 'contents') {
             nextLabel = 'もくじへ';
+        } else if (currentId === 'contents' && nextId === 'can-do-list') {
+            nextLabel = 'できることリストへ';
         }
         html += `<button class="nav-btn next-btn" onclick="showSection('${nextId}')">${nextLabel} →</button>`;
     } else {
-        html += '<span></span>'; // placeholder
+        html += '<span></span>';
     }
     
     html += '</div>';
@@ -88,17 +83,16 @@ async function loadXMLData() {
         
         renderDrawer('contents');
         renderAllContent();
-        buildSectionOrder(); // ← Tambahkan ini
+        buildSectionOrder();
         
-        // Apply saved translation states after all content is rendered
         const savedEn = localStorage.getItem('showEnglish');
         const savedId = localStorage.getItem('showIndonesian');
         if (savedEn === 'true') toggleEnglish();
         if (savedId === 'true') toggleIndonesian();
-		} catch (error) {
+    } catch (error) {
         console.error('Error loading database.xml:', error);
         document.getElementById('main-container').innerHTML = 
-            '<p class="text-red-500 p-4">Gagal memuat database. Pastikan file database.xml tersedia.</p>';
+            '<p style="color:red;padding:1rem;">Gagal memuat database. Pastikan file database.xml tersedia.</p>';
     }
 }
 
@@ -185,7 +179,6 @@ function parseXMLData() {
     
     const data = { pengantar: [], bab: [], bagianAkhir: [], canDoList: [] };
     
-    // Parse pengantar
     const pengantarItems = xmlData.querySelectorAll('pengantar > item');
     pengantarItems.forEach(item => {
         data.pengantar.push({
@@ -197,7 +190,6 @@ function parseXMLData() {
         });
     });
     
-    // Parse bab
     const babElements = xmlData.querySelectorAll('daftar_isi > bab');
     babElements.forEach(bab => {
         const grammarPoints = [];
@@ -225,7 +217,6 @@ function parseXMLData() {
         });
     });
     
-    // Parse bagian akhir
     const bagianAkhir = xmlData.querySelector('bagian_akhir');
     if (bagianAkhir) {
         const items = bagianAkhir.querySelectorAll('item');
@@ -240,8 +231,6 @@ function parseXMLData() {
         });
     }
     
-    
-    // Parse can_do_list
     const canDoList = xmlData.querySelector('can_do_list');
     if (canDoList) {
         const groups = canDoList.querySelectorAll('bab_group');
@@ -273,14 +262,13 @@ function parseXMLData() {
     return data;
 }
 
-// Render Functions
+// Render Drawer
 function renderDrawer(currentSection = 'contents') {
     const data = parseXMLData();
     const container = document.getElementById('drawer-content');
     
     let html = '<div class="drawer-section"><div class="drawer-section-title">Pengantar</div><div class="drawer-list">';
     
-    // Pengantar items all link to contents
     const pengantarActive = currentSection === 'contents';
     data.pengantar.forEach(item => {
         html += `
@@ -302,14 +290,16 @@ function renderDrawer(currentSection = 'contents') {
             html += `<div style="padding: 0.5rem 1rem; font-size: 0.75rem; color: #be123c; font-weight: 600; margin-top: 0.5rem;">${currentCategory}</div>`;
         }
         
-        // Check if this bab is active
-        const isBabActive = currentSection === `bab-${bab.id}-header` || currentSection === `bab-${bab.id}-grammar`;
+        const isBabActive = currentSection === `bab-${bab.id}-header` || 
+                            currentSection === `bab-${bab.id}-grammar` || 
+                            currentSection === `bab-${bab.id}-matome`;
         const isHeaderActive = currentSection === `bab-${bab.id}-header`;
         const isGrammarActive = currentSection === `bab-${bab.id}-grammar`;
+        const isMatomeActive = currentSection === `bab-${bab.id}-matome`;
         
-        // Ambil detail grammar points dari content XML
         const babContent = getBabContent(bab.id);
         const grammarList = babContent.grammar || [];
+        const hasMatome = babContent.matome && babContent.matome.mondais && babContent.matome.mondais.length > 0;
         
         html += `
             <div class="drawer-bab-group">
@@ -323,13 +313,11 @@ function renderDrawer(currentSection = 'contents') {
                 </div>
                 <div class="drawer-submenu ${isBabActive ? 'expanded' : ''}" id="submenu-${bab.id}">
                     
-                    <!-- Link ke Konten Utama / Header Bab -->
                     <div class="drawer-submenu-item ${isHeaderActive ? 'active' : ''}" onclick="showSection('bab-${bab.id}-header'); closeDrawer();">
                         <span class="drawer-submenu-text">📖 本文</span>
                     </div>
         `;
         
-        // List Grammar Points dengan nomor, judul, dan halaman
         if (grammarList.length > 0) {
             grammarList.forEach((g, idx) => {
                 html += `
@@ -346,11 +334,11 @@ function renderDrawer(currentSection = 'contents') {
             });
         }
         
-        // Matome / まとめの問題
-        if (bab.matomePage) {
+        if (hasMatome) {
             html += `
-                    <div class="drawer-submenu-item" onclick="alert('Matome Bab ${bab.number} - Halaman ${bab.matomePage}'); closeDrawer();">
+                    <div class="drawer-submenu-item ${isMatomeActive ? 'active' : ''}" onclick="showSection('bab-${bab.id}-matome'); closeDrawer();">
                         <span class="drawer-submenu-text">📝 まとめの問題</span>
+                        <span style="font-size: 0.75rem; color: #9ca3af; margin-left: auto;">p.${babContent.matome.page || bab.matomePage || ''}</span>
                     </div>
             `;
         }
@@ -388,11 +376,10 @@ function renderAllContent() {
     data.bab.forEach(bab => {
         html += renderBabHeader(bab);
         html += renderBabGrammar(bab);
+        html += renderBabMatome(bab);
     });
 
-    // Add Can Do List section
     html += renderCanDoList();
-
     container.innerHTML = html;
 }
 
@@ -452,8 +439,6 @@ function renderContentsSection() {
         `;
     });
     
-    
-    // Can Do List Quick Access
     html += '<div class="quick-section-title" style="margin-top: 2rem;">N5「できること」リスト</div>';
     html += `
         <div class="bab-card-home" onclick="showSection('can-do-list')" style="border-left-color: #059669;">
@@ -481,7 +466,6 @@ function renderContentsSection() {
 }
 
 function renderBabHeader(bab) {
-    // Get content from XML
     const contentData = getBabContent(bab.id);
     
     let html = `
@@ -501,7 +485,6 @@ function renderBabHeader(bab) {
             </div>
     `;
     
-    // Dekiru box
     if (contentData.dekiru && contentData.dekiru.length > 0) {
         html += `
             <div class="dekiru-box">
@@ -527,7 +510,6 @@ function renderBabHeader(bab) {
         html += '</ul></div>';
     }
     
-    // Render content based on type
     if (contentData.contentType === 'job_ad') {
         html += renderJobAd(contentData.content);
     } else if (contentData.contentType === 'speech') {
@@ -555,7 +537,6 @@ function renderBabGrammar(bab) {
     
     let html = `<section id="bab-${bab.id}-grammar" class="hidden space-y-6">`;
     
-    // Header Grammar
     html += `
         <div class="section-header">
             <div class="bab-header-category">Grammar Points</div>
@@ -566,7 +547,6 @@ function renderBabGrammar(bab) {
         </div>
     `;
     
-    // Render each grammar point
     if (contentData.grammar) {
         contentData.grammar.forEach((g, idx) => {
             html += `
@@ -580,7 +560,6 @@ function renderBabGrammar(bab) {
                     </div>
                     <div class="grammar-content">
                         
-                        <!-- Dou Tsukau Section -->
                         <div class="dou-tsukau">
                             <h3 class="dou-tsukau-title">
                                 どう使う？
@@ -594,7 +573,6 @@ function renderBabGrammar(bab) {
                             <span class="translation-id">${g.descId}</span>
                         </div>
                         
-                        <!-- Pattern Section -->
                         <div class="grammar-pattern">
                             <p class="grammar-pattern-text">
                                 <span class="sentence-jp">${g.pattern}</span>
@@ -602,11 +580,9 @@ function renderBabGrammar(bab) {
                             <span class="translation-id">${g.patternId}</span>
                         </div>
                         
-                        <!-- Example List - STRUKTUR BARU -->
                         <div class="example-list">
             `;
             
-            // Examples dengan sentence-jp wrapper
             g.examples.forEach((ex, exIdx) => {
                 html += `
                             <div class="example-item">
@@ -623,22 +599,18 @@ function renderBabGrammar(bab) {
                         </div>
             `;
             
-            // Yatte Miyou section if exists
             if (g.yatteMiyou) {
                 html += renderYatteMiyou(g.yatteMiyou);
             }
             
-            // U section (badge U) if exists
             if (g.u) {
                 html += renderExtraSection(g.u, 'u');
             }
             
-            // Plus section if exists
             if (g.plus) {
                 html += renderExtraSection(g.plus, 'plus');
             }
             
-            // Page reference
             html += `
                         <p class="page-ref">p.${g.page}</p>
                     </div>
@@ -647,7 +619,6 @@ function renderBabGrammar(bab) {
         });
     }
     
-    // Check section if exists
     if (contentData.check) {
         html += renderCheck(contentData.check);
     }
@@ -657,7 +628,688 @@ function renderBabGrammar(bab) {
     return html;
 }
 
-// Helper function for Yatte Miyou section
+// ==================== MATOME RENDERER ====================
+
+function renderBabMatome(bab) {
+    const contentData = getBabContent(bab.id);
+    if (!contentData.matome || !contentData.matome.mondais || contentData.matome.mondais.length === 0) {
+        return ''; // No matome for this bab
+    }
+    
+    const matome = contentData.matome;
+    
+    let html = `<section id="bab-${bab.id}-matome" class="hidden">`;
+    
+    // Header
+    html += `
+        <div class="section-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);">
+            <div class="bab-header-category">
+                <span class="sentence-jp">まとめの問題</span>
+                <span class="translation-en">Review Questions</span>
+                <span class="translation-id">Soal-soal Ringkasan</span>
+            </div>
+            <div class="bab-header-title">
+                <span class="bab-header-number">${bab.number}</span>
+                <h1 class="bab-header-text"><span class="sentence-jp">${bab.title}</span></h1>
+                <span class="bab-header-en">${bab.titleEn || ''}</span>
+                <span class="translation-id">${bab.titleId || ''}</span>
+            </div>
+            <p class="page-number" style="text-align: center; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">p.${matome.page || bab.matomePage || ''}</p>
+        </div>
+    `;
+    
+    // Jawaban ref
+    if (matome.jawabanRef) {
+        html += `<p style="text-align: right; font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">▶答え ${matome.jawabanRef}</p>`;
+    }
+    
+    // Render each mondai
+    matome.mondais.forEach((mondai, idx) => {
+        html += renderMondai(mondai, idx);
+    });
+    
+    html += getNavButtons(`bab-${bab.id}-matome`);
+    html += '</section>';
+    return html;
+}
+
+function renderMondai(mondai, idx) {
+    let html = `<div class="mondai-section" style="margin-bottom: 2.5rem;">`;
+    
+    // Title badge
+    html += `
+        <div style="background: #f3f4f6; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.125rem; font-weight: 700; color: #1f2937; margin-bottom: 0.25rem;">
+                <span class="sentence-jp">${mondai.judul || ''}</span>
+            </h3>
+            ${mondai.judulEn ? `<span class="translation-en" style="font-size: 0.875rem;">${mondai.judulEn}</span>` : ''}
+            ${mondai.judulId ? `<span class="translation-id" style="font-size: 0.875rem;">${mondai.judulId}</span>` : ''}
+            ${mondai.type ? `<span style="display: inline-block; background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; margin-top: 0.5rem;">${mondai.type}</span>` : ''}
+        </div>
+    `;
+    
+    // Instructions
+    if (mondai.instruksi) {
+        html += `<p style="font-size: 0.9375rem; color: #374151; margin-bottom: 1rem; line-height: 1.6;"><span class="sentence-jp">${mondai.instruksi}</span></p>`;
+    }
+    if (mondai.instruksiId) {
+        html += `<p class="translation-id" style="font-size: 0.875rem; margin-bottom: 1rem;">${mondai.instruksiId}</p>`;
+    }
+    
+    // Bacaan (reading passage) if exists
+    if (mondai.bacaan && mondai.bacaan.teks) {
+        html += `
+            <div class="bacaan-box">
+                <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 0.75rem;"><span class="sentence-jp">${highlightGrammar(mondai.bacaan.teks)}</span></p>
+                ${mondai.bacaan.id ? `<p class="translation-id" style="font-size: 0.875rem; color: #854d0e; margin-top: 0.5rem;">${mondai.bacaan.id}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // Render questions based on structure
+    if (mondai.soalList && mondai.soalList.length > 0) {
+        // Simple list of questions (mondai1, mondai2 style)
+        mondai.soalList.forEach((soal, sIdx) => {
+            html += renderSoalItem(soal, sIdx, mondai.pilihanList);
+        });
+    }
+    
+    // Bagian1 / Bagian2 structure
+    if (mondai.bagian1 || mondai.bagian2) {
+        html += `<div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">`;
+        
+        if (mondai.bagian1) {
+            html += `<div>`;
+            if (mondai.bagian1.instruksi) {
+                html += `<p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.75rem; font-style: italic;"><span class="sentence-jp">${mondai.bagian1.instruksi}</span></p>`;
+            }
+            if (mondai.bagian1.soalList) {
+                mondai.bagian1.soalList.forEach((soal, sIdx) => {
+                    html += renderSoalItem(soal, sIdx, mondai.bagian1.pilihanList);
+                });
+            }
+            html += `</div>`;
+        }
+        
+        if (mondai.bagian2) {
+            html += `<div>`;
+            if (mondai.bagian2.instruksi) {
+                html += `<p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.75rem; font-style: italic;"><span class="sentence-jp">${mondai.bagian2.instruksi}</span></p>`;
+            }
+            if (mondai.bagian2.soalList) {
+                mondai.bagian2.soalList.forEach((soal, sIdx) => {
+                    html += renderSoalItem(soal, sIdx, mondai.bagian2.pilihanList);
+                });
+            }
+            html += `</div>`;
+        }
+        
+        html += `</div>`;
+    }
+    
+    // CD listening section
+    if (mondai.cdList && mondai.cdList.length > 0) {
+        html += `<div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1rem; margin-top: 1rem;">`;
+        html += `<p style="font-size: 0.875rem; font-weight: 600; color: #1e40af; margin-bottom: 0.75rem;">🎧 CD ${mondai.cdList[0].cd || ''}</p>`;
+        mondai.cdList.forEach((soal, sIdx) => {
+            html += renderSoalItem(soal, sIdx, null, true);
+        });
+        html += `</div>`;
+    }
+    
+    html += `</div>`;
+    return html;
+}
+
+function renderSoalItem(soal, idx, globalPilihanList = null, isListening = false) {
+    let html = `<div class="soal-item" style="border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem;">`;
+    
+    // Question text
+    html += `<p class="soal-text" style="font-weight: 500; margin-bottom: 0.75rem; font-size: 1rem; line-height: 1.6;">`;
+    if (soal.num) {
+        html += `<span style="color: #be123c; font-weight: 700; margin-right: 0.5rem;">${soal.num}</span>`;
+    }
+    if (soal.teks) {
+        html += `<span class="sentence-jp">${soal.teks}</span>`;
+    }
+    html += `</p>`;
+    
+    // Translation
+    if (soal.id) {
+        html += `<p class="translation-id" style="font-size: 0.875rem; margin-bottom: 0.75rem;">${soal.id}</p>`;
+    }
+    if (soal.en) {
+        html += `<p class="translation-en" style="font-size: 0.875rem; margin-bottom: 0.75rem;">${soal.en}</p>`;
+    }
+    
+    // Choices (pilihan)
+    const pilihanList = soal.pilihan || globalPilihanList;
+    if (pilihanList && pilihanList.length > 0) {
+        html += `<div class="pilihan-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">`;
+        pilihanList.forEach((p, pIdx) => {
+            html += `
+                <label class="pilihan-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem; border-radius: 0.5rem; font-size: 0.9375rem; background: #f9fafb; border: 1px solid #e5e7eb;">
+                    <input type="radio" name="soal-${soal.num || idx}" style="accent-color: #be123c; width: 1.125rem; height: 1.125rem; flex-shrink: 0;">
+                    <span class="sentence-jp">${p.id ? p.id + '. ' : ''}${p.teks || p}</span>
+                </label>
+            `;
+        });
+        html += `</div>`;
+    }
+    
+    // For listening items with simple choices
+    if (isListening && soal.pilihan && soal.pilihan.length > 0) {
+        html += `<div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">`;
+        soal.pilihan.forEach((p, pIdx) => {
+            html += `
+                <label class="pilihan-label" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.9375rem; background: #f9fafb; border: 1px solid #e5e7eb;">
+                    <input type="radio" name="soal-${soal.num || idx}" style="accent-color: #be123c; width: 1.125rem; height: 1.125rem; flex-shrink: 0;">
+                    <span class="sentence-jp">${p.teks || p}</span>
+                </label>
+            `;
+        });
+        html += `</div>`;
+    }
+    
+    html += `</div>`;
+    return html;
+}
+
+// ==================== PARSERS ====================
+
+function parseMatome(matomeEl) {
+    if (!matomeEl) return null;
+    
+    const result = {
+        page: matomeEl.getAttribute('halaman') || '',
+        jawabanRef: '',
+        mondais: []
+    };
+    
+    const jawabanRef = matomeEl.querySelector('jawaban_ref');
+    if (jawabanRef) result.jawabanRef = jawabanRef.textContent;
+    
+    // Parse all mondai types (1-4)
+    const mondaiTypes = ['mondai1', 'mondai2', 'mondai3', 'mondai4'];
+    
+    mondaiTypes.forEach(type => {
+        const mondaiEl = matomeEl.querySelector(type);
+        if (!mondaiEl) return;
+        
+        const mondai = {
+            type: type,
+            judul: '',
+            judulEn: '',
+            judulId: '',
+            instruksi: '',
+            instruksiId: '',
+            bacaan: null,
+            soalList: [],
+            pilihanList: [],
+            bagian1: null,
+            bagian2: null,
+            cdList: []
+        };
+        
+        // Title
+        const judul = mondaiEl.querySelector('judul');
+        if (judul) mondai.judul = judul.textContent;
+        const judulEn = mondaiEl.querySelector('judul_en');
+        if (judulEn) mondai.judulEn = judulEn.textContent;
+        const judulId = mondaiEl.querySelector('judul_id');
+        if (judulId) mondai.judulId = judulId.textContent;
+        
+        // Type attribute
+        const typeAttr = mondaiEl.getAttribute('type');
+        if (typeAttr) mondai.type = typeAttr;
+        
+        // Instructions
+        const instruksi = mondaiEl.querySelector('instruksi');
+        if (instruksi) mondai.instruksi = instruksi.textContent;
+        const instruksiId = mondaiEl.querySelector('instruksi_id');
+        if (instruksiId) mondai.instruksiId = instruksiId.textContent;
+        
+        // Bacaan (reading passage)
+        const bacaan = mondaiEl.querySelector('bacaan');
+        if (bacaan) {
+            mondai.bacaan = {
+                teks: bacaan.querySelector('teks')?.textContent || '',
+                id: bacaan.querySelector('id')?.textContent || ''
+            };
+        }
+        
+        // Parse soal (questions)
+        const soalElements = mondaiEl.querySelectorAll(':scope > soal');
+        soalElements.forEach(soal => {
+            const soalObj = parseSoalElement(soal);
+            mondai.soalList.push(soalObj);
+        });
+        
+        // Parse bagian1/bagian2
+        ['bagian1', 'bagian2'].forEach(bagianName => {
+            const bagian = mondaiEl.querySelector(bagianName);
+            if (bagian) {
+                const bagianObj = {
+                    instruksi: '',
+                    soalList: [],
+                    pilihanList: []
+                };
+                
+                const bagianInstruksi = bagian.querySelector('instruksi');
+                if (bagianInstruksi) bagianObj.instruksi = bagianInstruksi.textContent;
+                
+                const bagianSoal = bagian.querySelectorAll('soal');
+                bagianSoal.forEach(soal => {
+                    bagianObj.soalList.push(parseSoalElement(soal));
+                });
+                
+                // Pilihan for this bagian
+                const pilihanEls = bagian.querySelectorAll('pilihan_bagian1 > item, pilihan_bagian2 > item, pilihan > item');
+                pilihanEls.forEach(p => {
+                    bagianObj.pilihanList.push({ teks: p.textContent });
+                });
+                
+                mondai[bagianName] = bagianObj;
+            }
+        });
+        
+        // Global pilihan
+        const globalPilihan = mondaiEl.querySelectorAll('pilihan_jawaban > item, pilihan > item');
+        globalPilihan.forEach(p => {
+            mondai.pilihanList.push({ teks: p.textContent });
+        });
+        
+        // CD listening
+        const cdSoal = mondaiEl.querySelectorAll('soal[cd]');
+        cdSoal.forEach(soal => {
+            const soalObj = parseSoalElement(soal);
+            soalObj.cd = soal.getAttribute('cd');
+            mondai.cdList.push(soalObj);
+        });
+        
+        result.mondais.push(mondai);
+    });
+    
+    return result;
+}
+
+function parseSoalElement(soal) {
+    const result = {
+        num: soal.getAttribute('id') || '',
+        teks: '',
+        en: '',
+        id: '',
+        pilihan: [],
+        jawaban: '',
+        urutan: '',
+        cd: soal.getAttribute('cd') || null
+    };
+    
+    const teks = soal.querySelector('teks');
+    if (teks) result.teks = teks.textContent;
+    
+    const teksEn = soal.querySelector('teks_en');
+    if (teksEn) result.en = teksEn.textContent;
+    
+    const teksId = soal.querySelector('teks_id');
+    if (teksId) result.id = teksId.textContent;
+    
+    const jawaban = soal.querySelector('jawaban');
+    if (jawaban) result.jawaban = jawaban.textContent;
+    
+    const urutan = soal.querySelector('urutan');
+    if (urutan) result.urutan = urutan.textContent;
+    
+    const pilihanEls = soal.querySelectorAll('pilihan');
+    pilihanEls.forEach(p => {
+        result.pilihan.push({
+            id: p.getAttribute('id') || '',
+            teks: p.textContent
+        });
+    });
+    
+    return result;
+}
+
+// ==================== GET BAB CONTENT ====================
+
+function getBabContent(babId) {
+    if (!xmlData) return {};
+    
+    const content = xmlData.querySelector(`bab${babId}_content`);
+    if (!content) return {};
+    
+    const result = {
+        dekiru: [],
+        grammar: [],
+        check: null,
+        matome: null,
+        contentType: null,
+        content: null
+    };
+    
+    // Parse dekiru
+    const dekiruItems = content.querySelectorAll('dekiru_koto > item');
+    dekiruItems.forEach(item => {
+        result.dekiru.push({
+            jp: item.querySelector('jp')?.textContent || '',
+            en: item.querySelector('en')?.textContent || '',
+            id: item.querySelector('id')?.textContent || ''
+        });
+    });
+    
+    // Parse content
+    const contentEl = content.querySelector('content');
+    if (contentEl) {
+        const type = contentEl.getAttribute('type');
+        result.contentType = type;
+        
+        switch(type) {
+            case 'job_ad': result.content = parseJobAd(contentEl); break;
+            case 'speech': result.content = parseSpeech(contentEl); break;
+            case 'essay': result.content = parseEssay(contentEl); break;
+            case 'article': result.content = parseArticle(contentEl); break;
+            case 'conversation': result.content = parseConversation(contentEl); break;
+            case 'story': result.content = parseStory(contentEl); break;
+            case 'editorial': result.content = parseEditorial(contentEl); break;
+        }
+    }
+    
+    // Parse grammar
+    const subBabs = content.querySelectorAll('sub_bab');
+    subBabs.forEach((subBab, idx) => {
+        const grammar = {
+            num: subBab.querySelector('nomor')?.textContent || (idx + 1),
+            page: subBab.getAttribute('halaman'),
+            title: subBab.querySelector('judul')?.textContent || '',
+            stars: (subBab.querySelector('bintang')?.textContent || '').length,
+            pattern: subBab.querySelector('pola')?.textContent || '',
+            patternId: subBab.querySelector('pola_id')?.textContent || '',
+            desc: subBab.querySelector('dou_tsukau > penjelasan > jp')?.textContent || '',
+            descEn: subBab.querySelector('dou_tsukau > penjelasan > en')?.textContent || '',
+            descId: subBab.querySelector('dou_tsukau > penjelasan > id')?.textContent || '',
+            plus: parseExtraSection(subBab.querySelector('plus')),
+            u: parseExtraSection(subBab.querySelector('u')),
+            examples: []
+        };
+        
+        const examples = subBab.querySelectorAll('contoh > item');
+        examples.forEach(ex => {
+            grammar.examples.push({
+                jp: ex.querySelector('jp')?.textContent || '',
+                id: ex.querySelector('id')?.textContent || ''
+            });
+        });
+        
+        // Yatte miyou
+        const yatteMiyou = subBab.querySelector('yatte_miyou');
+        if (yatteMiyou) {
+            grammar.yatteMiyou = {
+                ref: yatteMiyou.querySelector('jawaban_ref')?.textContent || '',
+                soal: []
+            };
+            const soalEls = yatteMiyou.querySelectorAll('soal');
+            soalEls.forEach(s => {
+                grammar.yatteMiyou.soal.push({
+                    teks: s.querySelector('teks')?.textContent || '',
+                    jawaban: s.querySelector('jawaban')?.textContent || ''
+                });
+            });
+        }
+        
+        result.grammar.push(grammar);
+    });
+    
+    // Parse check
+    const check = content.querySelector('check');
+    if (check) {
+        result.check = parseCheck(check);
+    }
+    
+    // Parse matome
+    const matome = content.querySelector('matome');
+    if (matome) {
+        result.matome = parseMatome(matome);
+    }
+    
+    return result;
+}
+
+// ==================== CONTENT PARSERS ====================
+
+function parseJobAd(jobAdEl) {
+    const sections = [];
+    const sectionElements = jobAdEl.querySelectorAll('section');
+    
+    sectionElements.forEach(sec => {
+        const type = sec.getAttribute('type');
+        sections.push({
+            label: type,
+            labelEn: getLabelEn(type),
+            labelId: getLabelId(type),
+            content: sec.querySelector('isi')?.textContent || '',
+            note: sec.querySelector('catatan')?.textContent || ''
+        });
+    });
+    
+    return {
+        title: jobAdEl.querySelector('judul')?.textContent || '',
+        titleEn: jobAdEl.querySelector('judul_en')?.textContent || '',
+        titleId: jobAdEl.querySelector('judul_id')?.textContent || '',
+        highlight: jobAdEl.querySelector('subjudul > highlight')?.textContent || '',
+        subtitle: jobAdEl.querySelector('subjudul')?.childNodes[2]?.textContent || '',
+        subtitleEn: jobAdEl.querySelector('subjudul_en')?.textContent || '',
+        subtitleId: jobAdEl.querySelector('subjudul_id')?.textContent || '',
+        sections: sections,
+        contact: {
+            name: jobAdEl.querySelector('kontak > nama')?.textContent || '',
+            tel: jobAdEl.querySelector('kontak > tel')?.textContent || '',
+            web: jobAdEl.querySelector('kontak > web')?.textContent || '',
+            email: jobAdEl.querySelector('kontak > email')?.textContent || ''
+        }
+    };
+}
+
+function parseSpeech(speechEl) {
+    const karakterElements = speechEl.querySelectorAll('karakter');
+    
+    if (karakterElements.length > 0) {
+        const characters = [];
+        karakterElements.forEach(char => {
+            characters.push({
+                nama: char.getAttribute('nama') || '',
+                jp: char.querySelector('jp')?.textContent || '',
+                id: char.querySelector('id')?.textContent || ''
+            });
+        });
+        return { type: 'dialogue', characters: characters };
+    } else {
+        return {
+            type: 'simple',
+            teks: speechEl.querySelector('teks')?.textContent || '',
+            teksId: speechEl.querySelector('teks_id')?.textContent || ''
+        };
+    }
+}
+
+function parseEssay(essayEl) {
+    const paragraphs = [];
+    const teksElements = essayEl.querySelectorAll('teks');
+    
+    if (teksElements.length > 0) {
+        teksElements.forEach(teks => {
+            paragraphs.push({
+                jp: teks.querySelector('jp')?.textContent || '',
+                id: teks.querySelector('id')?.textContent || ''
+            });
+        });
+    } else {
+        paragraphs.push({ jp: essayEl.textContent || '', id: '' });
+    }
+    
+    return { paragraphs };
+}
+
+function parseArticle(articleEl) {
+    const paragraphs = [];
+    const teksElements = articleEl.querySelectorAll('teks');
+    
+    if (teksElements.length > 0) {
+        teksElements.forEach(teks => {
+            paragraphs.push({
+                jp: teks.querySelector('jp')?.textContent || '',
+                id: teks.querySelector('id')?.textContent || ''
+            });
+        });
+    } else {
+        paragraphs.push({ jp: articleEl.textContent || '', id: '' });
+    }
+    
+    return { paragraphs };
+}
+
+function parseConversation(convEl) {
+    const dialogs = [];
+    const dialogElements = convEl.querySelectorAll('dialog');
+    
+    if (dialogElements.length > 0) {
+        dialogElements.forEach(dialog => {
+            dialogs.push({
+                speaker: dialog.querySelector('speaker')?.textContent || '',
+                jp: dialog.querySelector('jp')?.textContent || '',
+                id: dialog.querySelector('id')?.textContent || ''
+            });
+        });
+    } else {
+        const karakterElements = convEl.querySelectorAll('karakter');
+        karakterElements.forEach(char => {
+            dialogs.push({
+                speaker: char.getAttribute('nama') || '',
+                jp: char.querySelector('jp')?.textContent || '',
+                id: char.querySelector('id')?.textContent || ''
+            });
+        });
+    }
+    
+    return { dialogs };
+}
+
+function parseStory(storyEl) {
+    const paragraphs = [];
+    const paraElements = storyEl.querySelectorAll('paragraph');
+    
+    if (paraElements.length > 0) {
+        paraElements.forEach(para => {
+            paragraphs.push({
+                jp: para.querySelector('jp')?.textContent || '',
+                id: para.querySelector('id')?.textContent || ''
+            });
+        });
+    } else {
+        paragraphs.push({ jp: storyEl.textContent || '', id: '' });
+    }
+    
+    return { paragraphs };
+}
+
+function parseEditorial(editorialEl) {
+    const paragraphs = [];
+    const paraElements = editorialEl.querySelectorAll('paragraph');
+    
+    if (paraElements.length > 0) {
+        paraElements.forEach(para => {
+            paragraphs.push({
+                jp: para.querySelector('jp')?.textContent || '',
+                id: para.querySelector('id')?.textContent || ''
+            });
+        });
+    } else {
+        paragraphs.push({ jp: editorialEl.textContent || '', id: '' });
+    }
+    
+    return { paragraphs };
+}
+
+function parseCheck(check) {
+    const result = {
+        page: check.getAttribute('halaman'),
+        questions: [],
+        options: [],
+        questions2: [],
+        options2: []
+    };
+    
+    const bagian1 = check.querySelector('bagian1');
+    if (bagian1) {
+        const soalElements = bagian1.querySelectorAll('soal');
+        soalElements.forEach(soal => {
+            result.questions.push({
+                num: soal.getAttribute('id'),
+                text: soal.querySelector('teks')?.textContent || '',
+                en: soal.querySelector('teks_en')?.textContent || ''
+            });
+        });
+        
+        const pilihanElements = bagian1.querySelectorAll('pilihan_jawaban > item');
+        pilihanElements.forEach(p => {
+            result.options.push(p.textContent);
+        });
+    }
+    
+    const bagian2 = check.querySelector('bagian2');
+    if (bagian2) {
+        const soalElements = bagian2.querySelectorAll('soal');
+        soalElements.forEach(soal => {
+            result.questions2.push({
+                num: soal.getAttribute('id'),
+                text: soal.querySelector('teks')?.textContent || '',
+                en: soal.querySelector('teks_en')?.textContent || ''
+            });
+        });
+        
+        const pilihanElements = bagian2.querySelectorAll('pilihan_bagian2 > item');
+        pilihanElements.forEach(p => {
+            result.options2.push(p.textContent);
+        });
+    }
+    
+    return result;
+}
+
+function parseExtraSection(el) {
+    if (!el) return null;
+    
+    const result = {
+        judul: el.querySelector('judul')?.textContent?.trim() || '',
+        judulId: el.querySelector('judul_id')?.textContent?.trim() || '',
+        desc: '',
+        descEn: '',
+        descId: '',
+        pola: el.querySelector('pola')?.textContent?.trim() || '',
+        polaId: el.querySelector('pola_id')?.textContent?.trim() || '',
+        examples: []
+    };
+    
+    const penjelasan = el.querySelector('penjelasan');
+    if (penjelasan) {
+        result.desc = penjelasan.querySelector('jp')?.textContent?.trim() || penjelasan.textContent?.trim() || '';
+        result.descEn = penjelasan.querySelector('en')?.textContent?.trim() || '';
+        result.descId = penjelasan.querySelector('id')?.textContent?.trim() || '';
+    }
+    
+    const items = el.querySelectorAll('contoh_plus > item, contoh > item');
+    items.forEach(item => {
+        result.examples.push({
+            jp: item.querySelector('jp')?.textContent?.trim() || '',
+            id: item.querySelector('id')?.textContent?.trim() || ''
+        });
+    });
+    
+    return result;
+}
+
+// ==================== RENDERERS ====================
+
 function renderYatteMiyou(yatteMiyou) {
     let html = `
         <div class="yatte-miyou">
@@ -672,9 +1324,7 @@ function renderYatteMiyou(yatteMiyou) {
         yatteMiyou.soal.forEach(soal => {
             html += `
                 <div class="quiz-item">
-                    <p>
-                        <span class="sentence-jp">${soal.teks}</span>
-                    </p>
+                    <p><span class="sentence-jp">${soal.teks}</span></p>
                 </div>
             `;
         });
@@ -686,8 +1336,6 @@ function renderYatteMiyou(yatteMiyou) {
     `;
     return html;
 }
-
-// Content Type Renderers
 
 function renderJobAd(jobAd) {
     let html = `
@@ -738,13 +1386,11 @@ function renderSpeech(speechData) {
     let html = '<div class="speech-box">';
     
     if (speechData.type === 'simple') {
-        // Simple speech with teks and teks_id
         html += `<p><span class="sentence-jp">${highlightGrammar(speechData.teks)}</span></p>`;
         if (speechData.teksId) {
             html += `<span class="translation-id">${speechData.teksId}</span>`;
         }
     } else if (speechData.type === 'dialogue') {
-        // Speech with karakter/dialogue
         speechData.characters.forEach(char => {
             html += `
                 <div class="speech-character">
@@ -764,20 +1410,14 @@ function renderEssay(essayData) {
     let html = '<div class="essay-box">';
     
     essayData.paragraphs.forEach((para) => {
-        // Wrapper per paragraf
         html += '<div class="essay-item">';
-        
-        // Teks Jepang
         html += '<p class="essay-paragraph">';
         html += `<span class="sentence-jp">${highlightGrammar(para.jp)}</span>`;
         html += '</p>';
-        
-        // Terjemahan - dipisahkan sebagai block baru dengan class untuk toggle
         if (para.id) {
             html += `<div class="translation-id indonesian-translation">${para.id}</div>`;
         }
-        
-        html += '</div>'; // tutup essay-item
+        html += '</div>';
     });
     
     html += '</div>';
@@ -897,377 +1537,6 @@ function renderCheck(check) {
     return html;
 }
 
-function highlightGrammar(text) {
-    const patterns = [
-        '入社して以来', 'において', '部長をはじめ', '先輩方のご指導のもとで',
-        '仕事の進め方はもとより', '人は失敗から学ぶものだ', '仕事をする上で', '残念ながら'
-    ];
-    
-    let result = text;
-    patterns.forEach(pattern => {
-        result = result.replace(new RegExp(pattern, 'g'), `<span class="highlight-text">${pattern}</span>`);
-    });
-    
-    return result;
-}
-
-// Get content from XML for specific bab
-function getBabContent(babId) {
-    if (!xmlData) return {};
-    
-    const content = xmlData.querySelector(`bab${babId}_content`);
-    if (!content) return {};
-    
-    const result = {
-        dekiru: [],
-        grammar: [],
-        check: null,
-        contentType: null,
-        content: null
-    };
-    
-    // Parse dekiru
-    const dekiruItems = content.querySelectorAll('dekiru_koto > item');
-    dekiruItems.forEach(item => {
-        result.dekiru.push({
-            jp: item.querySelector('jp')?.textContent || '',
-            en: item.querySelector('en')?.textContent || '',
-            id: item.querySelector('id')?.textContent || ''
-        });
-    });
-    
-    // Parse content based on type
-    const contentEl = content.querySelector('content');
-    if (contentEl) {
-        const type = contentEl.getAttribute('type');
-        result.contentType = type;
-        
-        switch(type) {
-            case 'job_ad':
-                result.content = parseJobAd(contentEl);
-                break;
-            case 'speech':
-                result.content = parseSpeech(contentEl);
-                break;
-            case 'essay':
-                result.content = parseEssay(contentEl);
-                break;
-            case 'article':
-                result.content = parseArticle(contentEl);
-                break;
-            case 'conversation':
-                result.content = parseConversation(contentEl);
-                break;
-            case 'story':
-                result.content = parseStory(contentEl);
-                break;
-            case 'editorial':
-                result.content = parseEditorial(contentEl);
-                break;
-        }
-    }
-    
-    // Parse grammar points
-    const subBabs = content.querySelectorAll('sub_bab');
-    subBabs.forEach((subBab, idx) => {
-        const grammar = {
-            num: subBab.querySelector('nomor')?.textContent || (idx + 1),
-            page: subBab.getAttribute('halaman'),
-            title: subBab.querySelector('judul')?.textContent || '',
-            stars: (subBab.querySelector('bintang')?.textContent || '').length,
-            pattern: subBab.querySelector('pola')?.textContent || '',
-            patternId: subBab.querySelector('pola_id')?.textContent || '',
-            desc: subBab.querySelector('dou_tsukau > penjelasan > jp')?.textContent || '',
-            descEn: subBab.querySelector('dou_tsukau > penjelasan > en')?.textContent || '',
-            descId: subBab.querySelector('dou_tsukau > penjelasan > id')?.textContent || '',
-			plus: parseExtraSection(subBab.querySelector('plus')),
-			u: parseExtraSection(subBab.querySelector('u')),
-            examples: []
-        };
-        
-        const examples = subBab.querySelectorAll('contoh > item');
-        examples.forEach(ex => {
-            grammar.examples.push({
-                jp: ex.querySelector('jp')?.textContent || '',
-                id: ex.querySelector('id')?.textContent || ''
-            });
-        });
-        
-        result.grammar.push(grammar);
-    });
-    
-    // Parse check
-    const check = content.querySelector('check');
-    if (check) {
-        result.check = parseCheck(check);
-    }
-    
-    return result;
-}
-
-// Content Parsers
-
-function parseJobAd(jobAdEl) {
-    const sections = [];
-    const sectionElements = jobAdEl.querySelectorAll('section');
-    
-    sectionElements.forEach(sec => {
-        const type = sec.getAttribute('type');
-        sections.push({
-            label: type,
-            labelEn: getLabelEn(type),
-            labelId: getLabelId(type),
-            content: sec.querySelector('isi')?.textContent || '',
-            note: sec.querySelector('catatan')?.textContent || ''
-        });
-    });
-    
-    return {
-        title: jobAdEl.querySelector('judul')?.textContent || '',
-        titleEn: jobAdEl.querySelector('judul_en')?.textContent || '',
-        titleId: jobAdEl.querySelector('judul_id')?.textContent || '',
-        highlight: jobAdEl.querySelector('subjudul > highlight')?.textContent || '',
-        subtitle: jobAdEl.querySelector('subjudul')?.childNodes[2]?.textContent || '',
-        subtitleEn: jobAdEl.querySelector('subjudul_en')?.textContent || '',
-        subtitleId: jobAdEl.querySelector('subjudul_id')?.textContent || '',
-        sections: sections,
-        contact: {
-            name: jobAdEl.querySelector('kontak > nama')?.textContent || '',
-            tel: jobAdEl.querySelector('kontak > tel')?.textContent || '',
-            web: jobAdEl.querySelector('kontak > web')?.textContent || '',
-            email: jobAdEl.querySelector('kontak > email')?.textContent || ''
-        }
-    };
-}
-
-function parseSpeech(speechEl) {
-    // Check if it has karakter elements (dialogue format)
-    const karakterElements = speechEl.querySelectorAll('karakter');
-    
-    if (karakterElements.length > 0) {
-        // Dialogue format with characters
-        const characters = [];
-        karakterElements.forEach(char => {
-            characters.push({
-                nama: char.getAttribute('nama') || '',
-                jp: char.querySelector('jp')?.textContent || '',
-                id: char.querySelector('id')?.textContent || ''
-            });
-        });
-        return {
-            type: 'dialogue',
-            characters: characters
-        };
-    } else {
-        // Simple format with teks
-        return {
-            type: 'simple',
-            teks: speechEl.querySelector('teks')?.textContent || '',
-            teksId: speechEl.querySelector('teks_id')?.textContent || ''
-        };
-    }
-}
-
-function parseEssay(essayEl) {
-    const paragraphs = [];
-    
-    // Cari elemen <teks> (bukan <paragraph>)
-    const teksElements = essayEl.querySelectorAll('teks');
-    
-    if (teksElements.length > 0) {
-        teksElements.forEach(teks => {
-            paragraphs.push({
-                jp: teks.querySelector('jp')?.textContent || '',
-                id: teks.querySelector('id')?.textContent || ''
-            });
-        });
-    } else {
-        // Fallback: treat entire content as one paragraph
-        paragraphs.push({
-            jp: essayEl.textContent || '',
-            id: ''
-        });
-    }
-    
-    return { paragraphs };
-}
-
-function parseArticle(articleEl) {
-    const paragraphs = [];
-    
-    const teksElements = articleEl.querySelectorAll('teks');
-    
-    if (teksElements.length > 0) {
-        teksElements.forEach(teks => {
-            paragraphs.push({
-                jp: teks.querySelector('jp')?.textContent || '',
-                id: teks.querySelector('id')?.textContent || ''
-            });
-        });
-    } else {
-        paragraphs.push({
-            jp: articleEl.textContent || '',
-            id: ''
-        });
-    }
-    
-    return { paragraphs };
-}
-
-function parseConversation(convEl) {
-    const dialogs = [];
-    
-    const dialogElements = convEl.querySelectorAll('dialog');
-    
-    if (dialogElements.length > 0) {
-        dialogElements.forEach(dialog => {
-            dialogs.push({
-                speaker: dialog.querySelector('speaker')?.textContent || '',
-                jp: dialog.querySelector('jp')?.textContent || '',
-                id: dialog.querySelector('id')?.textContent || ''
-            });
-        });
-    } else {
-        // Fallback: try karakter format (backward compatibility)
-        const karakterElements = convEl.querySelectorAll('karakter');
-        karakterElements.forEach(char => {
-            dialogs.push({
-                speaker: char.getAttribute('nama') || '',
-                jp: char.querySelector('jp')?.textContent || '',
-                id: char.querySelector('id')?.textContent || ''
-            });
-        });
-    }
-    
-    return { dialogs };
-}
-
-function parseStory(storyEl) {
-    const paragraphs = [];
-    
-    const paraElements = storyEl.querySelectorAll('paragraph');
-    
-    if (paraElements.length > 0) {
-        paraElements.forEach(para => {
-            paragraphs.push({
-                jp: para.querySelector('jp')?.textContent || '',
-                id: para.querySelector('id')?.textContent || ''
-            });
-        });
-    } else {
-        paragraphs.push({
-            jp: storyEl.textContent || '',
-            id: ''
-        });
-    }
-    
-    return { paragraphs };
-}
-
-function parseEditorial(editorialEl) {
-    const paragraphs = [];
-    
-    const paraElements = editorialEl.querySelectorAll('paragraph');
-    
-    if (paraElements.length > 0) {
-        paraElements.forEach(para => {
-            paragraphs.push({
-                jp: para.querySelector('jp')?.textContent || '',
-                id: para.querySelector('id')?.textContent || ''
-            });
-        });
-    } else {
-        paragraphs.push({
-            jp: editorialEl.textContent || '',
-            id: ''
-        });
-    }
-    
-    return { paragraphs };
-}
-
-function parseCheck(check) {
-    const result = {
-        page: check.getAttribute('halaman'),
-        questions: [],
-        options: [],
-        questions2: [],
-        options2: []
-    };
-    
-    const bagian1 = check.querySelector('bagian1');
-    if (bagian1) {
-        const soalElements = bagian1.querySelectorAll('soal');
-        soalElements.forEach(soal => {
-            result.questions.push({
-                num: soal.getAttribute('id'),
-                text: soal.querySelector('teks')?.textContent || '',
-                en: soal.querySelector('teks_en')?.textContent || ''
-            });
-        });
-        
-        const pilihanElements = bagian1.querySelectorAll('pilihan_bagian1 > item');
-        pilihanElements.forEach(p => {
-            result.options.push(p.textContent);
-        });
-    }
-    
-    const bagian2 = check.querySelector('bagian2');
-    if (bagian2) {
-        const soalElements = bagian2.querySelectorAll('soal');
-        soalElements.forEach(soal => {
-            result.questions2.push({
-                num: soal.getAttribute('id'),
-                text: soal.querySelector('teks')?.textContent || '',
-                en: soal.querySelector('teks_en')?.textContent || ''
-            });
-        });
-        
-        const pilihanElements = bagian2.querySelectorAll('pilihan_bagian2 > item');
-        pilihanElements.forEach(p => {
-            result.options2.push(p.textContent);
-        });
-    }
-    
-    return result;
-}
-
-// Parser untuk <plus> dan <u>
-function parseExtraSection(el) {
-    if (!el) return null;
-    
-    const result = {
-        judul: el.querySelector('judul')?.textContent?.trim() || '',
-        judulId: el.querySelector('judul_id')?.textContent?.trim() || '',
-        desc: '',
-        descEn: '',
-        descId: '',
-        pola: el.querySelector('pola')?.textContent?.trim() || '',
-        polaId: el.querySelector('pola_id')?.textContent?.trim() || '',
-        examples: []
-    };
-    
-    // Penjelasan bisa nested <jp>/<en>/<id> atau langsung teks
-    const penjelasan = el.querySelector('penjelasan');
-    if (penjelasan) {
-        result.desc = penjelasan.querySelector('jp')?.textContent?.trim() || penjelasan.textContent?.trim() || '';
-        result.descEn = penjelasan.querySelector('en')?.textContent?.trim() || '';
-        result.descId = penjelasan.querySelector('id')?.textContent?.trim() || '';
-    }
-    
-    // Ambil contoh dari <contoh_plus> atau <contoh>
-    const items = el.querySelectorAll('contoh_plus > item, contoh > item');
-    items.forEach(item => {
-        result.examples.push({
-            jp: item.querySelector('jp')?.textContent?.trim() || '',
-            id: item.querySelector('id')?.textContent?.trim() || ''
-        });
-    });
-    
-    return result;
-}
-
-// Renderer untuk <plus> dan <u>
 function renderExtraSection(data, type) {
     if (!data) return '';
     
@@ -1278,7 +1547,6 @@ function renderExtraSection(data, type) {
     
     let html = `<div class="${type}-section">`;
     
-    // Header: Badge + Judul + Terjemahan judul
     html += `<div class="${type}-header">`;
     html += `<span class="${type}-badge">${badge}</span>`;
     if (title) {
@@ -1289,7 +1557,6 @@ function renderExtraSection(data, type) {
     }
     html += `</div>`;
     
-    // Penjelasan (dengan EN/ID toggle)
     if (data.desc) {
         html += `<div class="${type}-content">`;
         html += `<p class="${type}-desc"><span class="sentence-jp">${data.desc}</span></p>`;
@@ -1298,7 +1565,6 @@ function renderExtraSection(data, type) {
         html += `</div>`;
     }
     
-    // Pola (jika ada)
     if (data.pola) {
         html += `
             <div class="grammar-pattern ${type}-pattern">
@@ -1308,7 +1574,6 @@ function renderExtraSection(data, type) {
         `;
     }
     
-    // Contoh kalimat
     if (data.examples && data.examples.length > 0) {
         html += `<div class="example-list ${type}-examples">`;
         data.examples.forEach((ex, idx) => {
@@ -1327,6 +1592,21 @@ function renderExtraSection(data, type) {
     
     html += `</div>`;
     return html;
+}
+
+function highlightGrammar(text) {
+    if (!text) return '';
+    const patterns = [
+        '入社して以来', 'において', '部長をはじめ', '先輩方のご指導のもとで',
+        '仕事の進め方はもとより', '人は失敗から学ぶものだ', '仕事をする上で', '残念ながら'
+    ];
+    
+    let result = text;
+    patterns.forEach(pattern => {
+        result = result.replace(new RegExp(pattern, 'g'), `<span class="highlight-text">${pattern}</span>`);
+    });
+    
+    return result;
 }
 
 function getLabelEn(type) {
@@ -1351,8 +1631,8 @@ function getLabelId(type) {
     return labels[type] || type;
 }
 
+// ==================== CAN DO LIST ====================
 
-// Can Do List Renderer
 function renderCanDoList() {
     const data = parseXMLData();
     const canDoList = data.canDoList || [];
@@ -1386,7 +1666,6 @@ function renderCanDoList() {
             </div>
     `;
 
-    // Render each bab group
     canDoList.forEach(group => {
         const babContent = getBabContent(group.id);
         const grammarList = babContent.grammar || [];
@@ -1413,7 +1692,6 @@ function renderCanDoList() {
                 </div>
 
                 <div class="can-do-body" id="can-do-body-${group.id}">
-                    <!-- Dekiru Koto -->
                     <div class="can-do-dekiru-box">
                         <h4 class="can-do-dekiru-title">
                             <span class="sentence-jp">できること</span>
@@ -1440,7 +1718,6 @@ function renderCanDoList() {
                         </ul>
                     </div>
 
-                    <!-- Grammar Points with Example Sentences -->
                     <div class="can-do-grammar-section">
                         <h4 class="can-do-grammar-title">
                             <span class="sentence-jp">学んだ文法・例文</span>
@@ -1485,7 +1762,6 @@ function renderCanDoList() {
                         </div>
                     </div>
 
-                    <!-- Link to bab -->
                     <div class="can-do-link-row">
                         <button class="can-do-link-btn" onclick="showSection('bab-${group.id}-header')">
                             <span>📖</span>
@@ -1499,6 +1775,14 @@ function renderCanDoList() {
                             <span class="translation-en">Review Grammar</span>
                             <span class="translation-id">Ulangi Tata Bahasa</span>
                         </button>
+                        ${babContent.matome ? `
+                        <button class="can-do-link-btn" onclick="showSection('bab-${group.id}-matome')">
+                            <span>✅</span>
+                            <span class="sentence-jp">まとめの問題</span>
+                            <span class="translation-en">Review Questions</span>
+                            <span class="translation-id">Soal Ringkasan</span>
+                        </button>
+                        ` : ''}
                     </div>
                 </div>
             </div>
@@ -1507,7 +1791,6 @@ function renderCanDoList() {
 
     html += getNavButtons('can-do-list');
     html += '</section>';
-    console.log('renderCanDoList returning HTML, length:', html.length);
     return html;
 }
 
@@ -1525,6 +1808,8 @@ function toggleCanDoGroup(bodyId) {
     }
 }
 
+// ==================== SECTION NAVIGATION ====================
+
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(sec => {
         sec.classList.add('hidden');
@@ -1535,7 +1820,6 @@ function showSection(sectionId) {
         target.classList.remove('hidden');
         currentSection = sectionId;
         
-        // Update drawer active state
         renderDrawer(sectionId);
         
         const navTitle = document.getElementById('current-section-title');
@@ -1544,28 +1828,31 @@ function showSection(sectionId) {
         } else if (sectionId === 'can-do-list') {
             navTitle.textContent = 'できることリスト';
         } else {
-            const match = sectionId.match(/bab-(\d+)-/);
+            const match = sectionId.match(/bab-(\d+)-(\w+)/);
             if (match) {
                 const babId = parseInt(match[1]);
                 const data = parseXMLData();
                 const bab = data.bab.find(b => b.id == babId);
-                if (bab) navTitle.textContent = `Bab ${bab.number}`;
+                if (bab) {
+                    const sectionType = match[2];
+                    if (sectionType === 'header') navTitle.textContent = `Bab ${bab.number} - 本文`;
+                    else if (sectionType === 'grammar') navTitle.textContent = `Bab ${bab.number} - 文法`;
+                    else if (sectionType === 'matome') navTitle.textContent = `Bab ${bab.number} - まとめ`;
+                    else navTitle.textContent = `Bab ${bab.number}`;
+                }
             }
         }
         
         window.scrollTo(0, 0);
-        
-        // Re-attach TTS for newly visible content
         setTimeout(attachTTS, 300);
     }
 }
 
+// ==================== TTS ====================
+
 function speakJapanese(text) {
     if (!('speechSynthesis' in window)) return;
-    
-    // Hentikan suara yang sedang berjalan
     window.speechSynthesis.cancel();
-    
     const utterance = new SpeechSynthesisUtterance(text.replace(/<[^>]*>/g, '').trim());
     utterance.lang = 'ja-JP';
     utterance.rate = 0.8;
