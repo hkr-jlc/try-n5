@@ -1065,3 +1065,115 @@ body { font-family: 'Noto Sans JP', 'Inter', sans-serif; background-color: #f0f2
         transform: translateY(0);
     }
 }
+
+/* ============================================
+   PLUS & U SECTION - PERBAIKAN TAMPILAN
+   ============================================ */
+
+/* --- Plus Section --- */
+.plus-section {
+    margin-top: 1.25rem;
+    background: #f0fdf4;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid #bbf7d0;
+}
+
+.plus-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #bbf7d0;
+    flex-wrap: wrap;
+}
+
+.plus-badge {
+    background: #16a34a;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.plus-title {
+    font-size: 1rem;
+    color: #15803d;
+    font-weight: 700;
+}
+
+.plus-content {
+    margin-bottom: 1rem;
+}
+
+.plus-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.plus-pattern {
+    margin: 1rem 0;
+}
+
+.plus-examples {
+    margin-top: 1rem;
+}
+
+/* --- U Section --- */
+.u-section {
+    margin-top: 1.25rem;
+    background: #eff6ff;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid #bfdbfe;
+}
+
+.u-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #bfdbfe;
+    flex-wrap: wrap;
+}
+
+.u-badge {
+    background: #2563eb;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.u-title {
+    font-size: 1rem;
+    color: #1e40af;
+    font-weight: 700;
+}
+
+.u-content {
+    margin-bottom: 1rem;
+}
+
+.u-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.u-pattern {
+    margin: 1rem 0;
+}
+
+.u-examples {
+    margin-top: 1rem;
+}
