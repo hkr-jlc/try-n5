@@ -430,7 +430,7 @@ function renderContentsSection() {
         `;
     });
     
-    html += '<div class="quick-section-title">Bab 1-22</div>';
+    html += '<div class="quick-section-title">Bab 1-15</div>';
     data.bab.forEach(bab => {
         html += `
             <div class="bab-card-home" onclick="showSection('bab-${bab.id}-header')">
@@ -470,7 +470,7 @@ function renderContentsSection() {
                     <span class="translation-id">Daftar Kemampuan N5</span>
                 </div>
             </div>
-            <span class="bab-page-home">p.227-231</span>
+            <span class="bab-page-home">p.188-191</span>
         </div>
     `;
 
@@ -628,16 +628,14 @@ function renderBabGrammar(bab) {
                 html += renderYatteMiyou(g.yatteMiyou);
             }
             
+            // U section (badge U) if exists
+            if (g.u) {
+                html += renderExtraSection(g.u, 'u');
+            }
+            
             // Plus section if exists
             if (g.plus) {
-                html += `
-                    <div class="plus-section">
-                        <div class="plus-header">
-                            <span class="plus-badge">+Plus</span>
-                            <span class="plus-title">${g.plus}</span>
-                        </div>
-                    </div>
-                `;
+                html += renderExtraSection(g.plus, 'plus');
             }
             
             // Page reference
@@ -982,7 +980,8 @@ function getBabContent(babId) {
             desc: subBab.querySelector('dou_tsukau > penjelasan > jp')?.textContent || '',
             descEn: subBab.querySelector('dou_tsukau > penjelasan > en')?.textContent || '',
             descId: subBab.querySelector('dou_tsukau > penjelasan > id')?.textContent || '',
-            plus: subBab.querySelector('plus')?.textContent || null,
+			plus: parseExtraSection(subBab.querySelector('plus')),
+			u: parseExtraSection(subBab.querySelector('u')),
             examples: []
         };
         
@@ -1233,6 +1232,103 @@ function parseCheck(check) {
     return result;
 }
 
+// Parser untuk <plus> dan <u>
+function parseExtraSection(el) {
+    if (!el) return null;
+    
+    const result = {
+        judul: el.querySelector('judul')?.textContent?.trim() || '',
+        judulId: el.querySelector('judul_id')?.textContent?.trim() || '',
+        desc: '',
+        descEn: '',
+        descId: '',
+        pola: el.querySelector('pola')?.textContent?.trim() || '',
+        polaId: el.querySelector('pola_id')?.textContent?.trim() || '',
+        examples: []
+    };
+    
+    // Penjelasan bisa nested <jp>/<en>/<id> atau langsung teks
+    const penjelasan = el.querySelector('penjelasan');
+    if (penjelasan) {
+        result.desc = penjelasan.querySelector('jp')?.textContent?.trim() || penjelasan.textContent?.trim() || '';
+        result.descEn = penjelasan.querySelector('en')?.textContent?.trim() || '';
+        result.descId = penjelasan.querySelector('id')?.textContent?.trim() || '';
+    }
+    
+    // Ambil contoh dari <contoh_plus> atau <contoh>
+    const items = el.querySelectorAll('contoh_plus > item, contoh > item');
+    items.forEach(item => {
+        result.examples.push({
+            jp: item.querySelector('jp')?.textContent?.trim() || '',
+            id: item.querySelector('id')?.textContent?.trim() || ''
+        });
+    });
+    
+    return result;
+}
+
+// Renderer untuk <plus> dan <u>
+function renderExtraSection(data, type) {
+    if (!data) return '';
+    
+    const isPlus = type === 'plus';
+    const badge = isPlus ? '+Plus' : 'U';
+    const title = data.judul || '';
+    const titleId = data.judulId || '';
+    
+    let html = `<div class="${type}-section">`;
+    
+    // Header: Badge + Judul + Terjemahan judul
+    html += `<div class="${type}-header">`;
+    html += `<span class="${type}-badge">${badge}</span>`;
+    if (title) {
+        html += `<span class="${type}-title"><span class="sentence-jp">${title}</span></span>`;
+    }
+    if (titleId) {
+        html += `<span class="translation-id">${titleId}</span>`;
+    }
+    html += `</div>`;
+    
+    // Penjelasan (dengan EN/ID toggle)
+    if (data.desc) {
+        html += `<div class="${type}-content">`;
+        html += `<p class="${type}-desc"><span class="sentence-jp">${data.desc}</span></p>`;
+        if (data.descEn) html += `<span class="translation-en">${data.descEn}</span>`;
+        if (data.descId) html += `<span class="translation-id">${data.descId}</span>`;
+        html += `</div>`;
+    }
+    
+    // Pola (jika ada)
+    if (data.pola) {
+        html += `
+            <div class="grammar-pattern ${type}-pattern">
+                <p class="grammar-pattern-text"><span class="sentence-jp">${data.pola}</span></p>
+                ${data.polaId ? `<span class="translation-id">${data.polaId}</span>` : ''}
+            </div>
+        `;
+    }
+    
+    // Contoh kalimat
+    if (data.examples && data.examples.length > 0) {
+        html += `<div class="example-list ${type}-examples">`;
+        data.examples.forEach((ex, idx) => {
+            html += `
+                <div class="example-item">
+                    <p>
+                        <span class="example-num">${String.fromCharCode(9312 + idx)}</span>
+                        <span class="sentence-jp">${ex.jp}</span>
+                    </p>
+                    ${ex.id ? `<span class="translation-id">${ex.id}</span>` : ''}
+                </div>
+            `;
+        });
+        html += `</div>`;
+    }
+    
+    html += `</div>`;
+    return html;
+}
+
 function getLabelEn(type) {
     const labels = {
         '仕事': 'Work',
@@ -1274,7 +1370,7 @@ function renderCanDoList() {
                     <span class="bab-header-en">What You Can Do with N5 Grammar</span>
                     <span class="translation-id">Apa yang Dapat Anda Lakukan dengan Tata Bahasa N5</span>
                 </div>
-                <p class="page-number" style="text-align: center; color: #6b7280; margin-top: 0.5rem;">p.150-151</p>
+                <p class="page-number" style="text-align: center; color: #6b7280; margin-top: 0.5rem;">p.188-191</p>
             </div>
 
             <div class="can-do-intro">
